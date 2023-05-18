@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { AppContainer } from "./app.styled";
+import Footer from "./components/footer";
+import Header from "./components/header";
+import Home from "./components/home";
+import useResponsive from "./useResponsive";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePage from "./components/screens/HomePage";
 
 function App() {
+  const mobile = useResponsive();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainer>
+      <Header mobile={mobile} />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage mobile={mobile} />} />
+        </Routes>
+      </BrowserRouter>
+      <Footer mobile={mobile} />
+    </AppContainer>
   );
 }
 

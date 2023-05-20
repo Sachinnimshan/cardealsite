@@ -4,7 +4,6 @@ import { HomeImg } from "../../images";
 import { PRIMARY_ORANGE } from "../../themes/common";
 import { SectionText } from "../../themes/typography";
 import {
-  AboutUsButton,
   HomeBanner,
   HomeBannerText,
   HomeContainer,

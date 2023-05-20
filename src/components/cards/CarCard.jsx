@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  FONT_DARK,
   FONT_SECONDARY,
   PRIMARY_ORANGE,
   PRIMARY_WHITE,

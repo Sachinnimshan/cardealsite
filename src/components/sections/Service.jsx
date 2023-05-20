@@ -1,5 +1,4 @@
 import React from "react";
-import { service } from "../../common/data";
 import { IconWrapper } from "../../icons";
 import { SectionTitle } from "../../themes/typography";
 import {

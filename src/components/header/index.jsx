@@ -9,7 +9,6 @@ import {
 import { SiteLogo, SiteLogoDark, SiteLogoImg } from "../../images";
 import { PRIMARY_ORANGE, PRIMARY_WHITE } from "../../themes/common";
 import {
-  Divider,
   HeaderContainer,
   HeaderRight,
   NavItem,

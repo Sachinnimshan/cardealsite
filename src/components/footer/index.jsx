@@ -8,7 +8,7 @@ import {
   FooterText,
   FooterTop,
 } from "./footer.styled";
-import { FONT_LIGHT, FONT_SECONDARY, PRIMARY_GREEN, PRIMARY_ORANGE, PRIMARY_WHITE, SECONDARY_BLACK, WEIGHT_600 } from "../../themes/common";
+import { FONT_SECONDARY, PRIMARY_ORANGE, SECONDARY_BLACK, WEIGHT_600 } from "../../themes/common";
 import SocialMediaIcons from "../../common/social";
 
 function Footer(props) {

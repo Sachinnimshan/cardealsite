@@ -2,7 +2,6 @@ import "./App.css";
 import { AppContainer } from "./app.styled";
 import Footer from "./components/footer";
 import Header from "./components/header";
-import Home from "./components/home";
 import useResponsive from "./useResponsive";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./components/screens/HomePage";

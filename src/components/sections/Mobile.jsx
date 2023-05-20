@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../../common/button";
 import { AppleIcon, CheckIcon, IconWrapper, PlaystoreIcon } from "../../icons";
 import { MobileAppImg } from "../../images";
-import { PRIMARY_GREEN, PRIMARY_ORANGE, PRIMARY_WHITE } from "../../themes/common";
+import { PRIMARY_ORANGE, PRIMARY_WHITE } from "../../themes/common";
 import { SectionTitle } from "../../themes/typography";
 import {
   MobileApp,

@@ -23,9 +23,17 @@ export const SectionHeaderColumn = styled("div")`
   flex-wrap: wrap;
 `;
 
+export const SectionBottom = styled("div")`
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+`;
+
 export const SectionTitle = styled("span")`
-  font-size: calc(1rem + 2vw);
-  color: ${PRIMARY_BLACK};
+  font-size: calc(1rem + 2.25vw);
+  color: ${(props) => props.color || PRIMARY_BLACK};
   font-weight: ${WEIGHT_700};
 `;
 

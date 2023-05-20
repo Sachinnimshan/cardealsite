@@ -10,12 +10,13 @@ export const ButtonContainer = styled("span")`
   cursor: pointer;
   padding: 0.75rem;
   text-align: center;
+  height: fit-content;
   transition: all ease-in-out 0.2s;
   border-radius: 5px;
   white-space: nowrap;
   border: ${(props) => props.border || "none"};
   align-items: center;
-  max-width: ${(props) => props.maxWidth};
+  max-width: ${(props) => props.maxWidth && "150px"};
   &:hover {
     color: ${(props) => props.hoverColor};
     border: ${(props) => props.hoverBorder};

@@ -21,14 +21,13 @@ export const TabContainer = styled("div")`
 
 export const Tab = styled("div")`
   padding: 0.75rem;
-  font-size: 14px;
   border-radius: 5px;
   display: flex;
   gap: 5px;
   flex-direction: column;
-  min-width: 100px;
+  min-width: 120px;
   transition: all ease-in-out 0.2s;
-  background-color: ${(props) => (props.active ? "#FEF1EB" : BG_COLOR)};
+  background-color: ${(props) => (props.active ? "#FEF1EB" : props.bgrColor)};
   border: ${(props) =>
     props.active ? `1px solid ${PRIMARY_ORANGE}` : `1px solid transparent`};
 `;

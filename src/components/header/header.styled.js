@@ -16,12 +16,13 @@ export const HeaderContainer = styled("div")`
   left: 0;
   right: 0;
   top: 0;
+  z-index: 10000;
   background-color: ${(props) =>
     (props.scrolledDown && PRIMARY_WHITE) || "transparent"};
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: ${(props) => (props.mobile ? PADDING_MOBILE : PADDING_DESKTOP)};
+  padding: ${(props) => props.mobile ? `1.25rem 1rem` : `1.25rem 4rem`};
   box-shadow: ${(props) =>
     props.scrolledDown &&
     "0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.05)"};

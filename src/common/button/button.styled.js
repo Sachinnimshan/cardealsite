@@ -4,7 +4,7 @@ import { PRIMARY_ORANGE, PRIMARY_WHITE, WEIGHT_400 } from "../../themes/common";
 export const ButtonContainer = styled("span")`
   background-color: ${(props) => props.bgrColor || PRIMARY_ORANGE};
   color: ${(props) => props.color || PRIMARY_WHITE};
-  font-size: 14px;
+  font-size: 15px;
   flex: 1;
   font-weight: ${WEIGHT_400};
   cursor: pointer;

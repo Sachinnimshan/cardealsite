@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../../common/button";
-import { socialIcons } from "../../common/data";
+import SocialMediaIcons from "../../common/social";
 import Tabs from "../../common/tab";
 import { BG_COLOR, PRIMARY_ORANGE } from "../../themes/common";
 import {
@@ -14,8 +14,6 @@ import CarCard from "../cards/CarCard";
 import {
   FeatureCardContainer,
   FeaturedContainer,
-  SocialContainer,
-  SocialIcon,
 } from "./sections.styled";
 
 function Featured(props) {
@@ -44,11 +42,7 @@ function Featured(props) {
         ))}
       </FeatureCardContainer>
       <SectionBottom>
-        <SocialContainer>
-          {socialIcons?.map((icon, index) => (
-            <SocialIcon>{icon.icon}</SocialIcon>
-          ))}
-        </SocialContainer>
+        <SocialMediaIcons/>
         <Button text="View 29 New" bgrColor={PRIMARY_ORANGE} maxWidth/>
       </SectionBottom>
     </FeaturedContainer>

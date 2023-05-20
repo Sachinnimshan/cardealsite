@@ -7,4 +7,5 @@ export const MobileAppImg = "/images/phone.png"
 
 export const SiteLogo = styled("img")`
   max-width: 175px;
+  height: fit-content;
 `;

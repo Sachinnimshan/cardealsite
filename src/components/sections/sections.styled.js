@@ -27,21 +27,7 @@ export const FeatureCardContainer = styled("div")`
   gap: 1rem;
 `;
 
-export const SocialContainer = styled("div")`
-  display: flex;
-  align-items: center;
-  gap: 5px;
-`;
 
-export const SocialIcon = styled("div")`
-  background-color: ${BG_COLOR};
-  color: ${PRIMARY_BLACK};
-  font-size: 1.25rem;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  border-radius: 50%;
-`;
 
 /////////////////////////////////////////////////Popular/////////////////////////////////////////////////////
 
@@ -138,3 +124,23 @@ gap: 1rem;
 `;
 
 /////////////////////////////////////////////////Newsletter/////////////////////////////////////////////////////
+
+export const NewsLetterContainer = styled("div")`
+  padding: ${(props) => (props.mobile ? PADDING_MOBILE : PADDING_DESKTOP)};
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: ${(props) => (props.mobile ? "center" : "space-between")};
+  gap: 1rem;
+  background-color: ${PRIMARY_WHITE};
+  border-top: 1px solid ${BG_COLOR};
+`;
+
+export const NewsLetterRow = styled("div")`
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex: 1;
+gap: 1rem;
+max-width: 600px;
+`;

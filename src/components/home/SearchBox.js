@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Button from "../../common/button";
 import { vehicleBrands } from "../../common/data";
-import Input from "../../common/input";
 import SelectBox from "../../common/select";
 import { PRIMARY_BLACK, PRIMARY_ORANGE } from "../../themes/common";
 import {
@@ -37,8 +36,7 @@ function SearchBox() {
         <SelectBox data={vehicleBrands} />
         <HomeSearchRow>
           <SelectBox data={vehicleBrands} />
-          {/* <SelectBox data={vehicleBrands} /> */}
-          <Input/>
+          <SelectBox data={vehicleBrands} />
         </HomeSearchRow>
         <HomeSearchRow>
           <Button

@@ -38,10 +38,11 @@ export const SectionTitle = styled("span")`
 `;
 
 export const SectionText = styled("span")`
-  font-size: ${(props) => props.color || "14px"};
+  font-size: ${(props) => props.size || "14px"};
   color: ${(props) => props.color || FONT_LIGHT};
   font-weight: ${(props) => props.weight || WEIGHT_400};
-  line-height: 1.5rem;
+  line-height: 1.75rem;
+  text-align: justify;
 `;
 
 export const SectionSubTitle = styled("span")`

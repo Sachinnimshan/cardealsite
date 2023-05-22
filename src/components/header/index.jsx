@@ -42,7 +42,7 @@ function Header({ mobile }) {
           <MenuIcon />
         </IconWrapper>
       )}
-      <SiteLogo src={scrolledDown && !mobile ? SiteLogoDark : SiteLogoImg} />
+      <SiteLogo src={scrolledDown ? SiteLogoDark : SiteLogoImg} />
       {mobile ? (
         <IconWrapper color={PRIMARY_WHITE} size="2rem">
           <UsersIconDark />
@@ -53,7 +53,9 @@ function Header({ mobile }) {
             <UserIconLight />
           </IconWrapper>
           {loginData?.map((item, index) => (
-            <NavItem key={index} scrolledDown={scrolledDown && !mobile}>{item}</NavItem>
+            <NavItem key={index} scrolledDown={scrolledDown && !mobile}>
+              {item}
+            </NavItem>
           ))}
         </HeaderRight>
       )}

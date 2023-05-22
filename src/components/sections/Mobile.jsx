@@ -35,7 +35,7 @@ function Mobile(props) {
             <span>For Android</span>
           </MobileAppItem>
         </MobileBannerColumn>
-        <MobileApp src={MobileAppImg} />
+        <MobileApp src={MobileAppImg}/>
       </MobileBanner>
       <MobileBanner mobile={props.mobile}>
         <MobileBannerColumn>

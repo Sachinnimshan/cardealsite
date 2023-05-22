@@ -6,7 +6,6 @@ import { ScreenContainer } from "./screens.styled";
 import Popular from "../sections/Popular";
 import Service from "../sections/Service";
 import Mobile from "../sections/Mobile";
-import Newsletter from "../sections/Newsletter";
 
 function HomePage(props) {
   return (
@@ -16,7 +15,6 @@ function HomePage(props) {
       <Popular mobile={props.mobile} data={vehicleBrands} />
       <Service mobile={props.mobile} data={service} />
       <Mobile mobile={props.mobile} data={mobileData} />
-      <Newsletter mobile={props.mobile} />
     </ScreenContainer>
   );
 }

@@ -6,9 +6,9 @@ export const InputContainer = styled("input")`
   border-radius: 5px;
   font-size: 15px;
   padding: 0.75rem;
-  cursor: pointer;
   display: flex;
   flex: 1;
+  cursor: pointer;
   border: 2px solid ${BG_COLOR};
   &:focus {
     outline: none;

@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../../common/button";
 import { HomeImg } from "../../images";
-import { PRIMARY_ORANGE } from "../../themes/common";
+import { FONT_SECONDARY } from "../../themes/common";
 import { SectionText } from "../../themes/typography";
 import {
   HomeBanner,
@@ -20,16 +20,13 @@ function Home(props) {
           <HomeBannerText>
             Find your <br /> dream car
           </HomeBannerText>
-          <SectionText>
+          <SectionText color={FONT_SECONDARY}>
             We can help you find the best car. Check our reviews, <br /> compare
             models and find cars for sale.
           </SectionText>
           {!props.mobile && (
             <Button
               text="About Us"
-              bgrColor="transparent"
-              hoverBgColor={PRIMARY_ORANGE}
-              border={`2px solid ${PRIMARY_ORANGE}`}
               maxWidth="125px"
             />
           )}
@@ -37,6 +34,7 @@ function Home(props) {
         <SearchBox />
       </HomeTop>
       <HomeBanner src={HomeImg} alt="Silver Benz car" mobile={props.mobile} />
+     
     </HomeContainer>
   );
 }

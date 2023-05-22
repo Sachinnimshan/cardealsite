@@ -27,8 +27,6 @@ export const FeatureCardContainer = styled("div")`
   gap: 1rem;
 `;
 
-
-
 /////////////////////////////////////////////////Popular/////////////////////////////////////////////////////
 
 export const PopularContainer = styled("div")`
@@ -85,17 +83,20 @@ export const MobileContainer = styled("div")`
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1rem;
+  margin-bottom: 5rem;
 `;
 
 export const MobileBanner = styled("div")`
   display: flex;
-  justify-content: ${(props) => (props.mobile ? "center" : "space-between")};
+  justify-content: ${(props) => props.mobile ? "center" : "space-between"};
   background-color: ${(props) => props.bgrColor || SECONDARY_BLACK};
   border-radius: 1rem;
   flex-wrap: wrap;
   gap: 2rem;
   flex: 1;
-  padding: 2rem;
+  align-items: center;
+  max-height: fit-content;
+  padding: 2rem 3rem;
 `;
 
 export const MobileBannerColumn = styled("div")`
@@ -104,7 +105,9 @@ export const MobileBannerColumn = styled("div")`
   gap: 1rem;
 `;
 
-export const MobileApp = styled("img")``;
+export const MobileApp = styled("img")`
+  max-height: 300px;
+`;
 
 export const MobileAppItem = styled("div")`
   border-radius: 2rem;
@@ -117,10 +120,10 @@ export const MobileAppItem = styled("div")`
 `;
 
 export const MobileAppProsItem = styled("div")`
-display: flex;
-align-items: center;
-color: ${FONT_SECONDARY};
-gap: 1rem;
+  display: flex;
+  align-items: center;
+  color: ${FONT_SECONDARY};
+  gap: 1rem;
 `;
 
 /////////////////////////////////////////////////Newsletter/////////////////////////////////////////////////////
@@ -128,19 +131,16 @@ gap: 1rem;
 export const NewsLetterContainer = styled("div")`
   padding: ${(props) => (props.mobile ? PADDING_MOBILE : PADDING_DESKTOP)};
   display: flex;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
-  justify-content: ${(props) => (props.mobile ? "center" : "space-between")};
-  gap: 1rem;
+  gap: 2rem;
   background-color: ${PRIMARY_WHITE};
   border-top: 1px solid ${BG_COLOR};
+  flex: 1;
 `;
 
 export const NewsLetterRow = styled("div")`
-display: flex;
-align-items: center;
-justify-content: space-between;
-flex: 1;
-gap: 1rem;
-max-width: 600px;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 `;

@@ -28,7 +28,7 @@ function Footer(props) {
           <FooterText size="22px" weight={WEIGHT_600} color={PRIMARY_ORANGE}>
             (123) 456-78901
           </FooterText>
-          <FooterText size="16px">
+          <FooterText>
             support@vehica.com <br /> West 12th Street <br /> New York, NY, USA
           </FooterText>
         </FooterColumn>

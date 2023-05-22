@@ -18,11 +18,11 @@ export const HeaderContainer = styled("div")`
   top: 0;
   z-index: 10000;
   background-color: ${(props) =>
-    (props.scrolledDown && PRIMARY_WHITE) || "transparent"};
+    (props.scrolledDown && PRIMARY_WHITE) || PRIMARY_BLACK};
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: ${(props) => props.mobile ? `1.25rem 1rem` : `1.25rem 4rem`};
+  padding: ${(props) => (props.mobile ? `1.25rem 1rem` : `1.25rem 4rem`)};
   box-shadow: ${(props) =>
     props.scrolledDown &&
     "0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.05)"};

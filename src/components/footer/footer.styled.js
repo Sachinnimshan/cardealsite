@@ -35,7 +35,7 @@ export const FooterColumn = styled("div")`
 
 export const FooterDescription = styled("p")`
   display: flex;
-  color: ${BG_COLOR};
+  color: ${FONT_SECONDARY};
   text-align: justify;
   font-size: 14px;
   max-width: 500px;
@@ -43,7 +43,7 @@ export const FooterDescription = styled("p")`
 `;
 
 export const FooterText = styled("span")`
-  color: ${(props) => props.color || BG_COLOR};
+  color: ${(props) => props.color || FONT_SECONDARY};
   font-size: ${(props) => props.size || "14px"};
   font-weight: ${(props) => props.weight || WEIGHT_400};
   line-height: 2rem;

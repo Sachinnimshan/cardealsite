@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
 import {
   BG_COLOR,
   FONT_DARK,
@@ -10,7 +11,7 @@ import {
   WEIGHT_500,
 } from "../../themes/common";
 
-export const CarCardContainer = styled("div")`
+export const CarCardContainer = styled(Link)`
   display: flex;
   flex-direction: column;
   flex: ${(props) => (props.mobile ? "1" : "20%")};
@@ -18,6 +19,7 @@ export const CarCardContainer = styled("div")`
   overflow: hidden;
   cursor: pointer;
   min-width: 300px;
+  text-decoration: none;
   transition: all ease-in-out 0.3s;
 `;
 

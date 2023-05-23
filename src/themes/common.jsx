@@ -1,6 +1,7 @@
 export const PRIMARY_BLACK = "#0F141E";
 export const SECONDARY_BLACK = "#222732";
 export const PRIMARY_ORANGE = "#FF4606";
+export const SECONDARY_ORANGE = "#FEF1EB";
 export const PRIMARY_GREEN = "#84D27B";
 export const FONT_LIGHT = "#999999";
 export const FONT_DARK = "#666666";

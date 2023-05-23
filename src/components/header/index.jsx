@@ -7,7 +7,8 @@ import {
   UsersIconDark,
 } from "../../icons";
 import { SiteLogo, SiteLogoDark, SiteLogoImg } from "../../images";
-import { PRIMARY_ORANGE, PRIMARY_WHITE } from "../../themes/common";
+import { BG_COLOR, PRIMARY_ORANGE, PRIMARY_WHITE, SECONDARY_BLACK } from "../../themes/common";
+import { TextView } from "../../themes/typography";
 import {
   HeaderContainer,
   HeaderRight,
@@ -22,9 +23,9 @@ function Header({ mobile }) {
   const handleClose = () => setShowMenu(false);
 
   const checkScrolledDown = () => {
-    if (!scrolledDown && window.pageYOffset > 20) {
+    if (!scrolledDown && window.pageYOffset > 80) {
       setScrolledDown(true);
-    } else if (scrolledDown && window.pageYOffset <= 20) {
+    } else if (scrolledDown && window.pageYOffset <= 80) {
       setScrolledDown(false);
     }
   };
@@ -53,9 +54,9 @@ function Header({ mobile }) {
             <UserIconLight />
           </IconWrapper>
           {loginData?.map((item, index) => (
-            <NavItem key={index} scrolledDown={scrolledDown && !mobile}>
+            <TextView key={index} scrolledDown={scrolledDown && !mobile} color={scrolledDown ? SECONDARY_BLACK : BG_COLOR}>
               {item}
-            </NavItem>
+            </TextView>
           ))}
         </HeaderRight>
       )}

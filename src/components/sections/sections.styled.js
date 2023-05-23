@@ -18,7 +18,6 @@ export const FeaturedContainer = styled("div")`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: ${(props) => (props.mobile ? PADDING_MOBILE : PADDING_DESKTOP)};
 `;
 
 export const FeatureCardContainer = styled("div")`
@@ -30,15 +29,12 @@ export const FeatureCardContainer = styled("div")`
 /////////////////////////////////////////////////Popular/////////////////////////////////////////////////////
 
 export const PopularContainer = styled("div")`
-  background-color: ${BG_COLOR_BLUE};
-  padding: ${(props) => (props.mobile ? PADDING_MOBILE : PADDING_DESKTOP)};
+  
 `;
 
 /////////////////////////////////////////////////Service/////////////////////////////////////////////////////
 
 export const ServiceContainer = styled("div")`
-  background-color: ${PRIMARY_WHITE};
-  padding: ${(props) => (props.mobile ? PADDING_MOBILE : PADDING_DESKTOP)};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,8 +74,6 @@ export const ServiceMessage = styled("p")`
 
 export const MobileContainer = styled("div")`
   display: flex;
-  background-color: ${PRIMARY_WHITE};
-  padding: ${(props) => (props.mobile ? PADDING_MOBILE : PADDING_DESKTOP)};
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1rem;
@@ -129,12 +123,11 @@ export const MobileAppProsItem = styled("div")`
 /////////////////////////////////////////////////Newsletter/////////////////////////////////////////////////////
 
 export const NewsLetterContainer = styled("div")`
-  padding: ${(props) => (props.mobile ? PADDING_MOBILE : PADDING_DESKTOP)};
+  
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  background-color: ${PRIMARY_WHITE};
   border-top: 1px solid ${BG_COLOR};
   flex: 1;
 `;

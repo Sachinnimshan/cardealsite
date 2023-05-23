@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 import {
   BG_COLOR,
   FONT_DARK,
-  FONT_LIGHT,
   PADDING_DESKTOP,
   PADDING_MOBILE,
   PRIMARY_BLACK,
@@ -19,6 +18,7 @@ export const HomeContainer = styled("div")`
   align-items: center;
   flex-direction: column;
   position: relative;
+  height: 90vh;
   flex: 1;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -31,7 +31,7 @@ export const HomeBanner = styled("img")`
   width: 100%;
   display: flex;
   position: absolute;
-  bottom: -15%;
+  bottom: -17%;
 `;
 
 export const HomeTop = styled("div")`
@@ -51,11 +51,12 @@ export const HomeTopLeft = styled("div")`
 `;
 
 export const HomeBannerText = styled("span")`
-  font-size: calc(1rem + 4.5vw);
+  font-size: calc(1rem + 4vw);
   color: ${PRIMARY_WHITE};
   font-weight: 700;
   line-height: calc(1rem + 6vw);
   text-align: ${(props) => props.mobile && "center"};
+  
 `;
 
 

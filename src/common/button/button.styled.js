@@ -1,12 +1,12 @@
 import styled from "@emotion/styled";
-import { PRIMARY_ORANGE, PRIMARY_WHITE, WEIGHT_400 } from "../../themes/common";
+import { PRIMARY_ORANGE, PRIMARY_WHITE, WEIGHT_400, WEIGHT_500 } from "../../themes/common";
 
 export const ButtonContainer = styled("span")`
   background-color: ${(props) => props.bgrColor || PRIMARY_ORANGE};
   color: ${(props) => props.color || PRIMARY_WHITE};
   font-size: 15px;
   flex: 1;
-  font-weight: ${WEIGHT_400};
+  font-weight: ${WEIGHT_500};
   cursor: pointer;
   padding: 0.75rem;
   text-align: center;
@@ -14,7 +14,7 @@ export const ButtonContainer = styled("span")`
   transition: all ease-in-out 0.2s;
   border-radius: 5px;
   white-space: nowrap;
-  border: ${(props) => props.border || "none"};
+  border: ${(props) => props.border && `2px solid ${PRIMARY_ORANGE}`};
   align-items: center;
   max-width: ${(props) => props.maxWidth && "150px"};
   &:hover {

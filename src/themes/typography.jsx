@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import {
-  FONT_DARK,
   FONT_LIGHT,
   PRIMARY_BLACK,
   PRIMARY_ORANGE,
@@ -49,4 +48,14 @@ export const SectionSubTitle = styled("span")`
   font-size: calc(1rem + 0.4vw);
   color: ${PRIMARY_ORANGE};
   font-weight: ${WEIGHT_400};
+`;
+
+export const TextView = styled("span")`
+  font-size: ${(props) => `calc(0.875rem + ${props.size}vw)`};
+  font-weight: ${(props) => props.weight || WEIGHT_400};
+  color: ${(props) => props.color || FONT_LIGHT};
+  line-height: 1.8rem;
+  text-align: justify;
+  white-space: ${(props) => props.nowrap && "nowrap"};
+  text-transform: ${(props) => props.transform || "capitalize"};
 `;

@@ -1,18 +1,24 @@
+import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
 import {
   FONT_DARK,
   FONT_LIGHT,
-  PADDING_DESKTOP,
-  PADDING_MOBILE,
   PRIMARY_BLACK,
   PRIMARY_ORANGE,
   PRIMARY_WHITE,
   WEIGHT_400,
-  WEIGHT_500,
 } from "../../themes/common";
 
+export const HeaderDownAnimation = keyframes`
+from {
+    top: -100%;
+  }
+  to {
+    top: 0%;
+  }`;
+
 export const HeaderContainer = styled("div")`
-  position: ${(props) => (props.mobile ? "relative" : "fixed")};
+  position: ${(props) => !props.mobile && "fixed"};
   left: 0;
   right: 0;
   top: 0;
@@ -22,10 +28,12 @@ export const HeaderContainer = styled("div")`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: ${(props) => (props.mobile ? `1.25rem 1rem` : `1.25rem 4rem`)};
+  padding: ${(props) => (props.mobile ? `1.5rem 1rem` : `1.25rem 4rem`)};
   box-shadow: ${(props) =>
     props.scrolledDown &&
     "0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.05)"};
+  animation-name: ${HeaderDownAnimation};
+  animation-duration: 0.75s;
 `;
 
 export const NavItem = styled("span")`

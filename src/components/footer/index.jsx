@@ -3,20 +3,31 @@ import { SiteLogo, SiteLogoImg } from "../../images";
 import {
   CopyRights,
   FooterColumn,
-  FooterContainer,
   FooterDescription,
   FooterText,
   FooterTop,
 } from "./footer.styled";
-import { FONT_SECONDARY, PRIMARY_ORANGE, SECONDARY_BLACK, WEIGHT_600 } from "../../themes/common";
+import {
+  FONT_SECONDARY,
+  PRIMARY_ORANGE,
+  SECONDARY_BLACK,
+  WEIGHT_600,
+} from "../../themes/common";
 import SocialMediaIcons from "../../common/social";
+import { CommonLayout } from "../../common/Layouts.styled";
 
 function Footer(props) {
   return (
-    <FooterContainer mobile={props.mobile}>
+    <CommonLayout
+      mobile={props.mobile}
+      bgrColor={SECONDARY_BLACK}
+      display="flex"
+      direction="column"
+      alignHorizontal="center"
+    >
       <FooterTop>
         <FooterColumn>
-          <SiteLogo src={SiteLogoImg} />
+          <SiteLogo src={SiteLogoImg} alt="Vehica Logo" />
           <FooterDescription color={FONT_SECONDARY}>
             Award-winning, family owned dealership of new and pre-owned vehicles
             with several locations across the city. Lowest prices and the best
@@ -37,9 +48,9 @@ function Footer(props) {
         <FooterText>
           Copyright © 2023 | Design & Developed by Sachin Nimshan
         </FooterText>
-        <SocialMediaIcons color={SECONDARY_BLACK} bgrColor={FONT_SECONDARY}/>
+        <SocialMediaIcons color={SECONDARY_BLACK} bgrColor={FONT_SECONDARY} />
       </CopyRights>
-    </FooterContainer>
+    </CommonLayout>
   );
 }
 

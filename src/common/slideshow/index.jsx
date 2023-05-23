@@ -20,6 +20,7 @@ function SlideShow(props) {
             fuel={item?.fuel}
             transmission={item?.transmission}
             mobile={props.mobile}
+            id={item?.id}
           />
         ))}
       </SlideContainer>

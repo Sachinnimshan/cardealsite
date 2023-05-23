@@ -1,10 +1,8 @@
 import styled from "@emotion/styled";
 import {
-  BG_COLOR,
-  FONT_DARK,
   PRIMARY_ORANGE,
+  SECONDARY_ORANGE,
   WEIGHT_400,
-  WEIGHT_500,
 } from "../../themes/common";
 
 export const TabContainer = styled("div")`
@@ -27,7 +25,7 @@ export const Tab = styled("div")`
   flex-direction: column;
   min-width: 120px;
   transition: all ease-in-out 0.2s;
-  background-color: ${(props) => (props.active ? "#FEF1EB" : props.bgrColor)};
+  background-color: ${(props) => (props.active ? SECONDARY_ORANGE : props.bgrColor)};
   border: ${(props) =>
     props.active ? `1px solid ${PRIMARY_ORANGE}` : `1px solid transparent`};
 `;

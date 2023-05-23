@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../../common/button";
+import { CommonLayout } from "../../common/Layouts.styled";
 import SocialMediaIcons from "../../common/social";
 import Tabs from "../../common/tab";
 import { BG_COLOR, PRIMARY_ORANGE } from "../../themes/common";
@@ -13,19 +14,23 @@ import {
 import CarCard from "../cards/CarCard";
 import {
   FeatureCardContainer,
-  FeaturedContainer,
 } from "./sections.styled";
 
 function Featured(props) {
   const tabs = ["New", "Used"];
   return (
-    <FeaturedContainer mobile={props.mobile}>
+    <CommonLayout
+      mobile={props.mobile}
+      display="flex"
+      direction="column"
+      gap="2rem"
+    >
       <SectionHeader>
         <SectionHeaderColumn column>
           <SectionSubTitle>Handy picked</SectionSubTitle>
           <SectionTitle>Featured Listings</SectionTitle>
         </SectionHeaderColumn>
-        <Tabs data={tabs} bgrColor={BG_COLOR}/>
+        <Tabs data={tabs} bgrColor={BG_COLOR} />
       </SectionHeader>
       <FeatureCardContainer>
         {props.data?.slice(0, 7).map((item, index) => (
@@ -38,14 +43,15 @@ function Featured(props) {
             fuel={item?.fuel}
             transmission={item?.transmission}
             mobile={props.mobile}
+            id={item?.id}
           />
         ))}
       </FeatureCardContainer>
       <SectionBottom>
-        <SocialMediaIcons/>
-        <Button text="View 29 New" bgrColor={PRIMARY_ORANGE} maxWidth/>
+        <SocialMediaIcons />
+        <Button text="View 29 New" bgrColor={PRIMARY_ORANGE} maxWidth />
       </SectionBottom>
-    </FeaturedContainer>
+    </CommonLayout>
   );
 }
 

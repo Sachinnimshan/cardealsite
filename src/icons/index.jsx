@@ -1,5 +1,11 @@
 import styled from "@emotion/styled";
-import { FaRegUser, FaUser, FaUserFriends, FaApple } from "react-icons/fa";
+import {
+  FaRegUser,
+  FaUser,
+  FaUserFriends,
+  FaApple,
+  FaWhatsapp,
+} from "react-icons/fa";
 import { BiMenuAltLeft } from "react-icons/bi";
 import {
   MdOutlineArrowBackIos,
@@ -9,6 +15,9 @@ import { GiTakeMyMoney, GiShakingHands } from "react-icons/gi";
 import { SlBadge } from 'react-icons/sl';
 import { IoLogoGooglePlaystore } from 'react-icons/io5';
 import { AiFillCheckCircle } from 'react-icons/ai';
+import { VscCircleFilled } from 'react-icons/vsc';
+import { RiPhoneFill } from 'react-icons/ri';
+import { CgCheckO } from 'react-icons/cg';
 
 
 export const UserIconLight = styled(FaRegUser)``;
@@ -23,6 +32,10 @@ export const BadgeIcon = styled(SlBadge)``;
 export const AppleIcon = styled(FaApple)``;
 export const PlaystoreIcon = styled(IoLogoGooglePlaystore)``;
 export const CheckIcon = styled(AiFillCheckCircle)``;
+export const WhatsappIcon = styled(FaWhatsapp)``;
+export const CircleIcon = styled(VscCircleFilled)``;
+export const PhoneIcon = styled(RiPhoneFill)``;
+export const CheckOutlinedIcon = styled(CgCheckO)``;
 
 export const IconWrapper = styled("div")`
   color: ${(props) => props.color};

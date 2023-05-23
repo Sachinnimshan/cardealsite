@@ -12,10 +12,11 @@ import {
   CarCardInfoBottom,
   CarCardText,
 } from "./cards.styled";
+import { Link } from "react-router-dom";
 
 function CarCard(props) {
   return (
-    <CarCardContainer mobile={props.mobile}>
+    <CarCardContainer mobile={props.mobile} to={`/cars/${props?.id}`}>
       <CarCardImage src={props.images} />
       <CarCardInfo>
         <CarCardText>{props.title}</CarCardText>

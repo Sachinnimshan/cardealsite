@@ -11,14 +11,6 @@ import {
   WEIGHT_400,
 } from "../../themes/common";
 
-export const FooterContainer = styled("div")`
-  padding: ${(props) => (props.mobile ? PADDING_MOBILE : PADDING_DESKTOP)};
-  background-color: ${SECONDARY_BLACK};
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-`;
-
 export const FooterTop = styled("div")`
   display: flex;
   justify-content: space-between;

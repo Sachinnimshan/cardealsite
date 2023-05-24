@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import {
   BG_COLOR,
   BG_COLOR_BLUE,
+  BORDER_RADIUS,
   FONT_DARK,
   FONT_LIGHT,
   FONT_SECONDARY,
@@ -84,7 +85,7 @@ export const MobileBanner = styled("div")`
   display: flex;
   justify-content: ${(props) => props.mobile ? "center" : "space-between"};
   background-color: ${(props) => props.bgrColor || SECONDARY_BLACK};
-  border-radius: 1rem;
+  border-radius: ${BORDER_RADIUS};
   flex-wrap: wrap;
   gap: 2rem;
   flex: 1;
@@ -104,7 +105,7 @@ export const MobileApp = styled("img")`
 `;
 
 export const MobileAppItem = styled("div")`
-  border-radius: 2rem;
+  border-radius: ${BORDER_RADIUS};
   background-color: ${PRIMARY_WHITE};
   display: flex;
   align-items: center;

@@ -78,7 +78,7 @@ export const mobileData = [
 export const carData = [
   {
     title: "Mercedez Benz AMG GT 2 door coupe yellow",
-    price: "$450000",
+    price: 45000,
     year: "2023",
     model: "couple",
     color: "yellow",
@@ -89,47 +89,21 @@ export const carData = [
     id: "C001",
     description:
       "How the adventure ended will be seen anon. Aouda was anxious, though she said nothing. As for Passepartout, he thought Mr. Fogg’s manoeuvre simply glorious. The captain had said “between eleven and twelve knots,” and the Henrietta confirmed his prediction.If, then—for there were “ifs” still—the sea did not become too boisterous, if the wind did not veer round to the east, if no accident happened to the boat or its machinery, the Henrietta might cross the three thousand miles from New York to Liverpool in the nine days, between the 12th and the 21st of December. It is true that, once arrived, the affair on board the Henrietta, added to that of the Bank of England, might create more difficulties for Mr. Fogg than he imagined or could desire.During the first days, they went along smoothly enough. The sea was not very unpropitious, the wind seemed stationary in the north-east, the sails were hoisted, and the Henrietta ploughed across the waves like a real trans-Atlantic steamer.",
-    keySpecs: [
-      {
-        make: "Mercedez Benz",
-      },
-      {
-        model: "Couple",
-      },
-      {
-        color: "yellow",
-      },
-      {
-        Drivetype: "Front Wheel Drive",
-      },
-      {
-        transmission: "Automatic",
-      },
-      {
-        condition: "New",
-      },
-      {
-        year: "2023",
-      },
-      {
-        Fueltype: "Diesel",
-      },
-      {
-        Enginesize: "4.8L",
-      },
-      {
-        Doors: "2-door",
-      },
-      {
-        Cylinders: "6",
-      },
-      {
-        Color: "Blue",
-      },
-      {
-        VIN: "1C4TJPBA1CD851233",
-      },
-    ],
+    keySpecs: {
+      make: "Mercedez Benz",
+      model: "Couple",
+      color: "Yellow",
+      Drivetype: "Front Wheel Drive",
+      transmission: "Automatic",
+      condition: "New",
+      year: "2023",
+      Fueltype: "Diesel",
+      Enginesize: "4.8L",
+      Doors: "2-door",
+      Cylinders: "6",
+      Color: "Blue",
+      VIN: "1C4TJPBA1CD851233",
+    },
     techSpecs: [
       "Backup camera",
       "Brake assist",
@@ -146,7 +120,7 @@ export const carData = [
   },
   {
     title: "Mercedez Benz AMG GT 2 door coupe yellow",
-    price: "$450000",
+    price: 25000,
     year: "2023",
     model: "couple",
     color: "yellow",
@@ -157,47 +131,21 @@ export const carData = [
     id: "C002",
     description:
       "How the adventure ended will be seen anon. Aouda was anxious, though she said nothing. As for Passepartout, he thought Mr. Fogg’s manoeuvre simply glorious. The captain had said “between eleven and twelve knots,” and the Henrietta confirmed his prediction.If, then—for there were “ifs” still—the sea did not become too boisterous, if the wind did not veer round to the east, if no accident happened to the boat or its machinery, the Henrietta might cross the three thousand miles from New York to Liverpool in the nine days, between the 12th and the 21st of December. It is true that, once arrived, the affair on board the Henrietta, added to that of the Bank of England, might create more difficulties for Mr. Fogg than he imagined or could desire.During the first days, they went along smoothly enough. The sea was not very unpropitious, the wind seemed stationary in the north-east, the sails were hoisted, and the Henrietta ploughed across the waves like a real trans-Atlantic steamer.",
-    keySpecs: [
-      {
-        make: "Mercedez Benz",
-      },
-      {
-        model: "Couple",
-      },
-      {
-        color: "yellow",
-      },
-      {
-        Drivetype: "Front Wheel Drive",
-      },
-      {
-        transmission: "Automatic",
-      },
-      {
-        condition: "New",
-      },
-      {
-        year: "2023",
-      },
-      {
-        Fueltype: "Diesel",
-      },
-      {
-        Enginesize: "4.8L",
-      },
-      {
-        Doors: "2-door",
-      },
-      {
-        Cylinders: "6",
-      },
-      {
-        Color: "Blue",
-      },
-      {
-        VIN: "1C4TJPBA1CD851233",
-      },
-    ],
+    keySpecs: {
+      make: "Mercedez Benz",
+      model: "Couple",
+      color: "Yellow",
+      Drivetype: "Front Wheel Drive",
+      transmission: "Automatic",
+      condition: "New",
+      year: "2023",
+      Fueltype: "Diesel",
+      Enginesize: "4.8L",
+      Doors: "2-door",
+      Cylinders: "6",
+      Color: "Blue",
+      VIN: "1C4TJPBA1CD851233",
+    },
     techSpecs: [
       "Backup camera",
       "Brake assist",
@@ -214,7 +162,7 @@ export const carData = [
   },
   {
     title: "Mercedez Benz AMG GT 2 door coupe yellow",
-    price: "$450000",
+    price: 500000,
     year: "2023",
     model: "couple",
     color: "yellow",
@@ -225,47 +173,21 @@ export const carData = [
     id: "C003",
     description:
       "How the adventure ended will be seen anon. Aouda was anxious, though she said nothing. As for Passepartout, he thought Mr. Fogg’s manoeuvre simply glorious. The captain had said “between eleven and twelve knots,” and the Henrietta confirmed his prediction.If, then—for there were “ifs” still—the sea did not become too boisterous, if the wind did not veer round to the east, if no accident happened to the boat or its machinery, the Henrietta might cross the three thousand miles from New York to Liverpool in the nine days, between the 12th and the 21st of December. It is true that, once arrived, the affair on board the Henrietta, added to that of the Bank of England, might create more difficulties for Mr. Fogg than he imagined or could desire.During the first days, they went along smoothly enough. The sea was not very unpropitious, the wind seemed stationary in the north-east, the sails were hoisted, and the Henrietta ploughed across the waves like a real trans-Atlantic steamer.",
-    keySpecs: [
-      {
-        make: "Mercedez Benz",
-      },
-      {
-        model: "Couple",
-      },
-      {
-        color: "yellow",
-      },
-      {
-        Drivetype: "Front Wheel Drive",
-      },
-      {
-        transmission: "Automatic",
-      },
-      {
-        condition: "New",
-      },
-      {
-        year: "2023",
-      },
-      {
-        Fueltype: "Diesel",
-      },
-      {
-        Enginesize: "4.8L",
-      },
-      {
-        Doors: "2-door",
-      },
-      {
-        Cylinders: "6",
-      },
-      {
-        Color: "Blue",
-      },
-      {
-        VIN: "1C4TJPBA1CD851233",
-      },
-    ],
+    keySpecs: {
+      make: "Mercedez Benz",
+      model: "Couple",
+      color: "Yellow",
+      Drivetype: "Front Wheel Drive",
+      transmission: "Automatic",
+      condition: "New",
+      year: "2023",
+      Fueltype: "Diesel",
+      Enginesize: "4.8L",
+      Doors: "2-door",
+      Cylinders: "6",
+      Color: "Blue",
+      VIN: "1C4TJPBA1CD851233",
+    },
     techSpecs: [
       "Backup camera",
       "Brake assist",
@@ -282,7 +204,7 @@ export const carData = [
   },
   {
     title: "Mercedez Benz AMG GT 2 door coupe yellow",
-    price: "$450000",
+    price: 15000,
     year: "2023",
     model: "couple",
     color: "yellow",
@@ -293,47 +215,21 @@ export const carData = [
     id: "C004",
     description:
       "How the adventure ended will be seen anon. Aouda was anxious, though she said nothing. As for Passepartout, he thought Mr. Fogg’s manoeuvre simply glorious. The captain had said “between eleven and twelve knots,” and the Henrietta confirmed his prediction.If, then—for there were “ifs” still—the sea did not become too boisterous, if the wind did not veer round to the east, if no accident happened to the boat or its machinery, the Henrietta might cross the three thousand miles from New York to Liverpool in the nine days, between the 12th and the 21st of December. It is true that, once arrived, the affair on board the Henrietta, added to that of the Bank of England, might create more difficulties for Mr. Fogg than he imagined or could desire.During the first days, they went along smoothly enough. The sea was not very unpropitious, the wind seemed stationary in the north-east, the sails were hoisted, and the Henrietta ploughed across the waves like a real trans-Atlantic steamer.",
-    keySpecs: [
-      {
-        make: "Mercedez Benz",
-      },
-      {
-        model: "Couple",
-      },
-      {
-        color: "yellow",
-      },
-      {
-        Drivetype: "Front Wheel Drive",
-      },
-      {
-        transmission: "Automatic",
-      },
-      {
-        condition: "New",
-      },
-      {
-        year: "2023",
-      },
-      {
-        Fueltype: "Diesel",
-      },
-      {
-        Enginesize: "4.8L",
-      },
-      {
-        Doors: "2-door",
-      },
-      {
-        Cylinders: "6",
-      },
-      {
-        Color: "Blue",
-      },
-      {
-        VIN: "1C4TJPBA1CD851233",
-      },
-    ],
+    keySpecs: {
+      make: "Mercedez Benz",
+      model: "Couple",
+      color: "Yellow",
+      Drivetype: "Front Wheel Drive",
+      transmission: "Automatic",
+      condition: "New",
+      year: "2023",
+      Fueltype: "Diesel",
+      Enginesize: "4.8L",
+      Doors: "2-door",
+      Cylinders: "6",
+      Color: "Blue",
+      VIN: "1C4TJPBA1CD851233",
+    },
     techSpecs: [
       "Backup camera",
       "Brake assist",
@@ -350,7 +246,7 @@ export const carData = [
   },
   {
     title: "Mercedez Benz AMG GT 2 door coupe yellow",
-    price: "$450000",
+    price: 200000,
     year: "2023",
     model: "couple",
     color: "yellow",
@@ -361,47 +257,21 @@ export const carData = [
     id: "C005",
     description:
       "How the adventure ended will be seen anon. Aouda was anxious, though she said nothing. As for Passepartout, he thought Mr. Fogg’s manoeuvre simply glorious. The captain had said “between eleven and twelve knots,” and the Henrietta confirmed his prediction.If, then—for there were “ifs” still—the sea did not become too boisterous, if the wind did not veer round to the east, if no accident happened to the boat or its machinery, the Henrietta might cross the three thousand miles from New York to Liverpool in the nine days, between the 12th and the 21st of December. It is true that, once arrived, the affair on board the Henrietta, added to that of the Bank of England, might create more difficulties for Mr. Fogg than he imagined or could desire.During the first days, they went along smoothly enough. The sea was not very unpropitious, the wind seemed stationary in the north-east, the sails were hoisted, and the Henrietta ploughed across the waves like a real trans-Atlantic steamer.",
-    keySpecs: [
-      {
-        make: "Mercedez Benz",
-      },
-      {
-        model: "Couple",
-      },
-      {
-        color: "yellow",
-      },
-      {
-        Drivetype: "Front Wheel Drive",
-      },
-      {
-        transmission: "Automatic",
-      },
-      {
-        condition: "New",
-      },
-      {
-        year: "2023",
-      },
-      {
-        Fueltype: "Diesel",
-      },
-      {
-        Enginesize: "4.8L",
-      },
-      {
-        Doors: "2-door",
-      },
-      {
-        Cylinders: "6",
-      },
-      {
-        Color: "Blue",
-      },
-      {
-        VIN: "1C4TJPBA1CD851233",
-      },
-    ],
+    keySpecs: {
+      make: "Mercedez Benz",
+      model: "Couple",
+      color: "Yellow",
+      Drivetype: "Front Wheel Drive",
+      transmission: "Automatic",
+      condition: "New",
+      year: "2023",
+      Fueltype: "Diesel",
+      Enginesize: "4.8L",
+      Doors: "2-door",
+      Cylinders: "6",
+      Color: "Blue",
+      VIN: "1C4TJPBA1CD851233",
+    },
     techSpecs: [
       "Backup camera",
       "Brake assist",
@@ -418,7 +288,7 @@ export const carData = [
   },
   {
     title: "Mercedez Benz AMG GT 2 door coupe yellow",
-    price: "$450000",
+    price: 30000,
     year: "2023",
     model: "couple",
     color: "yellow",
@@ -429,47 +299,21 @@ export const carData = [
     id: "C006",
     description:
       "How the adventure ended will be seen anon. Aouda was anxious, though she said nothing. As for Passepartout, he thought Mr. Fogg’s manoeuvre simply glorious. The captain had said “between eleven and twelve knots,” and the Henrietta confirmed his prediction.If, then—for there were “ifs” still—the sea did not become too boisterous, if the wind did not veer round to the east, if no accident happened to the boat or its machinery, the Henrietta might cross the three thousand miles from New York to Liverpool in the nine days, between the 12th and the 21st of December. It is true that, once arrived, the affair on board the Henrietta, added to that of the Bank of England, might create more difficulties for Mr. Fogg than he imagined or could desire.During the first days, they went along smoothly enough. The sea was not very unpropitious, the wind seemed stationary in the north-east, the sails were hoisted, and the Henrietta ploughed across the waves like a real trans-Atlantic steamer.",
-    keySpecs: [
-      {
-        make: "Mercedez Benz",
-      },
-      {
-        model: "Couple",
-      },
-      {
-        color: "yellow",
-      },
-      {
-        Drivetype: "Front Wheel Drive",
-      },
-      {
-        transmission: "Automatic",
-      },
-      {
-        condition: "New",
-      },
-      {
-        year: "2023",
-      },
-      {
-        Fueltype: "Diesel",
-      },
-      {
-        Enginesize: "4.8L",
-      },
-      {
-        Doors: "2-door",
-      },
-      {
-        Cylinders: "6",
-      },
-      {
-        Color: "Blue",
-      },
-      {
-        VIN: "1C4TJPBA1CD851233",
-      },
-    ],
+    keySpecs: {
+      make: "Mercedez Benz",
+      model: "Couple",
+      color: "Yellow",
+      Drivetype: "Front Wheel Drive",
+      transmission: "Automatic",
+      condition: "New",
+      year: "2023",
+      Fueltype: "Diesel",
+      Enginesize: "4.8L",
+      Doors: "2-door",
+      Cylinders: "6",
+      Color: "Blue",
+      VIN: "1C4TJPBA1CD851233",
+    },
     techSpecs: [
       "Backup camera",
       "Brake assist",
@@ -486,7 +330,7 @@ export const carData = [
   },
   {
     title: "Mercedez Benz AMG GT 2 door coupe yellow",
-    price: "$450000",
+    price: 45000,
     year: "2023",
     model: "couple",
     color: "yellow",
@@ -497,47 +341,21 @@ export const carData = [
     id: "C007",
     description:
       "How the adventure ended will be seen anon. Aouda was anxious, though she said nothing. As for Passepartout, he thought Mr. Fogg’s manoeuvre simply glorious. The captain had said “between eleven and twelve knots,” and the Henrietta confirmed his prediction.If, then—for there were “ifs” still—the sea did not become too boisterous, if the wind did not veer round to the east, if no accident happened to the boat or its machinery, the Henrietta might cross the three thousand miles from New York to Liverpool in the nine days, between the 12th and the 21st of December. It is true that, once arrived, the affair on board the Henrietta, added to that of the Bank of England, might create more difficulties for Mr. Fogg than he imagined or could desire.During the first days, they went along smoothly enough. The sea was not very unpropitious, the wind seemed stationary in the north-east, the sails were hoisted, and the Henrietta ploughed across the waves like a real trans-Atlantic steamer.",
-    keySpecs: [
-      {
-        make: "Mercedez Benz",
-      },
-      {
-        model: "Couple",
-      },
-      {
-        color: "yellow",
-      },
-      {
-        Drivetype: "Front Wheel Drive",
-      },
-      {
-        transmission: "Automatic",
-      },
-      {
-        condition: "New",
-      },
-      {
-        year: "2023",
-      },
-      {
-        Fueltype: "Diesel",
-      },
-      {
-        Enginesize: "4.8L",
-      },
-      {
-        Doors: "2-door",
-      },
-      {
-        Cylinders: "6",
-      },
-      {
-        Color: "Blue",
-      },
-      {
-        VIN: "1C4TJPBA1CD851233",
-      },
-    ],
+    keySpecs: {
+      make: "Mercedez Benz",
+      model: "Couple",
+      color: "Yellow",
+      Drivetype: "Front Wheel Drive",
+      transmission: "Automatic",
+      condition: "New",
+      year: "2023",
+      Fueltype: "Diesel",
+      Enginesize: "4.8L",
+      Doors: "2-door",
+      Cylinders: "6",
+      Color: "Blue",
+      VIN: "1C4TJPBA1CD851233",
+    },
     techSpecs: [
       "Backup camera",
       "Brake assist",
@@ -554,7 +372,7 @@ export const carData = [
   },
   {
     title: "Mercedez Benz AMG GT 2 door coupe yellow",
-    price: "$450000",
+    price: 22000,
     year: "2023",
     model: "couple",
     color: "yellow",
@@ -565,47 +383,21 @@ export const carData = [
     id: "C008",
     description:
       "How the adventure ended will be seen anon. Aouda was anxious, though she said nothing. As for Passepartout, he thought Mr. Fogg’s manoeuvre simply glorious. The captain had said “between eleven and twelve knots,” and the Henrietta confirmed his prediction.If, then—for there were “ifs” still—the sea did not become too boisterous, if the wind did not veer round to the east, if no accident happened to the boat or its machinery, the Henrietta might cross the three thousand miles from New York to Liverpool in the nine days, between the 12th and the 21st of December. It is true that, once arrived, the affair on board the Henrietta, added to that of the Bank of England, might create more difficulties for Mr. Fogg than he imagined or could desire.During the first days, they went along smoothly enough. The sea was not very unpropitious, the wind seemed stationary in the north-east, the sails were hoisted, and the Henrietta ploughed across the waves like a real trans-Atlantic steamer.",
-    keySpecs: [
-      {
-        make: "Mercedez Benz",
-      },
-      {
-        model: "Couple",
-      },
-      {
-        color: "yellow",
-      },
-      {
-        Drivetype: "Front Wheel Drive",
-      },
-      {
-        transmission: "Automatic",
-      },
-      {
-        condition: "New",
-      },
-      {
-        year: "2023",
-      },
-      {
-        Fueltype: "Diesel",
-      },
-      {
-        Enginesize: "4.8L",
-      },
-      {
-        Doors: "2-door",
-      },
-      {
-        Cylinders: "6",
-      },
-      {
-        Color: "Blue",
-      },
-      {
-        VIN: "1C4TJPBA1CD851233",
-      },
-    ],
+    keySpecs: {
+      make: "Mercedez Benz",
+      model: "Couple",
+      color: "Yellow",
+      Drivetype: "Front Wheel Drive",
+      transmission: "Automatic",
+      condition: "New",
+      year: "2023",
+      Fueltype: "Diesel",
+      Enginesize: "4.8L",
+      Doors: "2-door",
+      Cylinders: "6",
+      Color: "Blue",
+      VIN: "1C4TJPBA1CD851233",
+    },
     techSpecs: [
       "Backup camera",
       "Brake assist",
@@ -621,11 +413,11 @@ export const carData = [
     ],
   },
   {
-    title: "Mercedez Benz AMG GT 2 door coupe yellow",
-    price: "$450000",
+    title: "Audi A7 Sportback 5-door hatchback silver",
+    price: 18000,
     year: "2023",
     model: "couple",
-    color: "yellow",
+    color: "Green",
     fuel: "Diesel",
     transmission: "Automatic",
     mileage: "500km",
@@ -633,47 +425,22 @@ export const carData = [
     id: "C009",
     description:
       "How the adventure ended will be seen anon. Aouda was anxious, though she said nothing. As for Passepartout, he thought Mr. Fogg’s manoeuvre simply glorious. The captain had said “between eleven and twelve knots,” and the Henrietta confirmed his prediction.If, then—for there were “ifs” still—the sea did not become too boisterous, if the wind did not veer round to the east, if no accident happened to the boat or its machinery, the Henrietta might cross the three thousand miles from New York to Liverpool in the nine days, between the 12th and the 21st of December. It is true that, once arrived, the affair on board the Henrietta, added to that of the Bank of England, might create more difficulties for Mr. Fogg than he imagined or could desire.During the first days, they went along smoothly enough. The sea was not very unpropitious, the wind seemed stationary in the north-east, the sails were hoisted, and the Henrietta ploughed across the waves like a real trans-Atlantic steamer.",
-    keySpecs: [
-      {
-        make: "Mercedez Benz",
-      },
-      {
-        model: "Couple",
-      },
-      {
-        color: "yellow",
-      },
-      {
-        Drivetype: "Front Wheel Drive",
-      },
-      {
-        transmission: "Automatic",
-      },
-      {
-        condition: "New",
-      },
-      {
-        year: "2023",
-      },
-      {
-        Fueltype: "Diesel",
-      },
-      {
-        Enginesize: "4.8L",
-      },
-      {
-        Doors: "2-door",
-      },
-      {
-        Cylinders: "6",
-      },
-      {
-        Color: "Blue",
-      },
-      {
-        VIN: "1C4TJPBA1CD851233",
-      },
-    ],
+    keySpecs: {
+      make: "Mercedez Benz",
+      model: "Couple",
+      color: "Yellow",
+      Drivetype: "Front Wheel Drive",
+      transmission: "Automatic",
+      condition: "New",
+      year: "2023",
+      Fueltype: "Diesel",
+      Enginesize: "4.8L",
+      Doors: "2-door",
+      Cylinders: "6",
+      Color: "Blue",
+      VIN: "1C4TJPBA1CD851233",
+    },
+
     techSpecs: [
       "Backup camera",
       "Brake assist",

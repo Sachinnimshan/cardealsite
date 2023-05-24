@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 import {
   BG_COLOR,
+  BORDER_RADIUS,
   FONT_DARK,
   PRIMARY_BLACK,
   PRIMARY_ORANGE,
@@ -15,7 +16,7 @@ export const CarCardContainer = styled(Link)`
   display: flex;
   flex-direction: column;
   flex: ${(props) => (props.mobile ? "1" : "20%")};
-  border-radius: 0.5rem;
+  border-radius: ${BORDER_RADIUS};
   overflow: hidden;
   cursor: pointer;
   min-width: 300px;
@@ -37,7 +38,7 @@ export const CarCardImage = styled("img")`
 export const CarCardInfo = styled("div")`
   background-color: ${SECONDARY_BLACK};
   padding: 1rem 1.5rem;
-  border-radius: 0 0 0.5rem 0.5rem;
+  border-radius: 0 0 ${BORDER_RADIUS} ${BORDER_RADIUS};
   display: flex;
   flex-direction: column;
   gap: 0.5rem;

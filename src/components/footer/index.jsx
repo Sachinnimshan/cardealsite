@@ -1,31 +1,28 @@
 import React from "react";
 import { SiteLogo, SiteLogoImg } from "../../images";
-import {
-  CopyRights,
-  FooterColumn,
-  FooterDescription,
-  FooterText,
-  FooterTop,
-} from "./footer.styled";
+import { FooterColumn, FooterDescription } from "./footer.styled";
 import {
   FONT_SECONDARY,
+  PADDING_DESKTOP,
+  PADDING_MOBILE,
   PRIMARY_ORANGE,
   SECONDARY_BLACK,
   WEIGHT_600,
 } from "../../themes/common";
 import SocialMediaIcons from "../../common/social";
-import { CommonLayout } from "../../common/Layouts.styled";
+import { FlexContainer } from "../../common/Layouts.styled";
+import { TextView } from "../../themes/typography";
 
 function Footer(props) {
   return (
-    <CommonLayout
-      mobile={props.mobile}
+    <FlexContainer
+      padding={props.mobile ? PADDING_MOBILE : PADDING_DESKTOP}
       bgrColor={SECONDARY_BLACK}
-      display="flex"
       direction="column"
-      alignHorizontal="center"
+      alignX="center"
+      gap={2}
     >
-      <FooterTop>
+      <FlexContainer flex flexwrap alignX="space-between" gap={3}>
         <FooterColumn>
           <SiteLogo src={SiteLogoImg} alt="Vehica Logo" />
           <FooterDescription color={FONT_SECONDARY}>
@@ -36,21 +33,21 @@ function Footer(props) {
         </FooterColumn>
 
         <FooterColumn>
-          <FooterText size="22px" weight={WEIGHT_600} color={PRIMARY_ORANGE}>
+          <TextView size={1} weight={WEIGHT_600} color={PRIMARY_ORANGE}>
             (123) 456-78901
-          </FooterText>
-          <FooterText>
+          </TextView>
+          <TextView color={FONT_SECONDARY} size={0.01}>
             support@vehica.com <br /> West 12th Street <br /> New York, NY, USA
-          </FooterText>
+          </TextView>
         </FooterColumn>
-      </FooterTop>
-      <CopyRights>
-        <FooterText>
+      </FlexContainer>
+      <FlexContainer gap={1} alignY="center" flexwrap>
+        <TextView size={0.01} color={FONT_SECONDARY}>
           Copyright © 2023 | Design & Developed by Sachin Nimshan
-        </FooterText>
+        </TextView>
         <SocialMediaIcons color={SECONDARY_BLACK} bgrColor={FONT_SECONDARY} />
-      </CopyRights>
-    </CommonLayout>
+      </FlexContainer>
+    </FlexContainer>
   );
 }
 

@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { PRIMARY_ORANGE, PRIMARY_WHITE, WEIGHT_400, WEIGHT_500 } from "../../themes/common";
+import { BORDER_RADIUS, PRIMARY_ORANGE, PRIMARY_WHITE, WEIGHT_400, WEIGHT_500 } from "../../themes/common";
 
 export const ButtonContainer = styled("span")`
   background-color: ${(props) => props.bgrColor || PRIMARY_ORANGE};
@@ -12,7 +12,7 @@ export const ButtonContainer = styled("span")`
   text-align: center;
   height: fit-content;
   transition: all ease-in-out 0.2s;
-  border-radius: 5px;
+  border-radius: ${BORDER_RADIUS};
   white-space: nowrap;
   border: ${(props) => props.border && `2px solid ${PRIMARY_ORANGE}`};
   align-items: center;

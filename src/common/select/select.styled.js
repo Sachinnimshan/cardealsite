@@ -1,13 +1,14 @@
 import styled from "@emotion/styled";
 import {
   BG_COLOR,
+  BORDER_RADIUS,
   FONT_DARK,
   FONT_LIGHT,
   PRIMARY_BLACK,
 } from "../../themes/common";
 
 export const SelectBoxContainer = styled("select")`
-  border-radius: 5px;
+  border-radius: ${BORDER_RADIUS};
   padding: 0.75rem;
   cursor: pointer;
   flex: 1;

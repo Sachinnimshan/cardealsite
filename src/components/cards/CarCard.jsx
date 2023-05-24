@@ -1,44 +1,58 @@
 import React from "react";
 import {
+  BG_COLOR,
+  FONT_DARK,
   FONT_SECONDARY,
   PRIMARY_ORANGE,
   PRIMARY_WHITE,
+  SECONDARY_BLACK,
   WEIGHT_600,
 } from "../../themes/common";
-import {
-  CarCardContainer,
-  CarCardImage,
-  CarCardInfo,
-  CarCardInfoBottom,
-  CarCardText,
-} from "./cards.styled";
-import { Link } from "react-router-dom";
+import { CarCardContainer, CarCardImage } from "./cards.styled";
+import formatCurrency from "../../utils/currency";
+import { TextView } from "../../themes/typography";
+import { FlexContainer } from "../../common/Layouts.styled";
 
 function CarCard(props) {
   return (
     <CarCardContainer mobile={props.mobile} to={`/cars/${props?.id}`}>
       <CarCardImage src={props.images} />
-      <CarCardInfo>
-        <CarCardText>{props.title}</CarCardText>
-        <CarCardText
-          weight={WEIGHT_600}
-          color={PRIMARY_WHITE}
-          size="calc(1rem + 0.2vw)"
+      <FlexContainer
+        direction="column"
+        bgrColor={SECONDARY_BLACK}
+        padding="1rem"
+        gap={0.5}
+      >
+        <TextView size={0.1} color={BG_COLOR}>
+          {props.title}
+        </TextView>
+        <TextView weight={WEIGHT_600} color={PRIMARY_WHITE} size={0.25}>
+          {formatCurrency(props.price)}
+        </TextView>
+        <FlexContainer
+          flex
+          gap={1}
+          padding="1rem 0 0 0"
+          border={FONT_DARK}
+          padding="1rem 0 0 0"
         >
-          {props.price}
-        </CarCardText>
-        <CarCardInfoBottom>
-          <CarCardText bgrColor={PRIMARY_ORANGE} padding="2px 10px" size="14px">
+          <TextView
+            bgrColor={PRIMARY_ORANGE}
+            color={PRIMARY_WHITE}
+            padding="2px 10px"
+            radius
+            size={0.01}
+          >
             {props.year}
-          </CarCardText>
-          <CarCardText size="14px" color={FONT_SECONDARY}>
+          </TextView>
+          <TextView color={FONT_SECONDARY} size={0.01}>
             {props.transmission}
-          </CarCardText>
-          <CarCardText size="14px" color={FONT_SECONDARY}>
+          </TextView>
+          <TextView color={FONT_SECONDARY} size={0.01}>
             {props.fuel}
-          </CarCardText>
-        </CarCardInfoBottom>
-      </CarCardInfo>
+          </TextView>
+        </FlexContainer>
+      </FlexContainer>
     </CarCardContainer>
   );
 }

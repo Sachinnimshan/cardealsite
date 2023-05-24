@@ -2,14 +2,16 @@ import React from "react";
 import CarCard from "../../components/cards/CarCard";
 import { ArrowLeftIcon, ArrowRightIcon } from "../../icons";
 import { PRIMARY_ORANGE } from "../../themes/common";
-import { SectionBottom } from "../../themes/typography";
 import Button from "../button";
-import { SlideContainer, SlideController, SlideControls, SlideShowContainer } from "./slideshow.styled";
+import { FlexContainer } from "../Layouts.styled";
+import {
+  SlideController,
+} from "./slideshow.styled";
 
 function SlideShow(props) {
   return (
-    <SlideShowContainer>
-      <SlideContainer>
+    <FlexContainer direction="column">
+      <FlexContainer overflow gap={1} margin="2rem 0">
         {props.data?.map((item, index) => (
           <CarCard
             key={index}
@@ -23,19 +25,19 @@ function SlideShow(props) {
             id={item?.id}
           />
         ))}
-      </SlideContainer>
-      <SectionBottom>
-        <SlideControls>
+      </FlexContainer>
+      <FlexContainer alignX="space-between" flex>
+        <FlexContainer alignY="center" gap={1}>
           <SlideController>
             <ArrowLeftIcon />
           </SlideController>
           <SlideController>
             <ArrowRightIcon />
           </SlideController>
-        </SlideControls>
+        </FlexContainer>
         <Button bgrColor={PRIMARY_ORANGE} text="Load More" maxWidth />
-      </SectionBottom>
-    </SlideShowContainer>
+      </FlexContainer>
+    </FlexContainer>
   );
 }
 

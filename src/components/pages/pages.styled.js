@@ -1,8 +1,9 @@
 import styled from "@emotion/styled";
+import { BORDER_RADIUS } from "../../themes/common";
 
 export const CarDetailsImage = styled("img")`
   max-width: 800px;
-  border-radius: 10px;
+  border-radius: ${BORDER_RADIUS};
   width: 100%;
 `;
 

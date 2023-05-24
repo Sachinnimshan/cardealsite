@@ -1,38 +1,39 @@
 import React from "react";
 import Button from "../../common/button";
-import { CommonLayout } from "../../common/Layouts.styled";
+import { FlexContainer } from "../../common/Layouts.styled";
 import SocialMediaIcons from "../../common/social";
 import Tabs from "../../common/tab";
-import { BG_COLOR, PRIMARY_ORANGE } from "../../themes/common";
 import {
-  SectionBottom,
-  SectionHeader,
-  SectionHeaderColumn,
-  SectionSubTitle,
-  SectionTitle,
-} from "../../themes/typography";
+  BG_COLOR,
+  PADDING_DESKTOP,
+  PADDING_MOBILE,
+  PRIMARY_ORANGE,
+  SECONDARY_BLACK,
+  WEIGHT_400,
+  WEIGHT_700,
+} from "../../themes/common";
+import { TextView } from "../../themes/typography";
 import CarCard from "../cards/CarCard";
-import {
-  FeatureCardContainer,
-} from "./sections.styled";
 
 function Featured(props) {
   const tabs = ["New", "Used"];
   return (
-    <CommonLayout
-      mobile={props.mobile}
-      display="flex"
+    <FlexContainer
+      padding={props.mobile ? PADDING_MOBILE : PADDING_DESKTOP}
       direction="column"
-      gap="2rem"
     >
-      <SectionHeader>
-        <SectionHeaderColumn column>
-          <SectionSubTitle>Handy picked</SectionSubTitle>
-          <SectionTitle>Featured Listings</SectionTitle>
-        </SectionHeaderColumn>
+      <FlexContainer alignX="space-between" flexwrap margin="1rem 0">
+        <FlexContainer direction="column" gap={1.5} padding="2rem 0">
+          <TextView size={0.75} weight={WEIGHT_400} color={PRIMARY_ORANGE}>
+            Handy picked
+          </TextView>
+          <TextView size={2} weight={WEIGHT_700} color={SECONDARY_BLACK}>
+            Featured Listings
+          </TextView>
+        </FlexContainer>
         <Tabs data={tabs} bgrColor={BG_COLOR} />
-      </SectionHeader>
-      <FeatureCardContainer>
+      </FlexContainer>
+      <FlexContainer gap={1} flexwrap>
         {props.data?.slice(0, 7).map((item, index) => (
           <CarCard
             key={index}
@@ -46,12 +47,12 @@ function Featured(props) {
             id={item?.id}
           />
         ))}
-      </FeatureCardContainer>
-      <SectionBottom>
+      </FlexContainer>
+      <FlexContainer alignX="space-between" flexwrap gap={1} margin="1rem 0">
         <SocialMediaIcons />
         <Button text="View 29 New" bgrColor={PRIMARY_ORANGE} maxWidth />
-      </SectionBottom>
-    </CommonLayout>
+      </FlexContainer>
+    </FlexContainer>
   );
 }
 

@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import Button from "../../common/button";
-import { CommonLayout, FlexContainer } from "../../common/Layouts.styled";
+import { FlexContainer } from "../../common/Layouts.styled";
 import SlideShow from "../../common/slideshow";
 import {
   CheckOutlinedIcon,
@@ -16,6 +16,8 @@ import { HistoryImg, VehicleHistoryImage } from "../../images";
 import {
   BG_COLOR_BLUE,
   FONT_SECONDARY,
+  PADDING_DESKTOP,
+  PADDING_MOBILE,
   PRIMARY_ORANGE,
   PRIMARY_WHITE,
   SECONDARY_BLACK,
@@ -26,13 +28,14 @@ import {
   WEIGHT_700,
 } from "../../themes/common";
 import { TextView } from "../../themes/typography";
+import formatCurrency from "../../utils/currency";
 import ContactForm from "../contact";
 import { CarDetailsImage } from "./pages.styled";
 
 function CarDetails(props) {
-  const [data, setData] = useState({});
+  const [data, setData] = useState([]);
   const { id } = useParams();
-  console.log("Key Specs", data.keySpecs);
+  console.log("Key Specs", data.price);
 
   useEffect(() => {
     if (id) {
@@ -42,7 +45,10 @@ function CarDetails(props) {
   }, [id]);
 
   return (
-    <CommonLayout mobile={props.mobile} direction="column" flexwrap>
+    <FlexContainer
+      padding={props.mobile ? PADDING_MOBILE : PADDING_DESKTOP}
+      direction="column"
+    >
       <FlexContainer gap={0.75} margin={!props.mobile && "4rem 0 2rem 0"}>
         <TextView size={0.05}>Home Page</TextView>
         <TextView size={0.05}>|</TextView>
@@ -149,28 +155,32 @@ function CarDetails(props) {
             </FlexContainer>
           </FlexContainer>
           <TextView size={1} color={PRIMARY_ORANGE} weight={WEIGHT_600}>
-            {data?.price}
+            {data?.price && formatCurrency(data?.price)}
           </TextView>
-          {/* <FlexContainer
-            radius
-            bgrColor={BG_COLOR_BLUE}
-            direction="column"
-            padding="1rem 2rem"
-            gap={0.5}
-          >
-            {data?.keySpecs?.map((item, index) => (
-              <FlexContainer key={index} gap={5}>
-                <TextView
-                  color={SECONDARY_BLACK}
-                  weight={WEIGHT_500}
-                  size={0.02}
-                >
-                  {item}
-                </TextView>
-                <TextView color={SECONDARY_BLACK} size={0.02}></TextView>
-              </FlexContainer>
-            ))}
-          </FlexContainer> */}
+          {data?.keySpecs && (
+            <FlexContainer
+              radius
+              bgrColor={BG_COLOR_BLUE}
+              direction="column"
+              padding="1rem 2rem"
+              gap={0.5}
+            >
+              {Object.keys(data?.keySpecs)?.map((item, index) => (
+                <FlexContainer key={index} gap={5}>
+                  <TextView
+                    color={SECONDARY_BLACK}
+                    weight={WEIGHT_600}
+                    size={0.05}
+                  >
+                    {item}
+                  </TextView>
+                  <TextView color={SECONDARY_BLACK} size={0.05}>
+                    {data?.keySpecs[item]}
+                  </TextView>
+                </FlexContainer>
+              ))}
+            </FlexContainer>
+          )}
           <FlexContainer direction="column" gap={0.75}>
             <Button
               text={
@@ -200,8 +210,8 @@ function CarDetails(props) {
         </FlexContainer>
       </FlexContainer>
       <ContactForm mobile={props.mobile} />
-      <SlideShow data={props.data} mobile={props.mobile}/>
-    </CommonLayout>
+      <SlideShow data={props.data} mobile={props.mobile} />
+    </FlexContainer>
   );
 }
 

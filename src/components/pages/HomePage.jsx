@@ -5,17 +5,17 @@ import Home from "../home";
 import Popular from "../sections/Popular";
 import Service from "../sections/Service";
 import Mobile from "../sections/Mobile";
-import { PageContainer } from "../../common/Layouts.styled";
+import { FlexContainer, PageContainer } from "../../common/Layouts.styled";
 
 function HomePage(props) {
   return (
-    <PageContainer>
+    <FlexContainer direction="column">
       <Home mobile={props.mobile} />
       <Featured mobile={props.mobile} data={carData} />
-      <Popular mobile={props.mobile} carData={carData}  data={vehicleBrands} />
+      <Popular mobile={props.mobile} carData={carData} data={vehicleBrands} />
       <Service mobile={props.mobile} data={service} />
       <Mobile mobile={props.mobile} data={mobileData} />
-    </PageContainer>
+    </FlexContainer>
   );
 }
 

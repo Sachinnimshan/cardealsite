@@ -24,17 +24,11 @@ function Home(props) {
             We can help you find the best car. Check our reviews, <br /> compare
             models and find cars for sale.
           </SectionText>
-          {!props.mobile && (
-            <Button
-              text="About Us"
-              maxWidth="125px"
-            />
-          )}
+          {!props.mobile && <Button text="About Us" maxWidth="125px" />}
         </HomeTopLeft>
         <SearchBox />
       </HomeTop>
       <HomeBanner src={HomeImg} alt="Silver Benz car" mobile={props.mobile} />
-     
     </HomeContainer>
   );
 }

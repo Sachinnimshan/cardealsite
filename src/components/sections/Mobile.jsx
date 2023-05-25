@@ -2,70 +2,105 @@ import React from "react";
 import Button from "../../common/button";
 import { FlexContainer } from "../../common/Layouts.styled";
 import { AppleIcon, CheckIcon, IconWrapper, PlaystoreIcon } from "../../icons";
-import { MobileAppImg } from "../../images";
-import { PADDING_DESKTOP, PADDING_MOBILE, PRIMARY_ORANGE, PRIMARY_WHITE } from "../../themes/common";
-import { SectionTitle } from "../../themes/typography";
+import { MobileApp, MobileAppImg } from "../../images";
 import {
-  MobileApp,
-  MobileAppItem,
-  MobileAppProsItem,
-  MobileBanner,
-  MobileBannerColumn,
-} from "./sections.styled";
+  FONT_SECONDARY,
+  PADDING_DESKTOP,
+  PADDING_MOBILE,
+  PRIMARY_ORANGE,
+  PRIMARY_WHITE,
+  SECONDARY_BLACK,
+  WEIGHT_700,
+} from "../../themes/common";
+import { TextView } from "../../themes/typography";
 
 function Mobile(props) {
   return (
     <FlexContainer
       padding={props.mobile ? PADDING_MOBILE : PADDING_DESKTOP}
-      gap={2}
+      alignX="center"
+      flex
       flexwrap
-      alignX="space-between"
+      gap={2}
     >
-      <MobileBanner bgrColor={PRIMARY_ORANGE} mobile={props.mobile}>
-        <MobileBannerColumn>
-          <SectionTitle color={PRIMARY_WHITE}>
+      <FlexContainer
+        bgrColor={PRIMARY_ORANGE}
+        padding="2rem"
+        radius
+        flex
+        alignX="space-between"
+        gap={1}
+        flexwrap
+      >
+        <FlexContainer direction="column" gap={1}>
+          <TextView color={PRIMARY_WHITE} weight={WEIGHT_700} size={2}>
             Download <br />
             our app
-          </SectionTitle>
-          <MobileAppItem>
-            <IconWrapper size="1.5rem" color={PRIMARY_ORANGE}>
+          </TextView>
+          <FlexContainer
+            padding="0.75rem"
+            alignY="center"
+            gap={0.5}
+            bgrColor={PRIMARY_WHITE}
+            radius
+          >
+            <IconWrapper color={PRIMARY_ORANGE} size="1.5rem">
               <AppleIcon />
             </IconWrapper>
-            <span>For iOS</span>
-          </MobileAppItem>
-          <MobileAppItem>
-            <IconWrapper size="1.5em" color={PRIMARY_ORANGE}>
+            <TextView color={SECONDARY_BLACK} size={0.1} nowrap>
+              For iOS
+            </TextView>
+          </FlexContainer>
+          <FlexContainer
+            padding="0.75rem"
+            alignY="center"
+            gap={0.5}
+            bgrColor={PRIMARY_WHITE}
+            radius
+          >
+            <IconWrapper color={PRIMARY_ORANGE} size="1.5rem">
               <PlaystoreIcon />
             </IconWrapper>
-            <span>For Android</span>
-          </MobileAppItem>
-        </MobileBannerColumn>
-        <MobileApp src={MobileAppImg} />
-      </MobileBanner>
-      <MobileBanner mobile={props.mobile}>
-        <MobileBannerColumn>
-          <SectionTitle color={PRIMARY_WHITE}>
+            <TextView color={SECONDARY_BLACK} size={0.1} nowrap>
+              For Android
+            </TextView>
+          </FlexContainer>
+        </FlexContainer>
+        <MobileApp src={MobileAppImg} mobile={props.mobile} />
+      </FlexContainer>
+
+      <FlexContainer
+        bgrColor={SECONDARY_BLACK}
+        padding="2rem"
+        radius
+        flex
+        flexwrap
+        gap={2}
+      >
+        <FlexContainer direction="column" gap={1}>
+          <TextView color={PRIMARY_WHITE} weight={WEIGHT_700} size={2}>
             How to buy <br />a car?
-          </SectionTitle>
+          </TextView>
           <Button
             text="Read more"
             bgrColor="transparent"
+            border
             hoverBgColor={PRIMARY_ORANGE}
-            border={`2px solid ${PRIMARY_ORANGE}`}
-            maxWidth
           />
-        </MobileBannerColumn>
-        <MobileBannerColumn>
+        </FlexContainer>
+        <FlexContainer direction="column" gap={0.5} alignX="center">
           {props.data?.map((item, index) => (
-            <MobileAppProsItem key={index}>
+            <FlexContainer key={index} gap={1} alignY="center">
               <IconWrapper color={PRIMARY_ORANGE}>
                 <CheckIcon />
               </IconWrapper>
-              {item}
-            </MobileAppProsItem>
+              <TextView color={FONT_SECONDARY} size={0.25} nowrap>
+                {item}
+              </TextView>
+            </FlexContainer>
           ))}
-        </MobileBannerColumn>
-      </MobileBanner>
+        </FlexContainer>
+      </FlexContainer>
     </FlexContainer>
   );
 }

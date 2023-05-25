@@ -7,6 +7,8 @@ import { EmailIcon, IconWrapper, LocationIcon, PhoneIcon } from "../../icons";
 import { ContactImage, EmilyImg } from "../../images";
 import {
   BG_COLOR_BLUE,
+  PADDING_DESKTOP,
+  PADDING_MOBILE,
   PRIMARY_ORANGE,
   PRIMARY_WHITE,
   SECONDARY_BLACK,
@@ -18,7 +20,7 @@ import { TextView } from "../../themes/typography";
 function ContactForm(props) {
   return (
     <FlexContainer
-      mobile={props.mobile}
+      mobile={props.mobile ? PADDING_MOBILE : PADDING_DESKTOP}
       bgrColor={BG_COLOR_BLUE}
       gap={2}
       padding="2rem 1.5rem"
@@ -26,20 +28,27 @@ function ContactForm(props) {
       radius
       flexwrap
       alignY="center"
+      position="relative"
     >
-      <FlexContainer direction="column" gap={1}>
-        <TextView color={SECONDARY_BLACK} weight={WEIGHT_600} size={0.3}>
+      <FlexContainer direction="column" gap={1.5}>
+        <TextView color={SECONDARY_BLACK} weight={WEIGHT_600} size={1}>
           Send Message
         </TextView>
-        <FlexContainer alignX="space-between" flexwrap gap={1}>
+        <FlexContainer alignX="space-between" flexwrap gap={1} flex>
           <Input placeholder="Name" />
           <Input placeholder="Email*" />
           <Input placeholder="Phone" />
         </FlexContainer>
         <Input placeholder="Message*" />
-        <FlexContainer alignX="space-between" alignY="center" gap={2} flexwrap>
+        <FlexContainer
+          alignX="space-between"
+          alignY="center"
+          gap={2}
+          flexwrap
+          flex
+        >
           <CheckBox />
-          <TextView size={0.1} color={SECONDARY_BLACK}>
+          <TextView size={0.01} color={SECONDARY_BLACK}>
             I accept the privacy policy
           </TextView>
           <Button text="Send" />

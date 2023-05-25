@@ -1,5 +1,6 @@
 import React from "react";
 import { FlexContainer } from "../../common/Layouts.styled";
+import SectionHeader from "../../common/sectioncommons/SectionHeader";
 import SlideShow from "../../common/slideshow";
 import Tabs from "../../common/tab";
 import {
@@ -18,12 +19,9 @@ function Popular(props) {
       bgrColor={BG_COLOR_BLUE}
       direction="column"
     >
-      <FlexContainer flex direction="column" gap={2}>
-        <TextView size={2} weight={WEIGHT_700} color={SECONDARY_BLACK}>
-          Popular Makes
-        </TextView>
+      <SectionHeader title=" Popular Makes" alignX = "space-between" mobile={props.mobile}>
         <Tabs data={props.data} bgrColor={PRIMARY_WHITE} />
-      </FlexContainer>
+      </SectionHeader>
       <SlideShow data={props.carData} mobile={props.mobile} />
     </FlexContainer>
   );

@@ -23,15 +23,15 @@ function CarCard(props) {
         padding="1rem"
         gap={0.5}
       >
-        <TextView size={0.1} color={BG_COLOR}>
-          {props.title}
+        <TextView size={0.1} color={PRIMARY_WHITE} align="left">
+          {props.title.substr(0, 28)}{props.title.length >= 28 && `...`}
         </TextView>
         <TextView weight={WEIGHT_600} color={PRIMARY_WHITE} size={0.25}>
           {formatCurrency(props.price)}
         </TextView>
         <FlexContainer
           flex
-          gap={1}
+          gap={2}
           padding="1rem 0 0 0"
           border={FONT_DARK}
           padding="1rem 0 0 0"

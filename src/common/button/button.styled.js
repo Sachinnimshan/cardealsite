@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { BORDER_RADIUS, PRIMARY_ORANGE, PRIMARY_WHITE, WEIGHT_400, WEIGHT_500 } from "../../themes/common";
 
-export const ButtonContainer = styled("span")`
+export const ButtonContainer = styled("div")`
   background-color: ${(props) => props.bgrColor || PRIMARY_ORANGE};
   color: ${(props) => props.color || PRIMARY_WHITE};
   font-size: 15px;

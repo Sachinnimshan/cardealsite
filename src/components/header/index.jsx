@@ -54,7 +54,7 @@ function Header({ mobile }) {
             <UserIconLight />
           </IconWrapper>
           {loginData?.map((item, index) => (
-            <TextView key={index} scrolledDown={scrolledDown && !mobile} color={scrolledDown ? SECONDARY_BLACK : BG_COLOR}>
+            <TextView key={index} scrolledDown={scrolledDown && !mobile} color={scrolledDown ? SECONDARY_BLACK : BG_COLOR} size={0.05}>
               {item}
             </TextView>
           ))}

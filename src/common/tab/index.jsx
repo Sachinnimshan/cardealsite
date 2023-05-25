@@ -16,7 +16,11 @@ function Tabs(props) {
           active={activeTab === index}
           bgrColor={props.bgrColor}
         >
-          <TabText active={activeTab === index} color={FONT_DARK}>
+          <TabText
+            active={activeTab === index}
+            color={FONT_DARK}
+            fontSize="15px"
+          >
             {item}
           </TabText>
           {props.count && (

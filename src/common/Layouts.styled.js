@@ -3,7 +3,7 @@ import { BORDER_RADIUS } from "../themes/common";
 
 export const FlexContainer = styled("div")`
   display: flex;
-  gap: ${(props) => `${props.gap}vw`};
+  gap: ${(props) => `${props.gap}rem`};
   align-items: ${(props) => props.alignY};
   flex-direction: ${(props) => props.direction};
   justify-content: ${(props) => props.alignX};
@@ -17,4 +17,8 @@ export const FlexContainer = styled("div")`
   max-width: ${(props) => props.maxWidth};
   position: ${(props) => props.position};
   border-top: ${(props) => `1px solid ${props.border}`};
+  overflow-x: ${(props) => props.overflowX && "scroll"};
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;

@@ -4,14 +4,12 @@ import { ArrowLeftIcon, ArrowRightIcon } from "../../icons";
 import { PRIMARY_ORANGE } from "../../themes/common";
 import Button from "../button";
 import { FlexContainer } from "../Layouts.styled";
-import {
-  SlideController,
-} from "./slideshow.styled";
+import { SlideController } from "./slideshow.styled";
 
 function SlideShow(props) {
   return (
     <FlexContainer direction="column">
-      <FlexContainer overflow gap={1} margin="2rem 0">
+      <FlexContainer gap={1} overflowX>
         {props.data?.map((item, index) => (
           <CarCard
             key={index}
@@ -26,7 +24,7 @@ function SlideShow(props) {
           />
         ))}
       </FlexContainer>
-      <FlexContainer alignX="space-between" flex>
+      <FlexContainer alignX="space-between" flex margin="1rem 0">
         <FlexContainer alignY="center" gap={1}>
           <SlideController>
             <ArrowLeftIcon />

@@ -19,12 +19,11 @@ function Service(props) {
       direction="column"
       gap={2}
       alignY="center"
-      alignX="center"
     >
       <TextView size={2} weight={WEIGHT_700} color={SECONDARY_BLACK}>
         Why choose us ?
       </TextView>
-      <FlexContainer gap={3} margin="3rem 0" alignX="center" flexwrap flex>
+      <FlexContainer flex direction={props.mobile && "column"} gap={2}>
         {props.data?.map((item, index) => (
           <FlexContainer
             key={index}
@@ -45,7 +44,13 @@ function Service(props) {
             <TextView size={0.4} weight={WEIGHT_600} color={SECONDARY_BLACK}>
               {item?.title}
             </TextView>
-            <TextView size={0.01} weight={WEIGHT_400} color={FONT_LIGHT}>
+            <TextView
+              size={0.01}
+              weight={WEIGHT_400}
+              color={FONT_LIGHT}
+              lineHeight={0.25}
+              maxWidth="400px"
+            >
               {item?.description}
             </TextView>
           </FlexContainer>

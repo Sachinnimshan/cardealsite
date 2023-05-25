@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../../common/button";
 import { FlexContainer } from "../../common/Layouts.styled";
+import SectionHeader from "../../common/sectioncommons/SectionHeader";
 import SocialMediaIcons from "../../common/social";
 import Tabs from "../../common/tab";
 import {
@@ -8,11 +9,7 @@ import {
   PADDING_DESKTOP,
   PADDING_MOBILE,
   PRIMARY_ORANGE,
-  SECONDARY_BLACK,
-  WEIGHT_400,
-  WEIGHT_700,
 } from "../../themes/common";
-import { TextView } from "../../themes/typography";
 import CarCard from "../cards/CarCard";
 
 function Featured(props) {
@@ -22,17 +19,13 @@ function Featured(props) {
       padding={props.mobile ? PADDING_MOBILE : PADDING_DESKTOP}
       direction="column"
     >
-      <FlexContainer alignX="space-between" flexwrap margin="1rem 0">
-        <FlexContainer direction="column" gap={1.5} padding="2rem 0">
-          <TextView size={0.75} weight={WEIGHT_400} color={PRIMARY_ORANGE}>
-            Handy picked
-          </TextView>
-          <TextView size={2} weight={WEIGHT_700} color={SECONDARY_BLACK}>
-            Featured Listings
-          </TextView>
-        </FlexContainer>
+      <SectionHeader
+        subTitle="Handy picked"
+        title="Featured Listings"
+        mobile={props.mobile}
+      >
         <Tabs data={tabs} bgrColor={BG_COLOR} />
-      </FlexContainer>
+      </SectionHeader>
       <FlexContainer gap={1} flexwrap>
         {props.data?.slice(0, 7).map((item, index) => (
           <CarCard

@@ -18,16 +18,19 @@ export const CarCardContainer = styled(Link)`
   flex: ${(props) => (props.mobile ? "1" : "20%")};
   border-radius: ${BORDER_RADIUS};
   overflow: hidden;
+  position: relative;
   cursor: pointer;
   min-width: 300px;
   text-decoration: none;
   transition: all ease-in-out 0.3s;
+  border: ${(props) => `1px solid ${props.border}`};
 `;
 
 export const CarCardImage = styled("img")`
   border-radius: 0.5rem 0.5rem 0 0;
   transition: all ease-in-out 0.3s;
   overflow: hidden;
+  max-width: 100%;
   &:hover {
     transform: scale(1.05);
     overflow: hidden;
@@ -35,29 +38,14 @@ export const CarCardImage = styled("img")`
   }
 `;
 
-export const CarCardInfo = styled("div")`
-  background-color: ${SECONDARY_BLACK};
-  padding: 1rem 1.5rem;
-  border-radius: 0 0 ${BORDER_RADIUS} ${BORDER_RADIUS};
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  z-index: 500;
-`;
-
-export const CarCardInfoBottom = styled("div")`
-  padding: 1.5rem 0;
-  border-top: 1px solid ${FONT_DARK};
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-`;
-
-export const CarCardText = styled("span")`
-  color: ${(props) => props.color || BG_COLOR};
-  border-radius: ${(props) => props.radius || "0.25rem"};
-  background-color: ${(props) => props.bgrColor};
-  padding: ${(props) => props.padding};
-  font-size: ${(props) => props.size || "1rem"};
-  font-weight: ${(props) => props.weight || WEIGHT_400};
+export const FeaturedTag = styled("span")`
+  background-color: ${PRIMARY_ORANGE};
+  color: ${PRIMARY_WHITE};
+  font-size: 14px;
+  font-weight: ${WEIGHT_500};
+  position: absolute;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  z-index: 2000;
+  overflow: hidden;
 `;

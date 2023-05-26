@@ -6,7 +6,8 @@ import useResponsive from "./hooks/useResponsive";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./components/pages/HomePage";
 import CarDetails from "./components/pages/CarDetails";
-import { carData } from "./common/data";
+import { carData, conditionTabs } from "./common/data";
+import SearchPage from "./components/pages/SearchPage";
 
 function App() {
   const mobile = useResponsive();
@@ -16,7 +17,14 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage mobile={mobile} />} />
-          <Route path="/cars/:id" element={<CarDetails mobile={mobile} data={carData}/>}/>
+          <Route
+            path="/cars/:id"
+            element={<CarDetails mobile={mobile} data={carData} />}
+          />
+          <Route
+            path="/search"
+            element={<SearchPage mobile={mobile} data={carData} />}
+          />
         </Routes>
       </BrowserRouter>
       <Footer mobile={mobile} />

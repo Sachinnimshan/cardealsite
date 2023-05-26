@@ -2,11 +2,15 @@ import React from "react";
 import { FlexContainer } from "../Layouts.styled";
 import { TextView } from "../../themes/typography";
 import { ArrowRightIcon, IconWrapper } from "../../icons";
-import { FONT_SECONDARY, PRIMARY_ORANGE } from "../../themes/common";
+import {
+  FONT_SECONDARY,
+  PRIMARY_ORANGE,
+  PRIMARY_WHITE,
+} from "../../themes/common";
 
 function BreadCrumbs(props) {
   return (
-    <FlexContainer flex gap={1} alignY="center" margin={props.mobile ? "0 0 1rem 0" : "2rem 0"}>
+    <FlexContainer flex gap={1} alignY="center" bgrColor={PRIMARY_WHITE}>
       <TextView size={0.05}>Home page</TextView>
       <IconWrapper color={FONT_SECONDARY}>
         <ArrowRightIcon />

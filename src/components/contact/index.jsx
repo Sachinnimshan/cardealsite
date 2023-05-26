@@ -34,7 +34,7 @@ function ContactForm(props) {
         <TextView color={SECONDARY_BLACK} weight={WEIGHT_600} size={1}>
           Send Message
         </TextView>
-        <FlexContainer alignX="space-between" flexwrap gap={1} flex>
+        <FlexContainer  gap={1} flexwrap>
           <Input placeholder="Name" />
           <Input placeholder="Email*" />
           <Input placeholder="Phone" />

@@ -9,6 +9,7 @@ export const PRIMARY_WHITE = "#ffffff";
 export const FONT_SECONDARY = "#98A1B2";
 export const BG_COLOR = "#f2f2f2";
 export const BG_COLOR_BLUE = "#EFF3FA";
+export const BORDER_COLOR = "#E7EDF3";
 
 export const WEIGHT_400 = "400";
 export const WEIGHT_500 = "500";
@@ -17,5 +18,9 @@ export const WEIGHT_700 = "700";
 
 export const PADDING_MOBILE = "2rem 1rem";
 export const PADDING_DESKTOP = "3rem 4rem";
+export const PADDING_MOBILE_X = "1rem";
+export const PADDING_DESKTOP_X = "4rem";
+export const PADDING_MOBILE_Y = "2rem";
+export const PADDING_DESKTOP_Y = "3rem";
 
 export const BORDER_RADIUS = "0.5rem";

@@ -28,13 +28,13 @@ function Mobile(props) {
         padding="2rem"
         radius
         flex
-        alignX="space-between"
+        alignX={props.mobile ? "center" : "space-between"}
         gap={1}
         flexwrap
       >
-        <FlexContainer direction="column" gap={1}>
+        <FlexContainer direction="column" gap={1} flex={props.mobile}>
           <TextView color={PRIMARY_WHITE} weight={WEIGHT_700} size={2}>
-            Download <br />
+            Download {!props.mobile && <br />}
             our app
           </TextView>
           <FlexContainer
@@ -75,11 +75,12 @@ function Mobile(props) {
         radius
         flex
         flexwrap
+        alignX={props.mobile && "center"}
         gap={2}
       >
         <FlexContainer direction="column" gap={1}>
           <TextView color={PRIMARY_WHITE} weight={WEIGHT_700} size={2}>
-            How to buy <br />a car?
+            How to buy {!props.mobile && <br />}a car?
           </TextView>
           <Button
             text="Read more"

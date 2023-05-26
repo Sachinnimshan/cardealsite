@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  BG_COLOR,
   FONT_DARK,
   FONT_SECONDARY,
   PRIMARY_ORANGE,
@@ -8,32 +7,47 @@ import {
   SECONDARY_BLACK,
   WEIGHT_600,
 } from "../../themes/common";
-import { CarCardContainer, CarCardImage } from "./cards.styled";
+import { CarCardContainer, CarCardImage, FeaturedTag } from "./cards.styled";
 import formatCurrency from "../../utils/currency";
 import { TextView } from "../../themes/typography";
 import { FlexContainer } from "../../common/Layouts.styled";
 
 function CarCard(props) {
   return (
-    <CarCardContainer mobile={props.mobile} to={`/cars/${props?.id}`}>
+    <CarCardContainer
+      mobile={props.mobile}
+      to={`/cars/${props?.id}`}
+      border={props.border}
+    >
+      {props.featured && <FeaturedTag>Featured</FeaturedTag>}
       <CarCardImage src={props.images} />
       <FlexContainer
         direction="column"
-        bgrColor={SECONDARY_BLACK}
+        bgrColor={props.bgrColor || SECONDARY_BLACK}
         padding="1rem"
         gap={0.5}
+        zIndex="1000"
       >
-        <TextView size={0.1} color={PRIMARY_WHITE} align="left">
-          {props.title.substr(0, 28)}{props.title.length >= 28 && `...`}
+        <TextView
+          size={0.1}
+          color={props.titleColor || PRIMARY_WHITE}
+          align="left"
+        >
+          {props.title.substr(0, 28)}
+          {props.title.length >= 28 && `...`}
         </TextView>
-        <TextView weight={WEIGHT_600} color={PRIMARY_WHITE} size={0.25}>
+        <TextView
+          weight={WEIGHT_600}
+          color={props.priceColor || PRIMARY_WHITE}
+          size={0.25}
+        >
           {formatCurrency(props.price)}
         </TextView>
         <FlexContainer
           flex
           gap={2}
           padding="1rem 0 0 0"
-          border={FONT_DARK}
+          borderTop={props.borderTop || FONT_DARK}
           padding="1rem 0 0 0"
         >
           <TextView

@@ -35,4 +35,11 @@ export const TextView = styled("span")`
   max-width: ${(props) => props.maxWidth};
   width: ${(props) => props.fullWidth && "100%"};
   display: flex;
+  &:hover {
+    color: ${(props) => props.hoverColor};
+    background-color: ${(props) => props.hoverBgColor};
+    opacity: ${(props) => props.hover && "0.9"};
+    transition: all ease-in-out 0.2s;
+  }
 `;
+

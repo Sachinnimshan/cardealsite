@@ -16,9 +16,12 @@ export const FlexContainer = styled("div")`
   overflow: ${(props) => props.overflow && "hidden"};
   max-width: ${(props) => props.maxWidth};
   position: ${(props) => props.position};
-  border-top: ${(props) => `1px solid ${props.border}`};
+  border-top: ${(props) => `1px solid ${props.borderTop}`};
+  border: ${(props) => props.border && `1px solid ${props.border}`};
   overflow-x: ${(props) => props.overflowX && "scroll"};
+  z-index: ${(props) => props.zIndex};
   &::-webkit-scrollbar {
     display: none;
   }
+
 `;

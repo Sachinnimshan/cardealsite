@@ -51,14 +51,12 @@ export const HomeTopLeft = styled("div")`
 `;
 
 export const HomeBannerText = styled("span")`
-  font-size: calc(1rem + 4vw);
+  font-size: calc(1rem + 3.5vw);
   color: ${PRIMARY_WHITE};
   font-weight: 700;
   line-height: calc(1rem + 6vw);
   text-align: ${(props) => props.mobile && "center"};
-  
 `;
-
 
 export const AboutUsButton = styled("span")`
   border: 2px solid ${PRIMARY_ORANGE};

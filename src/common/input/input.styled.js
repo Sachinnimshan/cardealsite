@@ -1,22 +1,15 @@
 import styled from "@emotion/styled";
-import {
-  BG_COLOR,
-  BORDER_RADIUS,
-  FONT_DARK,
-  FONT_SECONDARY,
-  PRIMARY_WHITE,
-} from "../../themes/common";
+import { BORDER_RADIUS, FONT_DARK } from "../../themes/common";
 
 export const InputContainer = styled("input")`
-  background-color: ${PRIMARY_WHITE};
-  border-radius: ${BORDER_RADIUS};
   font-size: 14px;
   color: ${FONT_DARK};
-  padding: 1rem;
+  padding: 0.75rem 0;
   display: flex;
-  flex: 1;
+  width: 100%;
   cursor: pointer;
-  border: 2px solid ${BG_COLOR};
+  border-radius: ${BORDER_RADIUS};
+  border: none;
   &:focus {
     outline: none;
   }

@@ -40,7 +40,12 @@ function Home(props) {
           >
             Find your {!props.mobile && <br />} dream car
           </TextView>
-          <TextView size={0.05} color={FONT_SECONDARY} lineHeight={0.05}>
+          <TextView
+            size={0.05}
+            color={FONT_SECONDARY}
+            lineHeight={0.05}
+            align={props.mobile && "center"}
+          >
             We can help you find the best car. Check our reviews,{" "}
             {!props.mobile && <br />} compare models and find cars for sale.
           </TextView>

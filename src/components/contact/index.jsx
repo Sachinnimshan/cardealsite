@@ -62,7 +62,7 @@ function ContactForm(props) {
         direction="column"
         gap={1}
       >
-        <FlexContainer alignX="space-between" radius>
+        <FlexContainer alignX="space-between" radius gap={1} flexwrap>
           <FlexContainer direction="column" gap={0.1}>
             <TextView color={SECONDARY_BLACK} weight={WEIGHT_600} size={0.5}>
               Emily Rees

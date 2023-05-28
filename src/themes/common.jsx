@@ -16,11 +16,9 @@ export const WEIGHT_500 = "500";
 export const WEIGHT_600 = "600";
 export const WEIGHT_700 = "700";
 
-export const PADDING_MOBILE = "2rem 1rem";
+export const PADDING_MOBILE = "2rem 1.25rem";
 export const PADDING_DESKTOP = "3rem 4rem";
-export const PADDING_MOBILE_X = "1rem";
-export const PADDING_DESKTOP_X = "4rem";
-export const PADDING_MOBILE_Y = "2rem";
-export const PADDING_DESKTOP_Y = "3rem";
+
+
 
 export const BORDER_RADIUS = "0.5rem";

@@ -26,6 +26,7 @@ import { RiPhoneFill } from "react-icons/ri";
 import { CgCheckO } from "react-icons/cg";
 import { HiCheck, HiMenu } from "react-icons/hi";
 import { TbArrowsRightLeft } from "react-icons/tb";
+import { FcGoogle } from 'react-icons/fc';
 
 export const UserIconLight = styled(FaRegUser)``;
 export const UserIconDark = styled(FaUser)``;
@@ -51,6 +52,7 @@ export const ListViewIcon = styled(HiMenu)``;
 export const GridViewIcon = styled(AiFillAppstore)``;
 export const CompareIcon = styled(TbArrowsRightLeft)``;
 export const SearchIcon = styled(IoSearch)``;
+export const GoogleIcon = styled(FcGoogle)``;
 
 export const IconWrapper = styled("div")`
   color: ${(props) => props.color};

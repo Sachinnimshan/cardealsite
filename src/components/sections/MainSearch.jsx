@@ -2,9 +2,15 @@ import React from "react";
 import { vehicleBrands } from "../../common/data";
 import Input from "../../common/input";
 import { FlexContainer } from "../../common/Layouts.styled";
+import BreadCrumbs from "../../common/sectioncommons/BreadCrumbs";
 import ConditionTabs from "../../common/sectioncommons/ConditionTabs";
 import SelectBox from "../../common/select";
-import { CompareIcon, DoubleArrowIcon, IconWrapper, SearchIcon } from "../../icons";
+import {
+  CompareIcon,
+  DoubleArrowIcon,
+  IconWrapper,
+  SearchIcon,
+} from "../../icons";
 import {
   BG_COLOR,
   BG_COLOR_BLUE,
@@ -25,6 +31,7 @@ function MainSearch(props) {
       gap={1}
       direction="column"
     >
+      <BreadCrumbs title="Search" mobile={props.mobile} />
       <FlexContainer gap={0.5} direction="column">
         <FlexContainer gap={0.5} flexwrap>
           <SelectBox data={vehicleBrands} />
@@ -88,7 +95,7 @@ function MainSearch(props) {
               Compare
             </TextView>
           </FlexContainer>
-          <Input placeholder="Enter keyword" icon={<SearchIcon/>} />
+          <Input placeholder="Enter keyword" icon={<SearchIcon />} />
         </FlexContainer>
       </FlexContainer>
     </FlexContainer>

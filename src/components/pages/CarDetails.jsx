@@ -50,8 +50,9 @@ function CarDetails(props) {
     <FlexContainer
       padding={props.mobile ? PADDING_MOBILE : PADDING_DESKTOP}
       direction="column"
+      gap={1}
     >
-      <BreadCrumbs title={data?.title} mobile={props.mobile}/>
+      <BreadCrumbs title={data?.title} mobile={props.mobile} />
       <FlexContainer gap={3} flexwrap>
         <FlexContainer direction="column" gap={2} flex>
           <CarDetailsImage src={data.images} />
@@ -59,7 +60,12 @@ function CarDetails(props) {
             <TextView weight={WEIGHT_700} size={1} color={SECONDARY_BLACK}>
               Description
             </TextView>
-            <TextView color={FONT_LIGHT} size={0.01} lineHeight={0.25}>
+            <TextView
+              color={FONT_LIGHT}
+              size={0.01}
+              lineHeight={0.25}
+              color={SECONDARY_BLACK}
+            >
               {data?.description}
             </TextView>
           </FlexContainer>
@@ -96,14 +102,18 @@ function CarDetails(props) {
                 </FlexContainer>
               ))}
             </FlexContainer>
-            <FlexContainer direction="column" gap={2} >
+            <FlexContainer
+              direction="column"
+              gap={2}
+              alignY={props.mobile && "center"}
+            >
               <TextView color={SECONDARY_BLACK} weight={WEIGHT_700} size={1}>
                 Vehicle history
               </TextView>
               <FlexContainer
                 flexwrap
                 flex
-                alignX="space-between"
+                alignX={props.mobile ? "center" : " space-between"}
                 alignY="center"
                 gap={2}
               >
@@ -115,7 +125,11 @@ function CarDetails(props) {
                   border
                   hoverBgColor={PRIMARY_ORANGE}
                 />
-                <TextView size={0.05} color={SECONDARY_BLACK}>
+                <TextView
+                  size={0.05}
+                  color={SECONDARY_BLACK}
+                  align={props.mobile && "center"}
+                >
                   Before you decide to buy a car,
                   <br /> read its history for free.
                 </TextView>
@@ -126,7 +140,7 @@ function CarDetails(props) {
             </FlexContainer>
           </FlexContainer>
         </FlexContainer>
-        <FlexContainer direction="column" gap={1} flex>
+        <FlexContainer direction="column" gap={0.75} flex>
           <TextView size={1} color={SECONDARY_BLACK} weight={WEIGHT_600}>
             {data?.title}
           </TextView>
@@ -135,19 +149,19 @@ function CarDetails(props) {
               <IconWrapper color={PRIMARY_ORANGE} size="12px">
                 <CircleIcon />
               </IconWrapper>
-              <TextView>{data?.year}</TextView>
+              <TextView size={0.1}>{data?.year}</TextView>
             </FlexContainer>
             <FlexContainer gap={0.5}>
               <IconWrapper color={PRIMARY_ORANGE} size="12px">
                 <CircleIcon />
               </IconWrapper>
-              <TextView>{data?.transmission}</TextView>
+              <TextView size={0.1}>{data?.transmission}</TextView>
             </FlexContainer>
             <FlexContainer gap={0.5}>
               <IconWrapper color={PRIMARY_ORANGE} size="12px">
                 <CircleIcon />
               </IconWrapper>
-              <TextView>{data?.fuel}</TextView>
+              <TextView size={0.1}>{data?.fuel}</TextView>
             </FlexContainer>
           </FlexContainer>
           <TextView size={1.5} color={PRIMARY_ORANGE} weight={WEIGHT_600}>

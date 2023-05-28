@@ -3,6 +3,7 @@ import {
   BORDER_RADIUS,
   FONT_LIGHT,
   PRIMARY_BLACK,
+  SECONDARY_BLACK,
   WEIGHT_400,
   WEIGHT_700,
 } from "./common";
@@ -24,7 +25,7 @@ export const SectionText = styled("span")`
 export const TextView = styled("span")`
   font-size: ${(props) => `calc(0.875rem + ${props.size}vw)`};
   font-weight: ${(props) => props.weight || WEIGHT_400};
-  color: ${(props) => props.color || FONT_LIGHT};
+  color: ${(props) => props.color || SECONDARY_BLACK};
   line-height: ${(props) => `calc(2rem + ${props.lineHeight}vw)`};
   text-align: ${(props) => props.align || "justify"};
   white-space: ${(props) => props.nowrap && "nowrap"};

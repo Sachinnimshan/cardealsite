@@ -30,6 +30,8 @@ export const CarCardImage = styled("img")`
   border-radius: 0.5rem 0.5rem 0 0;
   transition: all ease-in-out 0.3s;
   overflow: hidden;
+  height: 200px;
+  object-fit: cover;
   max-width: 100%;
   &:hover {
     transform: scale(1.05);

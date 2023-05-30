@@ -32,12 +32,17 @@ import {
 } from "../../themes/common";
 import { TextView } from "../../themes/typography";
 import formatCurrency from "../../utils/currency";
+import CarImage from "../cards/CarImage";
 import ContactForm from "../contact";
 
 function CarDetails(props) {
   const [data, setData] = useState([]);
+  const [imageIndex, setImageIndex] = useState(0);
   const { id } = useParams();
-  console.log("Key Specs", data.price);
+
+  const handleChangeIndex = (index) => {
+    setImageIndex(index);
+  };
 
   useEffect(() => {
     if (id) {
@@ -54,179 +59,167 @@ function CarDetails(props) {
     >
       <BreadCrumbs title={data?.title} mobile={props.mobile} />
       <FlexContainer gap={3} flexwrap>
-        <FlexContainer direction="column" gap={2} flex>
-          <CarDetailsImage src={data.images} />
-          <FlexContainer direction="column" gap={0.5}>
-            <TextView weight={WEIGHT_700} size={1} color={SECONDARY_BLACK}>
-              Description
+        <FlexContainer direction={props.mobile && "column"} gap={2} flex>
+          <CarImage images={data?.images} slideView hover slideCount />
+          <FlexContainer direction="column" gap={0.75} flex>
+            <TextView size={1} color={SECONDARY_BLACK} weight={WEIGHT_600}>
+              {data?.title}
             </TextView>
-            <TextView
-              color={FONT_LIGHT}
-              size={0.01}
-              lineHeight={0.25}
-              color={SECONDARY_BLACK}
-            >
-              {data?.description}
-            </TextView>
-          </FlexContainer>
-          <FlexContainer
-            bgrColor={BG_COLOR_BLUE}
-            padding="1rem"
-            radius
-            gap={2}
-            direction="column"
-            flexwrap
-            flex
-          >
-            <FlexContainer flexwrap flex gap={0.5}>
-              {data?.techSpecs?.map((item, index) => (
-                <FlexContainer
-                  key={index}
-                  bgrColor={PRIMARY_WHITE}
-                  padding="1rem"
-                  radius
-                  gap={0.5}
-                  flex
-                >
-                  <IconWrapper color={PRIMARY_ORANGE} size="1.25rem">
-                    <CheckOutlinedIcon />
-                  </IconWrapper>
-                  <TextView
-                    color={SECONDARY_BLACK}
-                    size={0.01}
-                    weight={WEIGHT_400}
-                    nowrap
-                  >
-                    {item}
-                  </TextView>
-                </FlexContainer>
-              ))}
-            </FlexContainer>
-            <FlexContainer
-              direction="column"
-              gap={2}
-              alignY={props.mobile && "center"}
-            >
-              <TextView color={SECONDARY_BLACK} weight={WEIGHT_700} size={1}>
-                Vehicle history
-              </TextView>
-              <FlexContainer
-                flexwrap
-                flex
-                alignX={props.mobile ? "center" : " space-between"}
-                alignY="center"
-                gap={2}
-              >
-                <Button
-                  text="Download Report"
-                  color={PRIMARY_ORANGE}
-                  hoverColor={PRIMARY_WHITE}
-                  bgrColor={SECONDARY_ORANGE}
-                  border
-                  hoverBgColor={PRIMARY_ORANGE}
-                />
-                <TextView
-                  size={0.05}
-                  color={SECONDARY_BLACK}
-                  align={props.mobile && "center"}
-                >
-                  Before you decide to buy a car,
-                  <br /> read its history for free.
-                </TextView>
-                {!props.mobile && (
-                  <VehicleHistoryImage src={HistoryImg} alt="Vehicle History" />
-                )}
+            <FlexContainer gap={2}>
+              <FlexContainer gap={0.5}>
+                <IconWrapper color={PRIMARY_ORANGE} size="12px">
+                  <CircleIcon />
+                </IconWrapper>
+                <TextView size={0.1}>{data?.year}</TextView>
               </FlexContainer>
+              <FlexContainer gap={0.5}>
+                <IconWrapper color={PRIMARY_ORANGE} size="12px">
+                  <CircleIcon />
+                </IconWrapper>
+                <TextView size={0.1}>{data?.transmission}</TextView>
+              </FlexContainer>
+              <FlexContainer gap={0.5}>
+                <IconWrapper color={PRIMARY_ORANGE} size="12px">
+                  <CircleIcon />
+                </IconWrapper>
+                <TextView size={0.1}>{data?.fuel}</TextView>
+              </FlexContainer>
+            </FlexContainer>
+            <TextView size={1.5} color={PRIMARY_ORANGE} weight={WEIGHT_600}>
+              {data?.price && formatCurrency(data?.price)}
+            </TextView>
+            {data?.keySpecs && (
+              <FlexContainer
+                radius
+                bgrColor={BG_COLOR_BLUE}
+                direction="column"
+                padding="1rem 2rem"
+                gap={0.75}
+              >
+                {Object.keys(data?.keySpecs)?.map((item, index) => (
+                  <FlexContainer key={index}>
+                    <TextView
+                      weight={WEIGHT_600}
+                      size={0.05}
+                      nowrap
+                      maxWidth="200px"
+                      fullWidth
+                      align="left"
+                    >
+                      {item}
+                    </TextView>
+                    <TextView
+                      size={0.05}
+                      nowrap
+                      maxWidth="200px"
+                      fullWidth
+                      align="left"
+                    >
+                      {data?.keySpecs[item]}
+                    </TextView>
+                  </FlexContainer>
+                ))}
+              </FlexContainer>
+            )}
+            <FlexContainer direction="column" gap={0.75}>
+              <Button
+                icon={<PhoneIcon />}
+                text="123 *** *** - reveal"
+                border
+                bgrColor="transparent"
+                color={SECONDARY_BLACK}
+                hoverBgColor={SECONDARY_ORANGE}
+              />
+              <Button
+                icon={<WhatsappIcon />}
+                text="Chat via whatsapp"
+                bgrColor="#04CD51"
+              />
+              <Button text="Send message" />
             </FlexContainer>
           </FlexContainer>
         </FlexContainer>
-        <FlexContainer direction="column" gap={0.75} flex>
-          <TextView size={1} color={SECONDARY_BLACK} weight={WEIGHT_600}>
-            {data?.title}
+        <FlexContainer direction="column" gap={0.5}>
+          <TextView weight={WEIGHT_700} size={1} color={SECONDARY_BLACK}>
+            Description
           </TextView>
-          <FlexContainer gap={2}>
-            <FlexContainer gap={0.5}>
-              <IconWrapper color={PRIMARY_ORANGE} size="12px">
-                <CircleIcon />
-              </IconWrapper>
-              <TextView size={0.1}>{data?.year}</TextView>
-            </FlexContainer>
-            <FlexContainer gap={0.5}>
-              <IconWrapper color={PRIMARY_ORANGE} size="12px">
-                <CircleIcon />
-              </IconWrapper>
-              <TextView size={0.1}>{data?.transmission}</TextView>
-            </FlexContainer>
-            <FlexContainer gap={0.5}>
-              <IconWrapper color={PRIMARY_ORANGE} size="12px">
-                <CircleIcon />
-              </IconWrapper>
-              <TextView size={0.1}>{data?.fuel}</TextView>
-            </FlexContainer>
+          <TextView
+            color={FONT_LIGHT}
+            size={0.01}
+            lineHeight={0.25}
+            color={SECONDARY_BLACK}
+          >
+            {data?.description}
+          </TextView>
+        </FlexContainer>
+        <FlexContainer
+          bgrColor={BG_COLOR_BLUE}
+          padding="1rem"
+          radius
+          gap={2}
+          direction="column"
+          flexwrap
+          flex
+        >
+          <FlexContainer flexwrap flex gap={0.5}>
+            {data?.techSpecs?.map((item, index) => (
+              <FlexContainer
+                key={index}
+                bgrColor={PRIMARY_WHITE}
+                padding="1rem"
+                radius
+                gap={0.5}
+                flex
+              >
+                <IconWrapper color={PRIMARY_ORANGE} size="1.25rem">
+                  <CheckOutlinedIcon />
+                </IconWrapper>
+                <TextView
+                  color={SECONDARY_BLACK}
+                  size={0.01}
+                  weight={WEIGHT_400}
+                  nowrap
+                >
+                  {item}
+                </TextView>
+              </FlexContainer>
+            ))}
           </FlexContainer>
-          <TextView size={1.5} color={PRIMARY_ORANGE} weight={WEIGHT_600}>
-            {data?.price && formatCurrency(data?.price)}
-          </TextView>
-          {data?.keySpecs && (
+          <FlexContainer
+            direction="column"
+            gap={2}
+            alignY={props.mobile && "center"}
+          >
+            <TextView color={SECONDARY_BLACK} weight={WEIGHT_700} size={1}>
+              Vehicle history
+            </TextView>
             <FlexContainer
-              radius
-              bgrColor={BG_COLOR_BLUE}
-              direction="column"
-              padding="1rem 2rem"
-              gap={0.5}
+              flexwrap
+              flex
+              alignX={props.mobile ? "center" : " space-between"}
+              alignY="center"
+              gap={2}
             >
-              {Object.keys(data?.keySpecs)?.map((item, index) => (
-                <FlexContainer key={index}>
-                  <TextView
-                    color={SECONDARY_BLACK}
-                    weight={WEIGHT_600}
-                    size={0.05}
-                    nowrap
-                    maxWidth="200px"
-                    fullWidth
-                    align="left"
-                  >
-                    {item}
-                  </TextView>
-                  <TextView
-                    color={SECONDARY_BLACK}
-                    size={0.05}
-                    nowrap
-                    maxWidth="200px"
-                    fullWidth
-                    align="left"
-                  >
-                    {data?.keySpecs[item]}
-                  </TextView>
-                </FlexContainer>
-              ))}
+              <Button
+                text="Download Report"
+                color={PRIMARY_ORANGE}
+                hoverColor={PRIMARY_WHITE}
+                bgrColor={SECONDARY_ORANGE}
+                border
+                hoverBgColor={PRIMARY_ORANGE}
+              />
+              <TextView
+                size={0.05}
+                color={SECONDARY_BLACK}
+                align={props.mobile && "center"}
+              >
+                Before you decide to buy a car,
+                <br /> read its history for free.
+              </TextView>
+              {!props.mobile && (
+                <VehicleHistoryImage src={HistoryImg} alt="Vehicle History" />
+              )}
             </FlexContainer>
-          )}
-          <FlexContainer direction="column" gap={0.75}>
-            <Button
-              text={
-                <FlexContainer alignX="center" alignY="center" gap={1}>
-                  <PhoneIcon size="1.25rem" color={PRIMARY_ORANGE} />
-                  <TextView color={PRIMARY_ORANGE}>
-                    123 *** *** - reveal
-                  </TextView>
-                </FlexContainer>
-              }
-              border
-              bgrColor="transparent"
-              color={SECONDARY_BLACK}
-              hoverBgColor={SECONDARY_ORANGE}
-            />
-            <Button
-              text={
-                <FlexContainer alignX="center" alignY="center" gap={1}>
-                  <WhatsappIcon size="1.25rem" />
-                  <TextView color={PRIMARY_WHITE}>Chat via whatsapp</TextView>
-                </FlexContainer>
-              }
-              bgrColor="#04CD51"
-            />
-            <Button text="Send message" />
           </FlexContainer>
         </FlexContainer>
       </FlexContainer>

@@ -69,15 +69,7 @@ function ListView(props) {
         {props.data?.map((item, index) => (
           <CarCard
             key={index}
-            images={item?.images}
-            title={item?.title}
-            price={item?.price}
-            year={item?.year}
-            fuel={item?.fuel}
-            transmission={item?.transmission}
-            mobile={props.mobile}
-            id={item?.id}
-            featured={item?.featured}
+            data={item}
             bgrColor={PRIMARY_WHITE}
             titleColor={SECONDARY_BLACK}
             priceColor={SECONDARY_BLACK}

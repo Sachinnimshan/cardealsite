@@ -10,7 +10,7 @@ function ConditionTabs(props) {
     setActiveTab(index);
   };
   return (
-    <FlexContainer alignX="center" >
+    <FlexContainer alignX="center">
       {tabs?.map((tab, index) => (
         <Tab
           size={props.size}

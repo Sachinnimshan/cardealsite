@@ -7,7 +7,6 @@ import MainSearch from "../sections/MainSearch";
 function SearchPage(props) {
   return (
     <FlexContainer direction="column">
-      
       <MainSearch mobile={props.mobile} />
       <ListView mobile={props.mobile} data={props.data} />
     </FlexContainer>

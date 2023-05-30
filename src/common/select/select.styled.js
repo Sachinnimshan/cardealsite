@@ -12,11 +12,11 @@ import {
 
 export const SelectBoxContainer = styled("select")`
   border-radius: ${BORDER_RADIUS};
-  padding: 1rem;
+  padding: 0.9rem;
   cursor: pointer;
   flex: 1;
   border: 1px solid ${BG_COLOR};
-  font-size: 14px;
+  font-size: 16px;
   color: ${FONT_DARK};
   padding-right: 1rem;
   background-color: ${PRIMARY_WHITE};

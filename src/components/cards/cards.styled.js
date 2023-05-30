@@ -1,14 +1,9 @@
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 import {
-  BG_COLOR,
   BORDER_RADIUS,
-  FONT_DARK,
-  PRIMARY_BLACK,
   PRIMARY_ORANGE,
   PRIMARY_WHITE,
-  SECONDARY_BLACK,
-  WEIGHT_400,
   WEIGHT_500,
 } from "../../themes/common";
 
@@ -26,20 +21,6 @@ export const CarCardContainer = styled(Link)`
   border: ${(props) => `1px solid ${props.border}`};
 `;
 
-export const CarCardImage = styled("img")`
-  border-radius: 0.5rem 0.5rem 0 0;
-  transition: all ease-in-out 0.3s;
-  overflow: hidden;
-  height: 200px;
-  object-fit: cover;
-  max-width: 100%;
-  &:hover {
-    transform: scale(1.05);
-    overflow: hidden;
-    transition: all ease-in-out 0.3s;
-  }
-`;
-
 export const FeaturedTag = styled("span")`
   background-color: ${PRIMARY_ORANGE};
   color: ${PRIMARY_WHITE};
@@ -48,6 +29,18 @@ export const FeaturedTag = styled("span")`
   position: absolute;
   padding: 0.5rem 1rem;
   text-align: center;
-  z-index: 2000;
+  z-index: 90000;
   overflow: hidden;
 `;
+
+export const ImageCount = styled("div")`
+  display: flex;
+  z-index: 5000;
+  position: absolute;
+  bottom: 0;
+  gap: 0.5rem;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+`;
+

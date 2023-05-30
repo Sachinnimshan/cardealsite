@@ -34,7 +34,7 @@ function ContactForm(props) {
         <TextView color={SECONDARY_BLACK} weight={WEIGHT_600} size={1}>
           Send Message
         </TextView>
-        <FlexContainer  gap={1} flexwrap>
+        <FlexContainer gap={1} flexwrap flex>
           <Input placeholder="Name" />
           <Input placeholder="Email*" />
           <Input placeholder="Phone" />
@@ -51,7 +51,7 @@ function ContactForm(props) {
           <TextView size={0.01} color={SECONDARY_BLACK}>
             I accept the privacy policy
           </TextView>
-          <Button text="Send" />
+          <Button text="Send" textColor={PRIMARY_WHITE} />
         </FlexContainer>
       </FlexContainer>
       <FlexContainer
@@ -63,7 +63,7 @@ function ContactForm(props) {
         gap={1}
       >
         <FlexContainer alignX="space-between" radius gap={1} flexwrap>
-          <FlexContainer direction="column" gap={0.1}>
+          <FlexContainer direction="column" gap={0.5}>
             <TextView color={SECONDARY_BLACK} weight={WEIGHT_600} size={0.5}>
               Emily Rees
             </TextView>

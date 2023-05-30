@@ -19,7 +19,7 @@ export const Tab = styled("span")`
   border-top: ${(props) =>
     props.activeTop
       ? `2px solid ${PRIMARY_ORANGE}`
-      : `2px solid ${BG_COLOR_BLUE}`};
+      : `2px solid transparent`};
   border-bottom: ${(props) =>
     props.activeBottom
       ? `1px solid ${PRIMARY_ORANGE}`

@@ -1,11 +1,10 @@
 import React from "react";
-import Button from "../../common/button";
+import { carTypes } from "../../common/data";
 import { FlexContainer } from "../../common/Layouts.styled";
-import { HomeBanner, HomeImg } from "../../images";
 import {
-  FONT_SECONDARY,
   PADDING_MOBILE,
   PRIMARY_BLACK,
+  PRIMARY_ORANGE,
   PRIMARY_WHITE,
   WEIGHT_700,
 } from "../../themes/common";
@@ -19,41 +18,32 @@ function Home(props) {
       bgrColor={PRIMARY_BLACK}
       position="relative"
       flex
-      alignX="center"
+      direction="column"
+      alignY={!props.mobile && "center"}
+      gap={props.mobile ? 0.5 : 3}
     >
-      <FlexContainer
-        alignX={props.mobile ? "center" : "space-between"}
-        flex
-        flexwrap
-        gap={2}
+      <TextView
+        size={4}
+        weight={WEIGHT_700}
+        color={PRIMARY_WHITE}
+        lineHeight={4}
+        alignY
       >
-        <FlexContainer
-          direction="column"
-          gap={1}
-          alignY={props.mobile && "center"}
-        >
-          <TextView
-            size={4}
-            weight={WEIGHT_700}
-            color={PRIMARY_WHITE}
-            lineHeight={4}
-          >
-            Find your {!props.mobile && <br />} dream car
+        Find Your{"  "}
+        <TextView color={PRIMARY_ORANGE} size={4} weight={WEIGHT_700}>
+          Perfect
+        </TextView>
+        {"  "}
+        Car
+      </TextView>
+      <SearchBox mobile={props.mobile} />
+      <FlexContainer flex flexwrap gap={1} alignX="center">
+        {carTypes?.map((item, index) => (
+          <TextView key={index} color={PRIMARY_WHITE} size={0.01}>
+            {item}
           </TextView>
-          <TextView
-            size={0.05}
-            color={FONT_SECONDARY}
-            lineHeight={0.05}
-            align={props.mobile && "center"}
-          >
-            We can help you find the best car. Check our reviews,{" "}
-            {!props.mobile && <br />} compare models and find cars for sale.
-          </TextView>
-          {!props.mobile && <Button text="About Us" maxWidth="125px" />}
-        </FlexContainer>
-        <SearchBox />
+        ))}
       </FlexContainer>
-      <HomeBanner src={HomeImg} alt="Silver Benz car" mobile={props.mobile} />
     </FlexContainer>
   );
 }

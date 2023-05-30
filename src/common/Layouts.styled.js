@@ -20,6 +20,8 @@ export const FlexContainer = styled("div")`
   border: ${(props) => props.border && `1px solid ${props.border}`};
   overflow-x: ${(props) => props.overflowX && "scroll"};
   z-index: ${(props) => props.zIndex};
+  top: ${(props) => props.top};
+  width: ${(props) => props.width};
   cursor: ${(props) => props.cursor && "pointer"};
   &::-webkit-scrollbar {
     display: none;

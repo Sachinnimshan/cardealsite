@@ -1,14 +1,21 @@
 import styled from "@emotion/styled";
-import { BORDER_RADIUS, PRIMARY_ORANGE, PRIMARY_WHITE, WEIGHT_400, WEIGHT_500 } from "../../themes/common";
+import {
+  BORDER_RADIUS,
+  PRIMARY_ORANGE,
+  PRIMARY_WHITE,
+  WEIGHT_500,
+} from "../../themes/common";
 
-export const ButtonContainer = styled("div")`
+export const ButtonContainer = styled("span")`
   background-color: ${(props) => props.bgrColor || PRIMARY_ORANGE};
+  font-size: ${(props) => `calc(0.875rem + ${props.size}vw)`};
+  font-weight: ${(props) => props.weight || WEIGHT_500};
   color: ${(props) => props.color || PRIMARY_WHITE};
-  font-size: 15px;
-  flex: 1;
-  font-weight: ${WEIGHT_500};
+  gap: 0.5rem;
+  flex: ${(props) => props.flex || 1};
   cursor: pointer;
-  padding: 0.75rem;
+  display: flex;
+  padding: 0.9rem;
   text-align: center;
   height: fit-content;
   transition: all ease-in-out 0.2s;
@@ -16,6 +23,7 @@ export const ButtonContainer = styled("div")`
   white-space: nowrap;
   border: ${(props) => props.border && `2px solid ${PRIMARY_ORANGE}`};
   align-items: center;
+  justify-content: center;
   max-width: ${(props) => props.maxWidth && "150px"};
   &:hover {
     color: ${(props) => props.hoverColor};

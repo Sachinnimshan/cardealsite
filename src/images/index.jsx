@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { BORDER_RADIUS } from "../themes/common";
+import { BORDER_RADIUS, PRIMARY_ORANGE } from "../themes/common";
 
 export const SiteLogoImg = "/images/site-logo.png";
 export const HomeImg = "/images/car-silver.png";
@@ -29,9 +29,24 @@ export const MobileApp = styled("img")`
 `;
 
 export const CarDetailsImage = styled("img")`
-  max-width: 800px;
-  border-radius: ${BORDER_RADIUS};
+  max-width: ${(props) => props.maxWidth || "800px"};
+  border-radius: ${(props) =>
+    (props.topRadius && "0.5rem 0.5rem 0 0") || BORDER_RADIUS};
   width: 100%;
+  max-height: ${(props) => props.small && "200px"};
+  height: ${(props) => props.height};
+  cursor: pointer;
+  object-fit: cover;
+  opacity: ${(props) => (props.fade ? 0.25 : 1)};
+  border: ${(props) => props.border && "2px solid transparent"};
+  border: ${(props) => props.active && `2px solid ${PRIMARY_ORANGE}`};
+  transition: all ease-in-out 0.3s;
+  &:hover {
+    opacity: ${(props) => props.hover && 1};
+    transition: all ease-in-out 0.3s;
+    transform: ${(props) => props.zoom && `scale(1.05)`};
+    overflow: ${(props) => props.overflowHide && "hidden"};
+  }
 `;
 
 export const HomeBanner = styled("img")`
@@ -43,5 +58,5 @@ export const HomeBanner = styled("img")`
 `;
 
 export const AppBanner = styled("img")`
-display: flex;
+  display: flex;
 `;

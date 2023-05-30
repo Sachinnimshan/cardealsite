@@ -24,6 +24,8 @@ export const vehicleBrands = [
   "Porche",
 ];
 
+export const carTypes = ["Sedan", "Coupe", "SUV", "Hatchback", "Convertible"];
+
 export const loginData = ["Log in", "Register"];
 export const socialIcons = [
   {
@@ -85,7 +87,15 @@ export const carData = [
     fuel: "Diesel",
     transmission: "Automatic",
     mileage: "500km",
-    images: "/images/car1.jpg",
+    images: [
+      "/images/car1.jpg",
+      "/images/car1.1.jpg",
+      "/images/car1.2.jpg",
+      "/images/car1.3.jpg",
+      "/images/car1.4.jpg",
+      "/images/car1.5.jpg",
+      "/images/car1.6.jpg",
+    ],
     id: "C001",
     description:
       "How the adventure ended will be seen anon. Aouda was anxious, though she said nothing. As for Passepartout, he thought Mr. Fogg’s manoeuvre simply glorious. The captain had said “between eleven and twelve knots,” and the Henrietta confirmed his prediction.If, then—for there were “ifs” still—the sea did not become too boisterous, if the wind did not veer round to the east, if no accident happened to the boat or its machinery, the Henrietta might cross the three thousand miles from New York to Liverpool in the nine days, between the 12th and the 21st of December. It is true that, once arrived, the affair on board the Henrietta, added to that of the Bank of England, might create more difficulties for Mr. Fogg than he imagined or could desire.During the first days, they went along smoothly enough. The sea was not very unpropitious, the wind seemed stationary in the north-east, the sails were hoisted, and the Henrietta ploughed across the waves like a real trans-Atlantic steamer.",
@@ -128,7 +138,14 @@ export const carData = [
     fuel: "Diesel",
     transmission: "Automatic",
     mileage: "500km",
-    images: "/images/car2.jpg",
+    images: [
+      "/images/car2.jpg",
+      "/images/car2.1.jpg",
+      "/images/car2.2.jpg",
+      "/images/car2.3.jpg",
+      "/images/car2.4.jpg",
+      "/images/car2.5.jpg",
+    ],
     id: "C002",
     description:
       "How the adventure ended will be seen anon. Aouda was anxious, though she said nothing. As for Passepartout, he thought Mr. Fogg’s manoeuvre simply glorious. The captain had said “between eleven and twelve knots,” and the Henrietta confirmed his prediction.If, then—for there were “ifs” still—the sea did not become too boisterous, if the wind did not veer round to the east, if no accident happened to the boat or its machinery, the Henrietta might cross the three thousand miles from New York to Liverpool in the nine days, between the 12th and the 21st of December. It is true that, once arrived, the affair on board the Henrietta, added to that of the Bank of England, might create more difficulties for Mr. Fogg than he imagined or could desire.During the first days, they went along smoothly enough. The sea was not very unpropitious, the wind seemed stationary in the north-east, the sails were hoisted, and the Henrietta ploughed across the waves like a real trans-Atlantic steamer.",
@@ -171,7 +188,13 @@ export const carData = [
     fuel: "Diesel",
     transmission: "Automatic",
     mileage: "500km",
-    images: "/images/car3.jpg",
+    images: [
+      "/images/car3.jpg",
+      "/images/car3.1.jpg",
+      "/images/car3.2.jpg",
+      "/images/car3.3.jpg",
+      "/images/car3.4.jpg",
+    ],
     id: "C003",
     description:
       "How the adventure ended will be seen anon. Aouda was anxious, though she said nothing. As for Passepartout, he thought Mr. Fogg’s manoeuvre simply glorious. The captain had said “between eleven and twelve knots,” and the Henrietta confirmed his prediction.If, then—for there were “ifs” still—the sea did not become too boisterous, if the wind did not veer round to the east, if no accident happened to the boat or its machinery, the Henrietta might cross the three thousand miles from New York to Liverpool in the nine days, between the 12th and the 21st of December. It is true that, once arrived, the affair on board the Henrietta, added to that of the Bank of England, might create more difficulties for Mr. Fogg than he imagined or could desire.During the first days, they went along smoothly enough. The sea was not very unpropitious, the wind seemed stationary in the north-east, the sails were hoisted, and the Henrietta ploughed across the waves like a real trans-Atlantic steamer.",
@@ -214,7 +237,13 @@ export const carData = [
     fuel: "Diesel",
     transmission: "Automatic",
     mileage: "500km",
-    images: "/images/car4.jpg",
+    images: [
+      "/images/car4.jpg",
+      "/images/car4.1.jpg",
+      "/images/car4.2.jpg",
+      "/images/car4.3.jpg",
+      "/images/car4.4.jpg",
+    ],
     id: "C004",
     description:
       "How the adventure ended will be seen anon. Aouda was anxious, though she said nothing. As for Passepartout, he thought Mr. Fogg’s manoeuvre simply glorious. The captain had said “between eleven and twelve knots,” and the Henrietta confirmed his prediction.If, then—for there were “ifs” still—the sea did not become too boisterous, if the wind did not veer round to the east, if no accident happened to the boat or its machinery, the Henrietta might cross the three thousand miles from New York to Liverpool in the nine days, between the 12th and the 21st of December. It is true that, once arrived, the affair on board the Henrietta, added to that of the Bank of England, might create more difficulties for Mr. Fogg than he imagined or could desire.During the first days, they went along smoothly enough. The sea was not very unpropitious, the wind seemed stationary in the north-east, the sails were hoisted, and the Henrietta ploughed across the waves like a real trans-Atlantic steamer.",
@@ -257,7 +286,13 @@ export const carData = [
     fuel: "Diesel",
     transmission: "Automatic",
     mileage: "500km",
-    images: "/images/car5.jpg",
+    images: [
+      "/images/car5.jpg",
+      "/images/car5.1.jpg",
+      "/images/car5.2.jpg",
+      "/images/car5.3.jpg",
+      "/images/car5.4.jpg",
+    ],
     id: "C005",
     description:
       "How the adventure ended will be seen anon. Aouda was anxious, though she said nothing. As for Passepartout, he thought Mr. Fogg’s manoeuvre simply glorious. The captain had said “between eleven and twelve knots,” and the Henrietta confirmed his prediction.If, then—for there were “ifs” still—the sea did not become too boisterous, if the wind did not veer round to the east, if no accident happened to the boat or its machinery, the Henrietta might cross the three thousand miles from New York to Liverpool in the nine days, between the 12th and the 21st of December. It is true that, once arrived, the affair on board the Henrietta, added to that of the Bank of England, might create more difficulties for Mr. Fogg than he imagined or could desire.During the first days, they went along smoothly enough. The sea was not very unpropitious, the wind seemed stationary in the north-east, the sails were hoisted, and the Henrietta ploughed across the waves like a real trans-Atlantic steamer.",
@@ -300,7 +335,13 @@ export const carData = [
     fuel: "Diesel",
     transmission: "Automatic",
     mileage: "500km",
-    images: "/images/car6.jpg",
+    images: [
+      "/images/car6.jpg",
+      "/images/car6.1.jpg",
+      "/images/car6.2.jpg",
+      "/images/car6.3.jpg",
+      "/images/car6.4.jpg",
+    ],
     id: "C006",
     description:
       "How the adventure ended will be seen anon. Aouda was anxious, though she said nothing. As for Passepartout, he thought Mr. Fogg’s manoeuvre simply glorious. The captain had said “between eleven and twelve knots,” and the Henrietta confirmed his prediction.If, then—for there were “ifs” still—the sea did not become too boisterous, if the wind did not veer round to the east, if no accident happened to the boat or its machinery, the Henrietta might cross the three thousand miles from New York to Liverpool in the nine days, between the 12th and the 21st of December. It is true that, once arrived, the affair on board the Henrietta, added to that of the Bank of England, might create more difficulties for Mr. Fogg than he imagined or could desire.During the first days, they went along smoothly enough. The sea was not very unpropitious, the wind seemed stationary in the north-east, the sails were hoisted, and the Henrietta ploughed across the waves like a real trans-Atlantic steamer.",
@@ -343,7 +384,14 @@ export const carData = [
     fuel: "Diesel",
     transmission: "Automatic",
     mileage: "500km",
-    images: "/images/car7.jpg",
+    images: [
+      "/images/car7.jpg",
+      "/images/car7.1.jpg",
+      "/images/car7.2.jpg",
+      "/images/car7.3.jpg",
+      "/images/car7.4.jpg",
+      "/images/car7.5.jpg",
+    ],
     id: "C007",
     description:
       "How the adventure ended will be seen anon. Aouda was anxious, though she said nothing. As for Passepartout, he thought Mr. Fogg’s manoeuvre simply glorious. The captain had said “between eleven and twelve knots,” and the Henrietta confirmed his prediction.If, then—for there were “ifs” still—the sea did not become too boisterous, if the wind did not veer round to the east, if no accident happened to the boat or its machinery, the Henrietta might cross the three thousand miles from New York to Liverpool in the nine days, between the 12th and the 21st of December. It is true that, once arrived, the affair on board the Henrietta, added to that of the Bank of England, might create more difficulties for Mr. Fogg than he imagined or could desire.During the first days, they went along smoothly enough. The sea was not very unpropitious, the wind seemed stationary in the north-east, the sails were hoisted, and the Henrietta ploughed across the waves like a real trans-Atlantic steamer.",
@@ -386,7 +434,7 @@ export const carData = [
     fuel: "Diesel",
     transmission: "Automatic",
     mileage: "500km",
-    images: "/images/car8.jpg",
+    images: ["/images/car8.jpg"],
     id: "C008",
     description:
       "How the adventure ended will be seen anon. Aouda was anxious, though she said nothing. As for Passepartout, he thought Mr. Fogg’s manoeuvre simply glorious. The captain had said “between eleven and twelve knots,” and the Henrietta confirmed his prediction.If, then—for there were “ifs” still—the sea did not become too boisterous, if the wind did not veer round to the east, if no accident happened to the boat or its machinery, the Henrietta might cross the three thousand miles from New York to Liverpool in the nine days, between the 12th and the 21st of December. It is true that, once arrived, the affair on board the Henrietta, added to that of the Bank of England, might create more difficulties for Mr. Fogg than he imagined or could desire.During the first days, they went along smoothly enough. The sea was not very unpropitious, the wind seemed stationary in the north-east, the sails were hoisted, and the Henrietta ploughed across the waves like a real trans-Atlantic steamer.",
@@ -429,7 +477,7 @@ export const carData = [
     fuel: "Diesel",
     transmission: "Automatic",
     mileage: "500km",
-    images: "/images/car9.jpg",
+    images: ["/images/car9.jpg"],
     id: "C009",
     description:
       "How the adventure ended will be seen anon. Aouda was anxious, though she said nothing. As for Passepartout, he thought Mr. Fogg’s manoeuvre simply glorious. The captain had said “between eleven and twelve knots,” and the Henrietta confirmed his prediction.If, then—for there were “ifs” still—the sea did not become too boisterous, if the wind did not veer round to the east, if no accident happened to the boat or its machinery, the Henrietta might cross the three thousand miles from New York to Liverpool in the nine days, between the 12th and the 21st of December. It is true that, once arrived, the affair on board the Henrietta, added to that of the Bank of England, might create more difficulties for Mr. Fogg than he imagined or could desire.During the first days, they went along smoothly enough. The sea was not very unpropitious, the wind seemed stationary in the north-east, the sails were hoisted, and the Henrietta ploughed across the waves like a real trans-Atlantic steamer.",
@@ -476,4 +524,3 @@ export const searchCriterias = [
   "Mileage: Lowest",
   "Mileage: Highest",
 ];
-

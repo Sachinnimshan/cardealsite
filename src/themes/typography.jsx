@@ -35,6 +35,8 @@ export const TextView = styled("span")`
   border-radius: ${(props) => props.radius && BORDER_RADIUS};
   max-width: ${(props) => props.maxWidth};
   width: ${(props) => props.fullWidth && "100%"};
+  align-self: ${(props) => props.alignY && "center"};
+  justify-self: ${(props) => props.alignX && "center"};
   display: flex;
   &:hover {
     color: ${(props) => props.hoverColor};
@@ -43,4 +45,3 @@ export const TextView = styled("span")`
     transition: all ease-in-out 0.2s;
   }
 `;
-

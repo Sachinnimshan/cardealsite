@@ -9,6 +9,7 @@ import {
   PADDING_DESKTOP,
   PADDING_MOBILE,
   PRIMARY_ORANGE,
+  PRIMARY_WHITE,
 } from "../../themes/common";
 import CarCard from "../cards/CarCard";
 
@@ -29,15 +30,8 @@ function Featured(props) {
       <FlexContainer gap={1} flexwrap>
         {props.data?.slice(0, 7).map((item, index) => (
           <CarCard
-            key={index}
-            images={item?.images}
-            title={item?.title}
-            price={item?.price}
-            year={item?.year}
-            fuel={item?.fuel}
-            transmission={item?.transmission}
-            mobile={props.mobile}
-            id={item?.id}
+            key={index} data={item} mobile={props.mobile}
+           
           />
         ))}
       </FlexContainer>

@@ -6,21 +6,15 @@ import Login from "../sections/Login";
 
 function LoginPage(props) {
   const [login, setLogin] = useState(true);
-  const handleChange = () => setLogin(!login);
+  const handleChangeView = () => setLogin(!login);
   return (
     <FlexContainer aligX="space-between">
       <Login
         mobile={props.mobile}
-        title={props.mobile && login ? "Log in to your account" : "Register"}
-        subTitle={
-          props.mobile && login
-            ? "Welcome back! Sign in to your account"
-            : "Create new account today"
-        }
+        title="Log in to your account"
+        subTitle="Welcome back! Sign in to your account"
         bgrColor={BG_COLOR_BLUE}
-        buttonTitle={props.mobile && login ? "Login" : "Register"}
-        login={login}
-        handleChange={handleChange}
+        buttonTitle="Login"
       />
       {!props.mobile && (
         <Login
@@ -29,8 +23,6 @@ function LoginPage(props) {
           subTitle="Create new account today."
           bgrColor={PRIMARY_WHITE}
           buttonTitle="Register"
-          login={login}
-          handleChange={handleChange}
         />
       )}
     </FlexContainer>

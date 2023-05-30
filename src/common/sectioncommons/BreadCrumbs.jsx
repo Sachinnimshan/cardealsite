@@ -10,7 +10,6 @@ function BreadCrumbs(props) {
       flex
       gap={1}
       alignY="center"
-      bgrColor={PRIMARY_WHITE}
     >
       <TextView size={0.05}>Home page</TextView>
       <IconWrapper color={FONT_SECONDARY}>

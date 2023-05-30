@@ -5,6 +5,8 @@ import {
   FaUserFriends,
   FaApple,
   FaWhatsapp,
+  FaRegImages,
+  FaSearch,
 } from "react-icons/fa";
 import { BiMenuAltLeft } from "react-icons/bi";
 import {
@@ -20,13 +22,17 @@ import {
   IoLocationSharp,
   IoSearch,
 } from "react-icons/io5";
-import { AiFillCheckCircle, AiFillAppstore } from "react-icons/ai";
+import {
+  AiFillCheckCircle,
+  AiFillAppstore,
+  AiOutlineStar,
+} from "react-icons/ai";
 import { VscCircleFilled } from "react-icons/vsc";
 import { RiPhoneFill } from "react-icons/ri";
 import { CgCheckO } from "react-icons/cg";
 import { HiCheck, HiMenu } from "react-icons/hi";
 import { TbArrowsRightLeft } from "react-icons/tb";
-import { FcGoogle } from 'react-icons/fc';
+import { FcGoogle } from "react-icons/fc";
 
 export const UserIconLight = styled(FaRegUser)``;
 export const UserIconDark = styled(FaUser)``;
@@ -51,15 +57,17 @@ export const DoubleArrowIcon = styled(MdKeyboardDoubleArrowDown)``;
 export const ListViewIcon = styled(HiMenu)``;
 export const GridViewIcon = styled(AiFillAppstore)``;
 export const CompareIcon = styled(TbArrowsRightLeft)``;
-export const SearchIcon = styled(IoSearch)``;
+export const SearchIcon = styled(FaSearch)``;
 export const GoogleIcon = styled(FcGoogle)``;
+export const ImagesIcon = styled(FaRegImages)``;
+export const StarIcon = styled(AiOutlineStar)``;
 
 export const IconWrapper = styled("div")`
   color: ${(props) => props.color};
-  font-size: ${(props) => props.size};
+  font-size: ${(props) => props.size || "1.25rem"};
   cursor: pointer;
   background-color: ${(props) => props.bgrColor};
-  padding: ${(props) => props.padding};
+  padding: ${(props) => props.padding && "0.5rem"};
   display: flex;
   align-items: center;
   border-radius: ${(props) => props.radius && "50%"};

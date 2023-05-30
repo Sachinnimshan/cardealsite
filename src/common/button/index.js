@@ -1,4 +1,7 @@
 import React from "react";
+import { IconWrapper } from "../../icons";
+import { WEIGHT_500 } from "../../themes/common";
+import { TextView } from "../../themes/typography";
 import { ButtonContainer } from "./button.styled";
 
 function Button(props) {
@@ -13,7 +16,10 @@ function Button(props) {
       hoverBorder={props.hoverBorder}
       maxWidth={props.maxWidth}
     >
-      {props.text}
+      {props.icon && (
+        <IconWrapper size={props.iconSize}>{props.icon}</IconWrapper>
+      )}
+      {props.text && props.text}
     </ButtonContainer>
   );
 }

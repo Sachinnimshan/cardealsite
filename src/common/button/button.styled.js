@@ -8,7 +8,7 @@ import {
 
 export const ButtonContainer = styled("span")`
   background-color: ${(props) => props.bgrColor || PRIMARY_ORANGE};
-  font-size: ${(props) => `calc(0.875rem + ${props.size}vw)`};
+  font-size: 15px;
   font-weight: ${(props) => props.weight || WEIGHT_500};
   color: ${(props) => props.color || PRIMARY_WHITE};
   gap: 0.5rem;

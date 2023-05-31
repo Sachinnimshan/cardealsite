@@ -11,7 +11,7 @@ export const EmilyImg = "/images/emily.jpg";
 export const AppBannerImg = "/images/appbanner.png";
 
 export const SiteLogo = styled("img")`
-  max-width: 175px;
+  max-width: ${(props) => (props.mobile ? "150px" : "180px")};
   height: fit-content;
 `;
 

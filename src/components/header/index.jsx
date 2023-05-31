@@ -49,7 +49,7 @@ function Header(props) {
           <MenuIcon />
         </IconWrapper>
       )}
-      <SiteLogo src={scrolledDown ? SiteLogoDark : SiteLogoImg} />
+      <SiteLogo src={scrolledDown ? SiteLogoDark : SiteLogoImg} mobile={props.mobile}/>
       {props.mobile ? (
         <ButtonLink to="/login">
           <IconWrapper color={PRIMARY_WHITE} size="2rem">

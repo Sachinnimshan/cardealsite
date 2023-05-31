@@ -16,7 +16,7 @@ export const SelectBoxContainer = styled("select")`
   cursor: pointer;
   flex: 1;
   border: 1px solid ${BG_COLOR};
-  font-size: 16px;
+  font-size: 15px;
   color: ${FONT_DARK};
   padding-right: 1rem;
   background-color: ${PRIMARY_WHITE};

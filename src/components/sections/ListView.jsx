@@ -65,7 +65,7 @@ function ListView(props) {
           <SelectBox data={searchCriterias} />
         </FlexContainer>
       </FlexContainer>
-      <FlexContainer flex gap={1} flexwrap>
+      <FlexContainer flex gap={0.75} flexwrap>
         {props.data?.map((item, index) => (
           <CarCard
             key={index}

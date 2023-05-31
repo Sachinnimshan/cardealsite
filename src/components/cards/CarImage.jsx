@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import { FlexContainer } from "../../common/Layouts.styled";
 import {
   ArrowLeftIcon,
@@ -10,6 +10,7 @@ import {
 import { CarDetailsImage } from "../../images";
 import {
   BG_COLOR_BLUE,
+  PRIMARY_ORANGE,
   PRIMARY_WHITE,
   SECONDARY_BLACK,
 } from "../../themes/common";
@@ -19,33 +20,49 @@ import { ImageCount } from "./cards.styled";
 function CarImage(props) {
   const [imageIndex, setImageIndex] = useState(0);
   const [showControlls, setShowControlls] = useState(false);
+  const [slideShow, setSlideShow] = useState(false);
 
   const handleShowControlls = () => setShowControlls(true);
   const handleHideControlls = () => setShowControlls(false);
 
   const handleNext = () => {
     setImageIndex(imageIndex === props.images?.length - 1 ? 0 : imageIndex + 1);
+    setSlideShow(true);
   };
 
   const handlePrevious = () => {
     setImageIndex(imageIndex === 0 ? props.images?.length - 1 : imageIndex - 1);
+    setSlideShow(true);
   };
 
   const handleChangeIndex = (index) => setImageIndex(index);
 
   return (
     <FlexContainer direction="column" gap={1} flex>
-      <FlexContainer position="relative" flex>
-        <CarDetailsImage
-          src={props?.images && props?.images[imageIndex]}
-          small={props.small}
-          topRadius={props.topRadius}
-          zoom={props.zoom}
-          overflowHide
-          onMouseEnter={handleShowControlls}
-          onMouseLeave={handleHideControlls}
-        />
-        { (
+      <FlexContainer
+        position="relative"
+        flex
+        onMouseEnter={handleShowControlls}
+        onMouseLeave={handleHideControlls}
+      >
+        {props?.images &&
+          props.images?.map((item, index) => {
+            return (
+              <Fragment key={index}>
+                {index === imageIndex && (
+                  <CarDetailsImage
+                    src={props?.images && props?.images[imageIndex]}
+                    small={props.small}
+                    topRadius={props.topRadius}
+                    zoom={props.zoom}
+                    overflowHide
+                    slideShow
+                  />
+                )}
+              </Fragment>
+            );
+          })}
+        {showControlls && props.showControlls && (
           <FlexContainer
             position="absolute"
             top="45%"
@@ -54,6 +71,7 @@ function CarImage(props) {
           >
             <IconWrapper
               color={SECONDARY_BLACK}
+              hoverColor={PRIMARY_ORANGE}
               bgrColor={PRIMARY_WHITE}
               padding
               radius
@@ -64,6 +82,7 @@ function CarImage(props) {
             <IconWrapper
               color={SECONDARY_BLACK}
               bgrColor={PRIMARY_WHITE}
+              hoverColor={PRIMARY_ORANGE}
               padding
               radius
               onClick={handleNext}

@@ -1,6 +1,7 @@
 import React from "react";
 import { carTypes } from "../../common/data";
 import { FlexContainer } from "../../common/Layouts.styled";
+import { CarIcon, IconWrapper } from "../../icons";
 import {
   PADDING_MOBILE,
   PRIMARY_BLACK,
@@ -20,7 +21,8 @@ function Home(props) {
       flex
       direction="column"
       alignY={!props.mobile && "center"}
-      gap={props.mobile ? 0.5 : 3}
+      gap={props.mobile ?1 : 3}
+      background
     >
       <TextView
         size={4}
@@ -39,9 +41,21 @@ function Home(props) {
       <SearchBox mobile={props.mobile} />
       <FlexContainer flex flexwrap gap={1} alignX="center">
         {carTypes?.map((item, index) => (
-          <TextView key={index} color={PRIMARY_WHITE} size={0.01}>
-            {item}
-          </TextView>
+          <FlexContainer direction="column" gap={1} alignY="center" width="80px">
+            <IconWrapper
+              color={PRIMARY_WHITE}
+              size="1.75rem"
+              border
+              radius
+              padding
+              hoverBorder
+            >
+              <CarIcon />
+            </IconWrapper>
+            <TextView key={index} color={PRIMARY_WHITE} size={0.01}>
+              {item}
+            </TextView>
+          </FlexContainer>
         ))}
       </FlexContainer>
     </FlexContainer>

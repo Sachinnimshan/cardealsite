@@ -23,6 +23,18 @@ export const FlexContainer = styled("div")`
   top: ${(props) => props.top};
   width: ${(props) => props.width};
   cursor: ${(props) => props.cursor && "pointer"};
+  background: ${(props) =>
+    props.background &&
+    `linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.85)
+    ),
+    url("/images/home1.jpg") no-repeat center center`};
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   &::-webkit-scrollbar {
     display: none;
   }

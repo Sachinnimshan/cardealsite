@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../../common/button";
 import { FlexContainer } from "../../common/Layouts.styled";
+import ButtonLink from "../../common/link";
 import SectionHeader from "../../common/sectioncommons/SectionHeader";
 import SocialMediaIcons from "../../common/social";
 import Tabs from "../../common/tab";
@@ -27,17 +28,16 @@ function Featured(props) {
       >
         <Tabs data={tabs} bgrColor={BG_COLOR} />
       </SectionHeader>
-      <FlexContainer gap={1} flexwrap>
+      <FlexContainer gap={0.75} flexwrap>
         {props.data?.slice(0, 7).map((item, index) => (
-          <CarCard
-            key={index} data={item} mobile={props.mobile}
-           
-          />
+          <CarCard key={index} data={item} mobile={props.mobile} />
         ))}
       </FlexContainer>
       <FlexContainer alignX="space-between" flexwrap gap={1} margin="1rem 0">
         <SocialMediaIcons />
-        <Button text="View 29 New" bgrColor={PRIMARY_ORANGE} maxWidth />
+        <ButtonLink to='/search'>
+          <Button text="View 29 New" bgrColor={PRIMARY_ORANGE} maxWidth />
+        </ButtonLink>
       </FlexContainer>
     </FlexContainer>
   );

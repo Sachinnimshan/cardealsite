@@ -16,6 +16,7 @@ export const CarCardContainer = styled(Link)`
   position: relative;
   cursor: pointer;
   min-width: 300px;
+  width: fit-content;
   text-decoration: none;
   transition: all ease-in-out 0.3s;
   border: ${(props) => `1px solid ${props.border}`};
@@ -29,7 +30,6 @@ export const FeaturedTag = styled("span")`
   position: absolute;
   padding: 0.5rem 1rem;
   text-align: center;
-  z-index: 90000;
   overflow: hidden;
 `;
 

@@ -6,17 +6,20 @@ import useResponsive from "./hooks/useResponsive";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./components/pages/HomePage";
 import CarDetails from "./components/pages/CarDetails";
-import { carData, conditionTabs } from "./common/data";
+import { carData } from "./common/data";
 import SearchPage from "./components/pages/SearchPage";
 import LoginPage from "./components/pages/LoginPage";
+import { useEffect, useState } from "react";
 
 function App() {
   const mobile = useResponsive();
+  const isHome = window.location.pathname === "/";
+
   return (
     <AppContainer>
-      <Header mobile={mobile} />
-      <AppContent marginTop={!mobile}>
-        <BrowserRouter>
+      <BrowserRouter>
+        <Header mobile={mobile} />
+        <AppContent marginTop={!mobile}>
           <Routes>
             <Route path="/" element={<HomePage mobile={mobile} />} />
             <Route
@@ -29,9 +32,8 @@ function App() {
             />
             <Route path="/login" element={<LoginPage mobile={mobile} />} />
           </Routes>
-        </BrowserRouter>
-      </AppContent>
-
+        </AppContent>
+      </BrowserRouter>
       <Footer mobile={mobile} />
     </AppContainer>
   );

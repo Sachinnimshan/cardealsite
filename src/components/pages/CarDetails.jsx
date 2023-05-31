@@ -58,9 +58,15 @@ function CarDetails(props) {
       gap={1}
     >
       <BreadCrumbs title={data?.title} mobile={props.mobile} />
-      <FlexContainer gap={3} flexwrap>
+      <FlexContainer gap={1} flexwrap>
         <FlexContainer direction={props.mobile && "column"} gap={2} flex>
-          <CarImage images={data?.images} slideView hover slideCount />
+          <CarImage
+            images={data?.images}
+            slideView
+            hover
+            slideCount
+            showControlls
+          />
           <FlexContainer direction="column" gap={0.75} flex>
             <TextView size={1} color={SECONDARY_BLACK} weight={WEIGHT_600}>
               {data?.title}

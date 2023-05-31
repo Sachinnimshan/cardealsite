@@ -1,3 +1,4 @@
+import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
 import { BORDER_RADIUS, PRIMARY_ORANGE } from "../themes/common";
 
@@ -28,6 +29,15 @@ export const MobileApp = styled("img")`
   max-height: ${(props) => (props.mobile ? "200px" : "300px")};
 `;
 
+export const SlideAnimation = keyframes`
+ from {
+    top: -100%;
+  }
+  to {
+    top: 0%;
+  }
+  `;
+
 export const CarDetailsImage = styled("img")`
   max-width: ${(props) => props.maxWidth || "800px"};
   border-radius: ${(props) =>
@@ -41,6 +51,8 @@ export const CarDetailsImage = styled("img")`
   border: ${(props) => props.border && "2px solid transparent"};
   border: ${(props) => props.active && `2px solid ${PRIMARY_ORANGE}`};
   transition: all ease-in-out 0.3s;
+  animation-name: ${SlideAnimation};
+  animation-duration: 4s;
   &:hover {
     opacity: ${(props) => props.hover && 1};
     transition: all ease-in-out 0.3s;

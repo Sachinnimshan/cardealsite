@@ -30,7 +30,7 @@ export const FlexContainer = styled("div")`
       rgba(0, 0, 0, 0.75),
       rgba(0, 0, 0, 0.75)
     ),
-    url("/images/home1.jpg") no-repeat center center`};
+    url("/images/home.jpg") no-repeat center center`};
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

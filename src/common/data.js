@@ -24,7 +24,28 @@ export const vehicleBrands = [
   "Porche",
 ];
 
-export const carTypes = ["Sedan", "Coupe", "SUV", "Hatchback", "Convertible"];
+export const carTypes = [
+  {
+    name: "Sedan",
+    icon: "/images/sedan.png",
+  },
+  {
+    name: "Coupe",
+    icon: "/images/coupe.png",
+  },
+  {
+    name: "SUV",
+    icon: "/images/suv.png",
+  },
+  {
+    name: "Hatchback",
+    icon: "/images/hatchback.png",
+  },
+  {
+    name: "Convertible",
+    icon: "/images/convertible.png",
+  },
+];
 
 export const loginData = ["Log in", "Register"];
 export const socialIcons = [

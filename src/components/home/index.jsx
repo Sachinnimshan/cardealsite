@@ -12,6 +12,7 @@ import {
 } from "../../themes/common";
 import { TextView } from "../../themes/typography";
 import SearchBox from "./SearchBox";
+import { CarType } from "../../images";
 
 function Home(props) {
   return (
@@ -33,8 +34,14 @@ function Home(props) {
         alignY
       >
         Find Your{"  "}
-        <TextView color={PRIMARY_ORANGE} size={4} weight={WEIGHT_700}>
-          Perfect
+        <TextView
+          color={PRIMARY_ORANGE}
+          size={4}
+          weight={WEIGHT_700}
+          padding="0 0.5rem"
+          transform="uppercase"
+        >
+          Dream
         </TextView>
         {"  "}
         Car
@@ -57,10 +64,10 @@ function Home(props) {
                 padding
                 hoverBorder
               >
-                <CarIcon />
+                <CarIcon/>
               </IconWrapper>
               <TextView key={index} color={PRIMARY_WHITE} size={0.01}>
-                {item}
+                {item?.name}
               </TextView>
             </FlexContainer>
           </ButtonLink>

@@ -15,6 +15,10 @@ export const SiteLogo = styled("img")`
   height: fit-content;
 `;
 
+export const CarType = styled("img")`
+  max-width: ${(props)=> props.mobile ? "2rem" : "3rem"};
+`;
+
 export const VehicleHistoryImage = styled("img")`
   max-height: 200px;
 `;

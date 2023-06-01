@@ -22,6 +22,7 @@ import {
   SECONDARY_BLACK,
   SECONDARY_ORANGE,
   WEIGHT_400,
+  WEIGHT_500,
   WEIGHT_600,
   WEIGHT_700,
 } from "../../themes/common";
@@ -66,7 +67,7 @@ function CarDetails(props) {
             mobile={props.mobile}
           />
           <FlexContainer direction="column" gap={0.75} flex>
-            <TextView size={1} color={SECONDARY_BLACK} weight={WEIGHT_600}>
+            <TextView size={1} color={SECONDARY_BLACK} weight={WEIGHT_500}>
               {data?.title}
             </TextView>
             <FlexContainer gap={2}>

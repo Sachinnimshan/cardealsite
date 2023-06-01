@@ -5,7 +5,7 @@ import Home from "../home";
 import Popular from "../sections/Popular";
 import Service from "../sections/Service";
 import Mobile from "../sections/Mobile";
-import { FlexContainer, PageContainer } from "../../common/Layouts.styled";
+import { FlexContainer, PageContainer } from "../../themes/Layouts.styled";;
 
 function HomePage(props) {
   return (

@@ -5,7 +5,7 @@ import {
   WEIGHT_700,
 } from "../../themes/common";
 import { TextView } from "../../themes/typography";
-import { FlexContainer } from "../Layouts.styled";
+import { FlexContainer } from "../../themes/Layouts.styled";
 
 function SectionHeader({ subTitle, title, children, mobile }) {
   return (

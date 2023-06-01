@@ -1,25 +1,20 @@
 import React from "react";
-import { FlexContainer } from "../Layouts.styled";
+import { FlexContainer } from '../../themes/Layouts.styled';
 import { TextView } from "../../themes/typography";
 import { ArrowRightIcon, IconWrapper } from "../../icons";
-import { FONT_SECONDARY, PADDING_DESKTOP, PADDING_MOBILE, PRIMARY_ORANGE, PRIMARY_WHITE } from "../../themes/common";
+import { FONT_LIGHT, FONT_SECONDARY, PRIMARY_ORANGE, SECONDARY_BLACK, SECONDARY_ORANGE } from "../../themes/common";
 
 function BreadCrumbs(props) {
   return (
-    <FlexContainer
-      flex
-      gap={1}
-      alignY="center"
-    >
-      <TextView size={0.05}>Home page</TextView>
+    <FlexContainer flex gap={1} alignY="center" >
+      <TextView size={0.05} nowrap color={FONT_SECONDARY}>
+        Home page
+      </TextView>
       <IconWrapper color={FONT_SECONDARY}>
         <ArrowRightIcon />
       </IconWrapper>
       {props?.title && (
-        <TextView
-          color={PRIMARY_ORANGE}
-          size={0.05}
-        >
+        <TextView color={PRIMARY_ORANGE} size={0.05} nowrap overflowX>
           {props?.title}
         </TextView>
       )}

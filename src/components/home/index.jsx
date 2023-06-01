@@ -1,6 +1,6 @@
 import React from "react";
 import { carTypes } from "../../common/data";
-import { FlexContainer } from "../../common/Layouts.styled";
+import { FlexContainer } from "../../themes/Layouts.styled";
 import ButtonLink from "../../common/link";
 import { CarIcon, IconWrapper } from "../../icons";
 import {

@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { BORDER_RADIUS } from "../themes/common";
+import { BORDER_RADIUS } from "./common";
 
 export const FlexContainer = styled("div")`
   display: flex;
@@ -27,8 +27,8 @@ export const FlexContainer = styled("div")`
     props.background &&
     `linear-gradient(
       0deg,
-      rgba(0, 0, 0, 0.85),
-      rgba(0, 0, 0, 0.85)
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.75)
     ),
     url("/images/home1.jpg") no-repeat center center`};
   -webkit-background-size: cover;

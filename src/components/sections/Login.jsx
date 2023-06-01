@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FaFacebook } from "react-icons/fa";
 import Button from "../../common/button";
 import Input from "../../common/input";
-import { FlexContainer } from "../../common/Layouts.styled";
+import { FlexContainer } from "../../themes/Layouts.styled";
 import Tabs from "../../common/tab";
 import { GoogleIcon, IconWrapper } from "../../icons";
 import {

@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../../common/button";
 import CheckBox from "../../common/checkbox";
 import Input from "../../common/input";
-import { FlexContainer } from "../../common/Layouts.styled";
+import { FlexContainer } from "../../themes/Layouts.styled";
 import { EmailIcon, IconWrapper, LocationIcon, PhoneIcon } from "../../icons";
 import { ContactImage, EmilyImg } from "../../images";
 import {

@@ -1,17 +1,14 @@
 import React from "react";
-import { FlexContainer } from "../../common/Layouts.styled";
-import SectionHeader from "../../common/sectioncommons/SectionHeader";
-import SlideShow from "../../common/slideshow";
+import { FlexContainer } from "../../themes/Layouts.styled";
 import Tabs from "../../common/tab";
 import {
   BG_COLOR_BLUE,
   PADDING_DESKTOP,
   PADDING_MOBILE,
   PRIMARY_WHITE,
-  SECONDARY_BLACK,
-  WEIGHT_700,
 } from "../../themes/common";
-import { TextView } from "../../themes/typography";
+import SectionHeader from "../sectioncommons/SectionHeader";
+import SlideShow from "../slideshow";
 function Popular(props) {
   return (
     <FlexContainer

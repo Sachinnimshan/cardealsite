@@ -1,5 +1,5 @@
 import React from "react";
-import { FlexContainer } from "../../common/Layouts.styled";
+import { FlexContainer } from "../../themes/Layouts.styled";
 import { IconWrapper } from "../../icons";
 import {
   FONT_LIGHT,

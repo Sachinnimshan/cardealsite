@@ -37,11 +37,15 @@ export const TextView = styled("span")`
   width: ${(props) => props.fullWidth && "100%"};
   align-self: ${(props) => props.alignY && "center"};
   justify-self: ${(props) => props.alignX && "center"};
+  overflow-x: ${(props) => props.overflowX && "scroll"};
   display: flex;
   &:hover {
     color: ${(props) => props.hoverColor};
     background-color: ${(props) => props.hoverBgColor};
     opacity: ${(props) => props.hover && "0.9"};
     transition: all ease-in-out 0.2s;
+  }
+  &::-webkit-scrollbar{
+    display: none;
   }
 `;

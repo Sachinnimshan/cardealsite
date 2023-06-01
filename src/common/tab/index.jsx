@@ -19,7 +19,7 @@ function Tabs(props) {
           <TabText
             active={activeTab === index}
             color={FONT_DARK}
-            fontSize="15px"
+            fontSize="14px"
           >
             {item}
           </TabText>

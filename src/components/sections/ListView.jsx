@@ -1,27 +1,20 @@
 import React, { useState } from "react";
 import { searchCriterias } from "../../common/data";
-import { FlexContainer } from "../../common/Layouts.styled";
-import ConditionTabs from "../../common/sectioncommons/ConditionTabs";
+import { FlexContainer } from "../../themes/Layouts.styled";
 import SelectBox from "../../common/select";
 import { GridViewIcon, IconWrapper, ListViewIcon } from "../../icons";
 import {
-  BG_COLOR,
-  BG_COLOR_BLUE,
   BORDER_COLOR,
-  FONT_SECONDARY,
   PADDING_DESKTOP,
   PADDING_MOBILE,
   PRIMARY_ORANGE,
   PRIMARY_WHITE,
   SECONDARY_BLACK,
   SECONDARY_ORANGE,
-  WEIGHT_600,
   WEIGHT_700,
 } from "../../themes/common";
 import { TextView } from "../../themes/typography";
 import CarCard from "../cards/CarCard";
-import Input from "../../common/input";
-import { AppBanner, AppBannerImg } from "../../images";
 
 function ListView(props) {
   const [selectedView, setSelectedView] = useState(false);

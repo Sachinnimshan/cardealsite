@@ -10,7 +10,7 @@ import {
 import { CarCardContainer, FeaturedTag } from "./cards.styled";
 import formatCurrency from "../../utils/currency";
 import { TextView } from "../../themes/typography";
-import { FlexContainer } from "../../common/Layouts.styled";
+import { FlexContainer } from "../../themes/Layouts.styled";
 import CarImage from "./CarImage";
 
 function CarCard({ data, ...props }) {
@@ -29,6 +29,9 @@ function CarCard({ data, ...props }) {
         topRadius
         carId={data?.id}
         cardView
+        smallIcons
+        showControlls
+        mobile
       />
       <FlexContainer
         direction="column"

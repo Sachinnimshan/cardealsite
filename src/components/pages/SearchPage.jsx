@@ -1,6 +1,5 @@
 import React from "react";
-import { FlexContainer } from "../../common/Layouts.styled";
-import BreadCrumbs from "../../common/sectioncommons/BreadCrumbs";
+import { FlexContainer } from "../../themes/Layouts.styled";
 import ListView from "../sections/ListView";
 import MainSearch from "../sections/MainSearch";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { FlexContainer } from "../../common/Layouts.styled";
+import { FlexContainer } from "../../themes/Layouts.styled";
 import { BG_COLOR_BLUE, PRIMARY_WHITE } from "../../themes/common";
 import Login from "../sections/Login";
 

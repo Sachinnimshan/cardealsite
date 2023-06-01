@@ -3,9 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import Button from "../../common/button";
-import { FlexContainer } from "../../common/Layouts.styled";
-import BreadCrumbs from "../../common/sectioncommons/BreadCrumbs";
-import SlideShow from "../../common/slideshow";
+import { FlexContainer } from "../../themes/Layouts.styled";
 import {
   CheckOutlinedIcon,
   CircleIcon,
@@ -13,12 +11,10 @@ import {
   PhoneIcon,
   WhatsappIcon,
 } from "../../icons";
-import { CarDetailsImage, HistoryImg, VehicleHistoryImage } from "../../images";
+import { HistoryImg, VehicleHistoryImage } from "../../images";
 import {
   BG_COLOR_BLUE,
-  FONT_DARK,
   FONT_LIGHT,
-  FONT_SECONDARY,
   PADDING_DESKTOP,
   PADDING_MOBILE,
   PRIMARY_ORANGE,
@@ -26,7 +22,6 @@ import {
   SECONDARY_BLACK,
   SECONDARY_ORANGE,
   WEIGHT_400,
-  WEIGHT_500,
   WEIGHT_600,
   WEIGHT_700,
 } from "../../themes/common";
@@ -34,6 +29,8 @@ import { TextView } from "../../themes/typography";
 import formatCurrency from "../../utils/currency";
 import CarImage from "../cards/CarImage";
 import ContactForm from "../contact";
+import SlideShow from "../slideshow";
+import BreadCrumbs from '../sectioncommons/BreadCrumbs';
 
 function CarDetails(props) {
   const [data, setData] = useState([]);
@@ -66,6 +63,7 @@ function CarDetails(props) {
             hover
             slideCount
             showControlls
+            mobile={props.mobile}
           />
           <FlexContainer direction="column" gap={0.75} flex>
             <TextView size={1} color={SECONDARY_BLACK} weight={WEIGHT_600}>

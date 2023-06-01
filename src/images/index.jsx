@@ -16,7 +16,7 @@ export const SiteLogo = styled("img")`
 `;
 
 export const VehicleHistoryImage = styled("img")`
-  max-width: 150px;
+  max-height: 200px;
 `;
 
 export const ContactImage = styled("img")`
@@ -53,6 +53,7 @@ export const CarDetailsImage = styled("img")`
   transition: all ease-in-out 0.3s;
   animation-name: ${SlideAnimation};
   animation-duration: 4s;
+  transform: ${(props) => props.scaleUp && `scale(1.25)`};
   &:hover {
     opacity: ${(props) => props.hover && 1};
     transition: all ease-in-out 0.3s;

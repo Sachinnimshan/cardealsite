@@ -1,8 +1,7 @@
 import React from "react";
 import Button from "../../common/button";
-import { FlexContainer } from "../../common/Layouts.styled";
+import { FlexContainer } from "../../themes/Layouts.styled";
 import ButtonLink from "../../common/link";
-import SectionHeader from "../../common/sectioncommons/SectionHeader";
 import SocialMediaIcons from "../../common/social";
 import Tabs from "../../common/tab";
 import {
@@ -13,6 +12,7 @@ import {
   PRIMARY_WHITE,
 } from "../../themes/common";
 import CarCard from "../cards/CarCard";
+import SectionHeader from '../sectioncommons/SectionHeader';
 
 function Featured(props) {
   const tabs = ["New", "Used"];
@@ -28,7 +28,7 @@ function Featured(props) {
       >
         <Tabs data={tabs} bgrColor={BG_COLOR} />
       </SectionHeader>
-      <FlexContainer gap={0.75} flexwrap>
+      <FlexContainer gap={0.5} flexwrap>
         {props.data?.slice(0, 7).map((item, index) => (
           <CarCard key={index} data={item} mobile={props.mobile} />
         ))}

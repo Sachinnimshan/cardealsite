@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { TextView } from "../../themes/typography";
-import { FlexContainer } from "../Layouts.styled";
+import { FlexContainer } from "../../themes/Layouts.styled";
 import { Tab } from "./section.styled";
 
 function ConditionTabs(props) {

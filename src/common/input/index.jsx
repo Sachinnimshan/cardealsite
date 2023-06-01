@@ -1,6 +1,6 @@
 import React from "react";
 import { InputContainer } from "./input.styled";
-import { FlexContainer } from "../Layouts.styled";
+import { FlexContainer } from "../../themes/Layouts.styled";
 import { IconWrapper } from "../../icons";
 import {
   BORDER_COLOR,

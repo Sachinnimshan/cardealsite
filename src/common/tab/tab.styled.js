@@ -8,7 +8,7 @@ import {
 export const TabContainer = styled("div")`
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.5rem;
   cursor: pointer;
   overflow-x: scroll;
   scroll-behavior: smooth;
@@ -25,15 +25,16 @@ export const Tab = styled("div")`
   flex-direction: column;
   min-width: 120px;
   transition: all ease-in-out 0.2s;
-  background-color: ${(props) => (props.active ? SECONDARY_ORANGE : props.bgrColor)};
+  background-color: ${(props) =>
+    props.active ? SECONDARY_ORANGE : props.bgrColor};
   border: ${(props) =>
     props.active ? `1px solid ${PRIMARY_ORANGE}` : `1px solid transparent`};
 `;
 
 export const TabText = styled("span")`
   font-weight: ${WEIGHT_400};
-  color: ${(props) => (props.active && PRIMARY_ORANGE || props.color)};
-  font-size: ${(props) => props.fontSize};
+  color: ${(props) => (props.active && PRIMARY_ORANGE) || props.color};
+  font-size: 14px;
   white-space: nowrap;
   text-align: center;
 `;

@@ -1,9 +1,7 @@
 import React from "react";
 import { vehicleBrands } from "../../common/data";
 import Input from "../../common/input";
-import { FlexContainer } from "../../common/Layouts.styled";
-import BreadCrumbs from "../../common/sectioncommons/BreadCrumbs";
-import ConditionTabs from "../../common/sectioncommons/ConditionTabs";
+import { FlexContainer } from "../../themes/Layouts.styled";
 import SelectBox from "../../common/select";
 import {
   CompareIcon,
@@ -12,16 +10,15 @@ import {
   SearchIcon,
 } from "../../icons";
 import {
-  BG_COLOR,
   BG_COLOR_BLUE,
   BORDER_COLOR,
-  PADDING_DESKTOP,
   PADDING_MOBILE,
   PRIMARY_ORANGE,
   SECONDARY_BLACK,
-  WEIGHT_500,
 } from "../../themes/common";
 import { TextView } from "../../themes/typography";
+import BreadCrumbs from "../sectioncommons/BreadCrumbs";
+import ConditionTabs from "../sectioncommons/ConditionTabs";
 
 function MainSearch(props) {
   return (

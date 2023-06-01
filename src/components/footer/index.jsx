@@ -9,7 +9,7 @@ import {
   WEIGHT_600,
 } from "../../themes/common";
 import SocialMediaIcons from "../../common/social";
-import { FlexContainer } from "../../common/Layouts.styled";
+import { FlexContainer } from "../../themes/Layouts.styled";
 import { TextView } from "../../themes/typography";
 
 function Footer(props) {

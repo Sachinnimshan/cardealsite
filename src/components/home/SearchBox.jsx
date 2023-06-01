@@ -1,11 +1,11 @@
 import React from "react";
 import Button from "../../common/button";
 import { vehicleBrands } from "../../common/data";
-import { FlexContainer } from "../../common/Layouts.styled";
-import ConditionTabs from "../../common/sectioncommons/ConditionTabs";
+import { FlexContainer } from "../../themes/Layouts.styled";
 import SelectBox from "../../common/select";
 import { SearchIcon } from "../../icons";
 import { BG_COLOR, PRIMARY_WHITE, WEIGHT_500 } from "../../themes/common";
+import ConditionTabs from "../sectioncommons/ConditionTabs";
 
 function SearchBox(props) {
   return (

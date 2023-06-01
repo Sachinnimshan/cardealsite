@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../../common/button";
-import { FlexContainer } from "../../common/Layouts.styled";
+import { FlexContainer } from "../../themes/Layouts.styled";
 import { AppleIcon, CheckIcon, IconWrapper, PlaystoreIcon } from "../../icons";
 import { MobileApp, MobileAppImg } from "../../images";
 import {

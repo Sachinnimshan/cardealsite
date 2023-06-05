@@ -76,6 +76,7 @@ export const IconWrapper = styled("div")`
   border: ${(props) => props.border && `2px solid ${PRIMARY_WHITE}`};
   position: ${(props) => props.position};
   transition: all ease-in-out 0.3s;
+  z-index: 20000;
   box-shadow: ${(props) =>
     props.shadow &&
     "0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.05)"};

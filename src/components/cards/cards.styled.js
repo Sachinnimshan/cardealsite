@@ -30,6 +30,9 @@ export const FeaturedTag = styled("span")`
   padding: 0.5rem 1rem;
   text-align: center;
   overflow: hidden;
+  opacity: 0.9;
+  border-radius: ${BORDER_RADIUS} 0 ${BORDER_RADIUS} 0;
+  z-index: 4000;
 `;
 
 export const ImageCount = styled("div")`

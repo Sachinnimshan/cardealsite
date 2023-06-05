@@ -20,7 +20,7 @@ function CarCard({ data, ...props }) {
       to={`/cars/${data?.id}`}
       border={props.border}
     >
-      {props.featured && <FeaturedTag>Featured</FeaturedTag>}
+      {data.featured && <FeaturedTag>Featured</FeaturedTag>}
 
       <CarImage
         images={data.images}

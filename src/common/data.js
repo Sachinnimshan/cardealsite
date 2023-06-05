@@ -148,7 +148,7 @@ export const carData = [
       "Navigation System",
       "Side airbags",
     ],
-    featured: false,
+    featured: true,
   },
   {
     title: "Porsche Macan 5-door SUV blue",
@@ -247,7 +247,7 @@ export const carData = [
       "Navigation System",
       "Side airbags",
     ],
-    featured: false,
+    featured: true,
   },
   {
     title: "Audi A8 4-door sedan blue",
@@ -345,7 +345,7 @@ export const carData = [
       "Navigation System",
       "Side airbags",
     ],
-    featured: false,
+    featured: true,
   },
   {
     title: "Ferrari LaFerrari 2-door coupe red",
@@ -444,7 +444,7 @@ export const carData = [
       "Navigation System",
       "Side airbags",
     ],
-    featured: false,
+    featured: true,
   },
   {
     title: "Mercedez Benz AMG GT 2 door coupe yellow",
@@ -531,7 +531,7 @@ export const carData = [
       "Navigation System",
       "Side airbags",
     ],
-    featured: false,
+    featured: true,
   },
 ];
 
@@ -544,4 +544,71 @@ export const searchCriterias = [
   "Price: Highest",
   "Mileage: Lowest",
   "Mileage: Highest",
+];
+
+export const carBrands = [
+  {
+    title: "Mercedes Benz",
+    logo: "/images/mercedes-benz-logo.png",
+  },
+  {
+    title: "BMW",
+    logo: "/images/bmw-logo.png",
+  },
+  {
+    title: "Tesla",
+    logo: "/images/tesla-logo.png",
+  },
+  {
+    title: "Ford",
+    logo: "/images/ford-logo.png",
+  },
+  {
+    title: "Chevrolet",
+    logo: "/images/chevrolet-logo.png",
+  },
+  {
+    title: "Subaru",
+    logo: "/images/subaru-logo.png",
+  },
+  {
+    title: "Porsche",
+    logo: "/images/porsche-logo.png",
+  },
+  {
+    title: "Audi",
+    logo: "/images/audi-logo.png",
+  },
+  {
+    title: "Volkswagen",
+    logo: "/images/volkswagen-logo.png",
+  },
+  {
+    title: "Toyota",
+    logo: "/images/toyota-logo.png",
+  },
+  {
+    title: "Honda",
+    logo: "/images/honda-logo.png",
+  },
+  {
+    title: "Mitsubishi",
+    logo: "/images/mitsubishi-logo.png",
+  },
+  {
+    title: "Lexus",
+    logo: "/images/lexus-logo.png",
+  },
+  {
+    title: "Suzuki",
+    logo: "/images/suzuki-logo.png",
+  },
+  {
+    title: "Nissan",
+    logo: "/images/nissan-logo.png",
+  },
+  {
+    title: "Mazda",
+    logo: "/images/mazda-logo.png",
+  },
 ];

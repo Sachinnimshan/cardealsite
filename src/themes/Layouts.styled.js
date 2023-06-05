@@ -22,7 +22,7 @@ export const FlexContainer = styled("div")`
   z-index: ${(props) => props.zIndex};
   top: ${(props) => props.top};
   width: ${(props) => props.width};
-  cursor: ${(props) => props.cursor && "pointer"};
+  cursor: ${(props) => props.cursor || "pointer"};
   background: ${(props) =>
     props.background &&
     `linear-gradient(

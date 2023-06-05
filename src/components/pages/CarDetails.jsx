@@ -192,7 +192,7 @@ function CarDetails(props) {
           </FlexContainer>
           <FlexContainer
             direction="column"
-            gap={2}
+            gap={1}
             alignY={props.mobile && "center"}
           >
             <TextView color={SECONDARY_BLACK} weight={WEIGHT_700} size={1}>

@@ -11,10 +11,16 @@ function LoginPage(props) {
     <FlexContainer aligX="space-between">
       <Login
         mobile={props.mobile}
-        title="Log in to your account"
-        subTitle="Welcome back! Sign in to your account"
+        title={login ? "Log in to your account" : "Register"}
+        subTitle={
+          login
+            ? "Welcome back! Sign in to your account"
+            : "Create new account today."
+        }
         bgrColor={BG_COLOR_BLUE}
-        buttonTitle="Login"
+        buttonTitle={login ? "Login" : "Register"}
+        login={!login && props.mobile}
+        handleChange={handleChangeView}
       />
       {!props.mobile && (
         <Login
@@ -23,6 +29,7 @@ function LoginPage(props) {
           subTitle="Create new account today."
           bgrColor={PRIMARY_WHITE}
           buttonTitle="Register"
+          login={login || !props.mobile}
         />
       )}
     </FlexContainer>

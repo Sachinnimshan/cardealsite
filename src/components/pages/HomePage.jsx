@@ -5,7 +5,8 @@ import Home from "../home";
 import Popular from "../sections/Popular";
 import Service from "../sections/Service";
 import Mobile from "../sections/Mobile";
-import { FlexContainer, PageContainer } from "../../themes/Layouts.styled";;
+import { FlexContainer, PageContainer } from "../../themes/Layouts.styled";import Brands from "../sections/Brands";
+;
 
 function HomePage(props) {
   return (
@@ -14,6 +15,7 @@ function HomePage(props) {
       <Featured mobile={props.mobile} data={carData} />
       <Popular mobile={props.mobile} carData={carData} data={vehicleBrands} />
       <Service mobile={props.mobile} data={service} />
+      <Brands mobile={props.mobile}/>
       <Mobile mobile={props.mobile} data={mobileData} />
     </FlexContainer>
   );

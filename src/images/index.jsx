@@ -16,7 +16,18 @@ export const SiteLogo = styled("img")`
 `;
 
 export const CarType = styled("img")`
-  max-width: ${(props)=> props.mobile ? "2rem" : "3rem"};
+  max-width: ${(props) => (props.mobile ? "2rem" : "3rem")};
+`;
+
+export const CarLogo = styled("img")`
+  max-width: calc(100px + 2vw);
+  /* filter: grayscale(100%);
+  cursor: pointer;
+  opacity: 0.75;
+  &:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+  } */
 `;
 
 export const VehicleHistoryImage = styled("img")`

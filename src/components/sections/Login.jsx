@@ -54,7 +54,7 @@ function Login(props) {
           </FlexContainer>
         </FlexContainer>
       )}
-      <FlexContainer direction="column" flex gap={3}>
+      <FlexContainer direction="column" flex gap={2}>
         <FlexContainer
           direction="column"
           gap={0.5}
@@ -107,10 +107,15 @@ function Login(props) {
             <TextView size={0.1}>Facebook</TextView>
           </FlexContainer>
         </FlexContainer>
+        <TextView transform="lowercase">or</TextView>
         <FlexContainer direction="column" gap={0.75}>
           <Input placeholder="Email or Username" />
-          <Input placeholder="Email*" />
-          <Input placeholder="Phone" />
+          {props.login && (
+            <>
+              <Input placeholder="Email*" />
+              <Input placeholder="Phone" />
+            </>
+          )}
           <Input placeholder="Password*" />
           <Button text={props.buttonTitle} />
         </FlexContainer>

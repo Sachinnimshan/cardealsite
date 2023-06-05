@@ -1,6 +1,10 @@
 import React from "react";
 import { ArrowLeftIcon, ArrowRightIcon, IconWrapper } from "../../icons";
-import { PRIMARY_WHITE, SECONDARY_BLACK } from "../../themes/common";
+import {
+  PRIMARY_ORANGE,
+  PRIMARY_WHITE,
+  SECONDARY_BLACK,
+} from "../../themes/common";
 import { FlexContainer } from "../../themes/Layouts.styled";
 
 function SlideButtons(props) {
@@ -10,33 +14,41 @@ function SlideButtons(props) {
       width={props.width}
       alignY="center"
       alignX={props.alignX}
-          position={props.position}
-          top={props.top}
+      position={props.position}
+      top={props.top}
     >
-      <IconWrapper
-        onClick={props.onClickNext}
-        size={props.size}
-        hoverColor={props.hoverColor}
-        padding="1rem"
-        shadow
-        radius
-        color={SECONDARY_BLACK}
-        bgrColor={PRIMARY_WHITE}
-      >
-        <ArrowLeftIcon />
-      </IconWrapper>
-      <IconWrapper
-        onClick={props.onClickPrevious}
-        size={props.size}
-        hoverColor={props.hoverColor}
-        padding="1rem"
-        shadow
-        radius
-        color={SECONDARY_BLACK}
-        bgrColor={PRIMARY_WHITE}
-      >
-        <ArrowRightIcon />
-      </IconWrapper>
+      {props.showPrevious && (
+        <IconWrapper
+          onClick={props.onClickPrevious}
+          size={props.size}
+          padding="1rem"
+          shadow
+          radius
+          color={SECONDARY_BLACK}
+          bgrColor={PRIMARY_WHITE}
+          hoverColor={PRIMARY_ORANGE}
+          className="slideControlBtn"
+          id="left"
+        >
+          <ArrowLeftIcon />
+        </IconWrapper>
+      )}
+      {props.showNext && (
+        <IconWrapper
+          onClick={props.onClickNext}
+          size={props.size}
+          padding="1rem"
+          shadow
+          radius
+          color={SECONDARY_BLACK}
+          bgrColor={PRIMARY_WHITE}
+          hoverColor={PRIMARY_ORANGE}
+          className="slideControlBtn"
+          id="right"
+        >
+          <ArrowRightIcon />
+        </IconWrapper>
+      )}
     </FlexContainer>
   );
 }

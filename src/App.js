@@ -12,8 +12,14 @@ import LoginPage from "./components/pages/LoginPage";
 import { useEffect, useState } from "react";
 
 function App() {
+  const [isHome, setIsHome] = useState(false);
   const mobile = useResponsive();
-  const isHome = window.location.pathname === "/";
+
+  useEffect(() => {
+    if (window.location.pathname !== "/") {
+      setIsHome(true);
+    }
+  }, [window.location]);
 
   return (
     <AppContainer>

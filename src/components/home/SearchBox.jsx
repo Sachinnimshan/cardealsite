@@ -6,6 +6,7 @@ import SelectBox from "../../common/select";
 import { SearchIcon } from "../../icons";
 import { BG_COLOR, PRIMARY_WHITE, WEIGHT_500 } from "../../themes/common";
 import ConditionTabs from "../sectioncommons/ConditionTabs";
+import ButtonLink from '../../common/link';
 
 function SearchBox(props) {
   return (
@@ -29,14 +30,16 @@ function SearchBox(props) {
         <SelectBox data={vehicleBrands} />
         <SelectBox data={vehicleBrands} />
         <SelectBox data={vehicleBrands} />
-        <Button
-          text={props.mobile && "Search"}
-          textColor={PRIMARY_WHITE}
-          textSize="16px"
-          iconSize="18px"
-          hover
-          icon={<SearchIcon />}
-        />
+        <ButtonLink to="/search">
+          <Button
+            text={props.mobile && "Search"}
+            textColor={PRIMARY_WHITE}
+            textSize="16px"
+            iconSize="18px"
+            hover
+            icon={<SearchIcon />}
+          />
+        </ButtonLink>
       </FlexContainer>
     </FlexContainer>
   );

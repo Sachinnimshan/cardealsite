@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { TextView } from "../../themes/typography";
 import { FlexContainer } from "../../themes/Layouts.styled";
 import { Tab } from "./section.styled";
+import { FONT_SECONDARY } from "../../themes/common";
 
 function ConditionTabs(props) {
   const tabs = ["All", "New", "Used"];
@@ -25,7 +26,7 @@ function ConditionTabs(props) {
           hoverColor={props.hoverColor}
         >
           {tab}
-          {props.showCount && <TextView size={0.1}>(100)</TextView>}
+          {props.showCount && <TextView size={0.1} color={FONT_SECONDARY}>(100)</TextView>}
         </Tab>
       ))}
     </FlexContainer>

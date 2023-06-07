@@ -1,6 +1,6 @@
 import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
-import { BORDER_RADIUS, PRIMARY_ORANGE } from "../themes/common";
+import { BORDER_RADIUS, PRIMARY_ORANGE, TRANSITION } from "../themes/common";
 
 export const SiteLogoImg = "/images/site-logo.png";
 export const HomeImg = "/images/car-silver.png";
@@ -8,7 +8,7 @@ export const SiteLogoDark = "/images/site-logo-dark.png";
 export const MobileAppImg = "/images/phone.png";
 export const HistoryImg = "/images/history.png";
 export const EmilyImg = "/images/emily.jpg";
-export const AppBannerImg = "/images/appbanner.png";
+export const AppBannerImg = "/images/mycar_sidebar.png";
 
 export const SiteLogo = styled("img")`
   max-width: ${(props) => (props.mobile ? "150px" : "180px")};
@@ -54,10 +54,10 @@ export const SlideAnimation = keyframes`
   `;
 
 export const CarDetailsImage = styled("img")`
-  max-width: ${(props) => props.maxWidth || "800px"};
+  max-width: ${(props) => props.maxWidth };
   border-radius: ${(props) =>
     (props.topRadius && "0.5rem 0.5rem 0 0") || BORDER_RADIUS};
-  width: 100%;
+  width: ${(props) => props.imageWidth || "100%"};
   max-height: ${(props) => props.small && "200px"};
   height: ${(props) => props.height};
   cursor: pointer;
@@ -65,7 +65,7 @@ export const CarDetailsImage = styled("img")`
   opacity: ${(props) => (props.fade ? 0.25 : 1)};
   border: ${(props) => props.border && "2px solid transparent"};
   border: ${(props) => props.active && `2px solid ${PRIMARY_ORANGE}`};
-  transition: all ease-in-out 0.3s;
+  transition: ${TRANSITION};
   animation-name: ${SlideAnimation};
   animation-duration: 4s;
   transform: ${(props) => props.scaleUp && `scale(1.25)`};
@@ -87,4 +87,6 @@ export const HomeBanner = styled("img")`
 
 export const AppBanner = styled("img")`
   display: flex;
+  height: fit-content;
+  max-width: 225px;
 `;

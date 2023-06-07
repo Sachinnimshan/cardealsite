@@ -1,20 +1,9 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import { FlexContainer } from "../../themes/Layouts.styled";
 import SlideButtons from "../../common/slidebtn";
-import {
-  ArrowLeftIcon,
-  ArrowRightIcon,
-  IconWrapper,
-  ImagesIcon,
-  StarIcon,
-} from "../../icons";
+import { IconWrapper, ImagesIcon, StarIcon } from "../../icons";
 import { CarDetailsImage } from "../../images";
-import {
-  BG_COLOR_BLUE,
-  PRIMARY_ORANGE,
-  PRIMARY_WHITE,
-  SECONDARY_BLACK,
-} from "../../themes/common";
+import { BG_COLOR_BLUE } from "../../themes/common";
 import { TextView } from "../../themes/typography";
 import { ImageCount } from "./cards.styled";
 
@@ -36,7 +25,7 @@ function CarImage(props) {
   const handleChangeIndex = (index) => setImageIndex(index);
 
   return (
-    <FlexContainer direction="column" gap={1} flex>
+    <FlexContainer direction="column" gap={1}>
       <FlexContainer
         position="relative"
         flex
@@ -50,6 +39,7 @@ function CarImage(props) {
           zoom={props.zoom}
           overflowHide
           slideShow
+          imageWidth={props.imageWidth}
         />
         {showControlls &&
           props.showControlls &&
@@ -63,6 +53,8 @@ function CarImage(props) {
               top="40%"
               onClickNext={handleNext}
               onClickPrevious={handlePrevious}
+              showNext
+              showPrevious
             />
           )}
         <ImageCount>

@@ -4,7 +4,10 @@ import { FlexContainer } from "../../themes/Layouts.styled";
 import SelectBox from "../../common/select";
 import { GridViewIcon, IconWrapper, ListViewIcon } from "../../icons";
 import {
+  BG_COLOR_BLUE,
   BORDER_COLOR,
+  FONT_LIGHT,
+  FONT_SECONDARY,
   PADDING_DESKTOP,
   PADDING_MOBILE,
   PRIMARY_ORANGE,
@@ -15,10 +18,13 @@ import {
 } from "../../themes/common";
 import { TextView } from "../../themes/typography";
 import CarCard from "../cards/CarCard";
+import { AppBanner, AppBannerImg } from "../../images";
 
 function ListView(props) {
-  const [selectedView, setSelectedView] = useState(false);
-  const handleSelectView = () => setSelectedView(!selectedView);
+  const [listView, setListView] = useState(true);
+  const handleChangeView = () => setListView(!listView);
+
+  const views = [<GridViewIcon />, <ListViewIcon />];
 
   return (
     <FlexContainer
@@ -40,16 +46,16 @@ function ListView(props) {
           {!props.mobile && (
             <>
               <IconWrapper
+                color={!listView ? PRIMARY_ORANGE : FONT_LIGHT}
                 size="2rem"
-                color={PRIMARY_ORANGE}
-                hoverColor={SECONDARY_ORANGE}
+                onClick={handleChangeView}
               >
                 <GridViewIcon />
               </IconWrapper>
               <IconWrapper
+                color={listView ? PRIMARY_ORANGE : FONT_LIGHT}
                 size="2rem"
-                color={PRIMARY_ORANGE}
-                hoverColor={SECONDARY_ORANGE}
+                onClick={handleChangeView}
               >
                 <ListViewIcon />
               </IconWrapper>
@@ -58,18 +64,28 @@ function ListView(props) {
           <SelectBox data={searchCriterias} />
         </FlexContainer>
       </FlexContainer>
-      <FlexContainer flex gap={0.75} flexwrap>
-        {props.data?.map((item, index) => (
-          <CarCard
-            key={index}
-            data={item}
-            bgrColor={PRIMARY_WHITE}
-            titleColor={SECONDARY_BLACK}
-            priceColor={SECONDARY_BLACK}
-            border={BORDER_COLOR}
-            borderTop={BORDER_COLOR}
-          />
-        ))}
+      <FlexContainer gap={1} flexwrap>
+        <FlexContainer flex gap={0.5} flexwrap>
+          {props.data?.map((item, index) => (
+            <CarCard
+              key={index}
+              data={item}
+              bgrColor={PRIMARY_WHITE}
+              titleColor={SECONDARY_BLACK}
+              priceColor={SECONDARY_BLACK}
+              border={BORDER_COLOR}
+              borderTop={BORDER_COLOR}
+              cardDirection={listView && !props.mobile && "space-between"}
+              flexValue={listView ? "100%" : "20%"}
+              cardPadding={listView && !props.mobile}
+              zoom={false}
+              showControlls={false}
+              topRadius={!listView}
+              selectedView={listView && !props.mobile}
+            />
+          ))}
+        </FlexContainer>
+        {!props.mobile && listView && <AppBanner src={AppBannerImg} />}
       </FlexContainer>
     </FlexContainer>
   );

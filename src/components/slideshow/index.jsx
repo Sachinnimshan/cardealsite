@@ -19,7 +19,7 @@ function SlideShow(props) {
         ))}
       </FlexContainer>
       <FlexContainer alignX="space-between" flex margin="1rem 0">
-        <SlideButtons/>
+        <SlideButtons showNext showPrevious/>
         <ButtonLink to="/search">
           <Button bgrColor={PRIMARY_ORANGE} text="Load More" maxWidth />
         </ButtonLink>

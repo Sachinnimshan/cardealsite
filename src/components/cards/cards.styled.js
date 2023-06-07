@@ -4,20 +4,23 @@ import {
   BORDER_RADIUS,
   PRIMARY_ORANGE,
   PRIMARY_WHITE,
+  TRANSITION,
   WEIGHT_500,
 } from "../../themes/common";
 
 export const CarCardContainer = styled(Link)`
   display: flex;
-  flex-direction: column;
-  flex: ${(props) => (props.mobile ? "1" : "20%")};
+  flex-direction: ${(props) => props.cardDirection || "column"};
+  flex: ${(props) => (props.mobile ? "1" : props.flexValue)};
   border-radius: ${BORDER_RADIUS};
   overflow: hidden;
   position: relative;
+  padding: ${(props) => props.padding};
   cursor: pointer;
+  gap: ${(props) => props.selectedView && "1rem"};
   min-width: 300px;
   text-decoration: none;
-  transition: all ease-in-out 0.3s;
+  transition: ${TRANSITION};
   border: ${(props) => `1px solid ${props.border}`};
 `;
 
@@ -45,4 +48,3 @@ export const ImageCount = styled("div")`
   align-items: center;
   justify-content: space-between;
 `;
-

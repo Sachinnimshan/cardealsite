@@ -149,6 +149,7 @@ export const carData = [
       "Side airbags",
     ],
     featured: true,
+    locations: ["Colomobo", "Matara", "Hambantota"],
   },
   {
     title: "Porsche Macan 5-door SUV blue",
@@ -199,6 +200,7 @@ export const carData = [
       "Side airbags",
     ],
     featured: true,
+    locations: ["Colomobo", "Matara", "Hambantota"],
   },
   {
     title: "Audi A4 4-door sedan blue",
@@ -248,6 +250,7 @@ export const carData = [
       "Side airbags",
     ],
     featured: true,
+    locations: ["Colomobo", "Matara", "Hambantota"],
   },
   {
     title: "Audi A8 4-door sedan blue",
@@ -297,6 +300,7 @@ export const carData = [
       "Side airbags",
     ],
     featured: true,
+    locations: ["Colomobo", "Matara", "Hambantota"],
   },
   {
     title: "Audi A8 4-door sedan silver",
@@ -346,6 +350,7 @@ export const carData = [
       "Side airbags",
     ],
     featured: true,
+    locations: ["Colomobo", "Matara", "Hambantota"],
   },
   {
     title: "Ferrari LaFerrari 2-door coupe red",
@@ -395,6 +400,7 @@ export const carData = [
       "Side airbags",
     ],
     featured: true,
+    locations: ["Colomobo", "Matara", "Hambantota"],
   },
   {
     title: "Ferrari Portofino 2-door convertible white",
@@ -445,6 +451,7 @@ export const carData = [
       "Side airbags",
     ],
     featured: true,
+    locations: ["Colomobo", "Matara", "Hambantota"],
   },
   {
     title: "Mercedez Benz AMG GT 2 door coupe yellow",
@@ -488,6 +495,7 @@ export const carData = [
       "Side airbags",
     ],
     featured: true,
+    locations: ["Colomobo", "Matara", "Hambantota"],
   },
   {
     title: "Audi A7 Sportback 5-door hatchback silver",
@@ -532,6 +540,7 @@ export const carData = [
       "Side airbags",
     ],
     featured: true,
+    locations: ["Colomobo", "Matara", "Hambantota"],
   },
 ];
 

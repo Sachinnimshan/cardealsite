@@ -69,19 +69,20 @@ export const IconWrapper = styled("div")`
   font-size: ${(props) => props.size || "1.25rem"};
   cursor: pointer;
   background-color: ${(props) => props.bgrColor};
-  padding: ${(props) => props.padding && "0.75rem"};
+  padding: ${(props) => props.padding && "0.5rem"};
   display: flex;
   align-items: center;
   border-radius: ${(props) => props.radius && "50%"};
   border: ${(props) => props.border && `2px solid ${PRIMARY_WHITE}`};
   position: ${(props) => props.position};
   transition: all ease-in-out 0.3s;
-  z-index: 20000;
+  z-index: 4000;
   box-shadow: ${(props) =>
     props.shadow &&
     "0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.05)"};
   &:hover {
     color: ${(props) => props.hoverColor};
+    background-color: ${(props) => props.hoverBgrColor};
     border: ${(props) => props.hoverBorder && `2px solid ${PRIMARY_ORANGE}`};
     transition: all ease-in-out 0.3s;
   }

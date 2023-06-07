@@ -22,6 +22,7 @@ export const FlexContainer = styled("div")`
   z-index: ${(props) => props.zIndex};
   top: ${(props) => props.top};
   width: ${(props) => props.width};
+
   cursor: ${(props) => props.cursor || "pointer"};
   background: ${(props) =>
     props.background &&
@@ -30,12 +31,14 @@ export const FlexContainer = styled("div")`
       rgba(0, 0, 0, 0.75),
       rgba(0, 0, 0, 0.75)
     ),
-    url("/images/home.jpg") no-repeat center center`};
+    url("/images/home2.jpg") no-repeat center center`};
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  opacity: ${(props) => props.opacity};
   &::-webkit-scrollbar {
     display: none;
   }
 `;
+

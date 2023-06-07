@@ -10,6 +10,7 @@ import {
 import { SiteLogo, SiteLogoDark, SiteLogoImg } from "../../images";
 import {
   BG_COLOR,
+  PRIMARY_BLACK,
   PRIMARY_ORANGE,
   PRIMARY_WHITE,
   SECONDARY_BLACK,
@@ -32,7 +33,6 @@ function Header(props) {
     }
   };
 
-  // const handleLogoClick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   useEffect(() => {
     window.addEventListener("scroll", checkScrolledDown);

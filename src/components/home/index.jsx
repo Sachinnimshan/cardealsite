@@ -23,7 +23,6 @@ function Home(props) {
       flex
       direction="column"
       alignY={!props.mobile && "center"}
-      gap={props.mobile ? 1 : 3}
       background
     >
       <TextView
@@ -47,7 +46,7 @@ function Home(props) {
         Car
       </TextView>
       <SearchBox mobile={props.mobile} />
-      <FlexContainer flex flexwrap gap={1} alignX="center">
+      <FlexContainer flex flexwrap gap={1} alignX="center" margin="2rem 0 0 0">
         {carTypes?.map((item, index) => (
           <ButtonLink to="/search">
             <FlexContainer
@@ -58,7 +57,7 @@ function Home(props) {
             >
               <IconWrapper
                 color={PRIMARY_WHITE}
-                size="1.75rem"
+                size="2.5rem"
                 border
                 radius
                 padding

@@ -17,7 +17,7 @@ function Input(props) {
       radius
       border={BORDER_COLOR}
       padding="0.25rem 1rem"
-      
+      flex
     >
       <InputContainer placeholder={props.placeholder} />
       <IconWrapper size="1.25rem" color={SECONDARY_BLACK}>

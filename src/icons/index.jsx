@@ -27,7 +27,7 @@ import {
   AiFillAppstore,
   AiOutlineStar,
 } from "react-icons/ai";
-import { VscCircleFilled } from "react-icons/vsc";
+import { VscCircleFilled, VscDash } from "react-icons/vsc";
 import { RiPhoneFill } from "react-icons/ri";
 import { CgCheckO } from "react-icons/cg";
 import { HiCheck, HiMenu } from "react-icons/hi";
@@ -63,6 +63,7 @@ export const GoogleIcon = styled(FcGoogle)``;
 export const ImagesIcon = styled(FaRegImages)``;
 export const StarIcon = styled(AiOutlineStar)``;
 export const CarIcon = styled(IoCarSportOutline)``;
+export const DashIcon = styled(VscDash)``;
 
 export const IconWrapper = styled("div")`
   color: ${(props) => props.color};

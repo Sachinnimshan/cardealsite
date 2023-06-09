@@ -5,40 +5,26 @@ import CarInformation from "./CarInformation";
 
 function CarCard({
   data,
-  zoom = true,
-  flexValue = "20%",
+  mobile,
   topRadius = true,
-  selectedView,
-  imageWidth = "100%",
-  showControlls = true,
-  cardPadding = false,
+  small = true,
+  border,
+  cardView = true,
+  zoom = true,
+  shrink,
   ...props
 }) {
   return (
-    <CarCardContainer
-      mobile={props.mobile}
-      to={`/cars/${data?.id}`}
-      border={props.border}
-      cardDirection={props.cardDirection}
-      flexValue={flexValue}
-      padding={cardPadding && "1rem"}
-      selectedView={selectedView}
-    >
+    <CarCardContainer to={`/cars/${data?.id}`} border={border} shrink={shrink}>
       {data.featured && <FeaturedTag>Featured</FeaturedTag>}
       <CarImage
         images={data.images}
-        small
-        zoom={zoom}
         topRadius={topRadius}
-        carId={data?.id}
-        cardView
-        smallIcons
-        showControlls={showControlls}
-        mobile={props.mobile}
-        imageWidth={imageWidth}
-        {...props}
+        small={small}
+        cardView={cardView}
+        zoom={zoom}
       />
-      <CarInformation data={data} listView={selectedView} {...props} />
+      <CarInformation data={data} {...props} />
     </CarCardContainer>
   );
 }

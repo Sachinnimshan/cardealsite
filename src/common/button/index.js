@@ -15,6 +15,9 @@ function Button(props) {
       border={props.border}
       hoverBorder={props.hoverBorder}
       maxWidth={props.maxWidth}
+      small={props.small}
+      flex={props.flex}
+      onClick={props.onClick}
     >
       {props.icon && (
         <IconWrapper size={props.iconSize}>{props.icon}</IconWrapper>

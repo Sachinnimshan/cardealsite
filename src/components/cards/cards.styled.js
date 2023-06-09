@@ -9,19 +9,37 @@ import {
 } from "../../themes/common";
 
 export const CarCardContainer = styled(Link)`
-  display: flex;
-  flex-direction: ${(props) => props.cardDirection || "column"};
-  flex: ${(props) => (props.mobile ? "1" : props.flexValue)};
-  border-radius: ${BORDER_RADIUS};
-  overflow: hidden;
-  position: relative;
-  padding: ${(props) => props.padding};
-  cursor: pointer;
-  gap: ${(props) => props.selectedView && "1rem"};
-  min-width: 300px;
   text-decoration: none;
+  border-radius: ${BORDER_RADIUS};
+  flex-grow: 1;
+  flex-shrink: ${(props) => props.shrink || 1};
+  flex-basis: 300px;
+  overflow: hidden;
+  padding: ${(props) => props.padding};
+  position: relative;
   transition: ${TRANSITION};
+  display: flex;
+  flex-direction: ${(props) => (props.selectedView ? "row" : "column")};
   border: ${(props) => `1px solid ${props.border}`};
+`;
+
+export const CarDetailsImage = styled("img")`
+  width: 100%;
+  height: ${(props) => props.small && "225px"};
+  object-fit: cover;
+  display: flex;
+  overflow: hidden;
+  border-radius: ${(props) =>
+    props.topRadius ? "0.5rem 0.5rem 0 0" : BORDER_RADIUS};
+  border: ${(props) => props.border && "2px solid transparent"};
+  border: ${(props) => props.active && `2px solid ${PRIMARY_ORANGE}`};
+  transition: ${TRANSITION};
+  &:hover {
+    opacity: ${(props) => props.hover && 1};
+    transition: ${TRANSITION};
+    transform: ${(props) => props.zoom && `scale(1.05)`};
+    overflow: ${(props) => props.overflowHide && "hidden"};
+  }
 `;
 
 export const FeaturedTag = styled("span")`
@@ -47,4 +65,11 @@ export const ImageCount = styled("div")`
   width: 100%;
   align-items: center;
   justify-content: space-between;
+`;
+
+export const ListViewCardContainer = styled("div")`
+  width: 100%;
+  justify-content: space-between;
+  gap: 1rem;
+  display: flex;
 `;

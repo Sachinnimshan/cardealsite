@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import { FlexContainer } from "../../themes/Layouts.styled";
 import SlideButtons from "../../common/slidebtn";
 import { IconWrapper, ImagesIcon, StarIcon } from "../../icons";
-import { CarDetailsImage } from "../../images";
 import { BG_COLOR_BLUE } from "../../themes/common";
 import { TextView } from "../../themes/typography";
-import { ImageCount } from "./cards.styled";
+import { CarDetailsImage, ImageCount } from "./cards.styled";
 
 function CarImage(props) {
   const [imageIndex, setImageIndex] = useState(0);
@@ -25,21 +24,18 @@ function CarImage(props) {
   const handleChangeIndex = (index) => setImageIndex(index);
 
   return (
-    <FlexContainer direction="column" gap={1}>
+    <FlexContainer direction="column" gap={1} flex>
       <FlexContainer
         position="relative"
-        flex
         onMouseEnter={handleShowControlls}
         onMouseLeave={handleHideControlls}
+        flex
       >
         <CarDetailsImage
           src={props?.images && props?.images[imageIndex]}
-          small={props.small}
           topRadius={props.topRadius}
+          small={props.small}
           zoom={props.zoom}
-          overflowHide
-          slideShow
-          imageWidth={props.imageWidth}
         />
         {showControlls &&
           props.showControlls &&

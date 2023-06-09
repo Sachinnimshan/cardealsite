@@ -13,7 +13,7 @@ function SearchBox(props) {
     <FlexContainer direction="column" radius>
       <ConditionTabs
         padding="1rem 2rem"
-        size={0.1}
+        size={0.2}
         color={PRIMARY_WHITE}
         weight={WEIGHT_500}
       />
@@ -21,7 +21,7 @@ function SearchBox(props) {
         flex
         flexwrap={props.mobile}
         gap={props.mobile ? 0.5 : 0.25}
-        padding="1.25rem"
+        padding="1.75rem"
         bgrColor={BG_COLOR}
         radius
         alignY={!props.mobile && "center"}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { searchCriterias } from "../../common/data";
 import { FlexContainer } from "../../themes/Layouts.styled";
 import SelectBox from "../../common/select";
@@ -73,19 +73,13 @@ function ListView(props) {
               bgrColor={PRIMARY_WHITE}
               titleColor={SECONDARY_BLACK}
               priceColor={SECONDARY_BLACK}
+              mobile={props.mobile}
               border={BORDER_COLOR}
               borderTop={BORDER_COLOR}
-              cardDirection={listView && !props.mobile && "space-between"}
-              flexValue={listView ? "100%" : "20%"}
-              cardPadding={listView && !props.mobile}
-              zoom={false}
-              showControlls={false}
-              topRadius={!listView}
-              selectedView={listView && !props.mobile}
             />
           ))}
         </FlexContainer>
-        {!props.mobile && listView && <AppBanner src={AppBannerImg} />}
+        {/* {!props.mobile && listView && <AppBanner src={AppBannerImg} />} */}
       </FlexContainer>
     </FlexContainer>
   );

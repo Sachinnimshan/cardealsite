@@ -28,7 +28,7 @@ function Featured(props) {
       >
         <Tabs data={tabs} bgrColor={BG_COLOR} />
       </SectionHeader>
-      <FlexContainer gap={0.5} flexwrap>
+      <FlexContainer gap={0.5} flexwrap flex>
         {props.data?.slice(0, 7).map((item, index) => (
           <CarCard key={index} data={item} mobile={props.mobile} />
         ))}

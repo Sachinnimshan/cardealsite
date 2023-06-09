@@ -1,7 +1,7 @@
 import React from "react";
 import { FlexContainer } from '../../themes/Layouts.styled';
 import { TextView } from "../../themes/typography";
-import { ArrowRightIcon, IconWrapper } from "../../icons";
+import { ArrowRightIcon, DashIcon, IconWrapper } from "../../icons";
 import { FONT_LIGHT, FONT_SECONDARY, PRIMARY_ORANGE, SECONDARY_BLACK, SECONDARY_ORANGE } from "../../themes/common";
 
 function BreadCrumbs(props) {
@@ -11,7 +11,7 @@ function BreadCrumbs(props) {
         Home page
       </TextView>
       <IconWrapper color={FONT_SECONDARY}>
-        <ArrowRightIcon />
+        <DashIcon />
       </IconWrapper>
       {props?.title && (
         <TextView color={PRIMARY_ORANGE} size={0.05} nowrap overflowX>

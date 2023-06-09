@@ -10,16 +10,15 @@ import SlideButtons from "../../common/slidebtn";
 function SlideShow(props) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  
   return (
-    <FlexContainer direction="column">
-      <FlexContainer gap={0.5} overflowX>
+    <FlexContainer direction="column" flex>
+      <FlexContainer gap={0.5} overflowX flex>
         {props.data?.map((item, index) => (
-          <CarCard key={index} data={item} mobile={props.mobile} />
+          <CarCard key={index} data={item} shrink="0"/>
         ))}
       </FlexContainer>
       <FlexContainer alignX="space-between" flex margin="1rem 0">
-        <SlideButtons showNext showPrevious/>
+        <SlideButtons showNext showPrevious />
         <ButtonLink to="/search">
           <Button bgrColor={PRIMARY_ORANGE} text="Load More" maxWidth />
         </ButtonLink>

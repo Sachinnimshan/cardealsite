@@ -1,4 +1,3 @@
-import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
 import { BORDER_RADIUS, PRIMARY_ORANGE, TRANSITION } from "../themes/common";
 
@@ -42,39 +41,6 @@ export const ContactImage = styled("img")`
 
 export const MobileApp = styled("img")`
   max-height: ${(props) => (props.mobile ? "200px" : "300px")};
-`;
-
-export const SlideAnimation = keyframes`
- from {
-    top: -100%;
-  }
-  to {
-    top: 0%;
-  }
-  `;
-
-export const CarDetailsImage = styled("img")`
-  max-width: ${(props) => props.maxWidth };
-  border-radius: ${(props) =>
-    (props.topRadius && "0.5rem 0.5rem 0 0") || BORDER_RADIUS};
-  width: ${(props) => props.imageWidth || "100%"};
-  max-height: ${(props) => props.small && "200px"};
-  height: ${(props) => props.height};
-  cursor: pointer;
-  object-fit: cover;
-  opacity: ${(props) => (props.fade ? 0.25 : 1)};
-  border: ${(props) => props.border && "2px solid transparent"};
-  border: ${(props) => props.active && `2px solid ${PRIMARY_ORANGE}`};
-  transition: ${TRANSITION};
-  animation-name: ${SlideAnimation};
-  animation-duration: 4s;
-  transform: ${(props) => props.scaleUp && `scale(1.25)`};
-  &:hover {
-    opacity: ${(props) => props.hover && 1};
-    transition: all ease-in-out 0.3s;
-    transform: ${(props) => props.zoom && `scale(1.05)`};
-    overflow: ${(props) => props.overflowHide && "hidden"};
-  }
 `;
 
 export const HomeBanner = styled("img")`

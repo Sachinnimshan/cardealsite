@@ -22,11 +22,11 @@ function CarInformation({ data, ...props }) {
       padding={!props.listView && "1rem"}
       bgrColor={props.bgrColor || SECONDARY_BLACK}
       gap={1}
-      flex
       zIndex="1000"
       alignX="space-between"
+      flex
     >
-      <FlexContainer direction="column" gap={0.5}>
+      <FlexContainer direction="column" gap={0.5} flex>
         <TextView
           size={props.listView ? 0.5 : 0.1}
           color={props.titleColor || PRIMARY_WHITE}
@@ -37,7 +37,7 @@ function CarInformation({ data, ...props }) {
           {data.title.length >= 28 && `...`}
         </TextView>
         {props.listView && (
-          <FlexContainer gap={0.25}>
+          <FlexContainer gap={0.25} flexwrap>
             {data?.techSpecs.slice(0, 4)?.map((item, index) => (
               <TextView nowrap size={0.01} color={FONT_LIGHT} key={index}>
                 {item}
@@ -108,7 +108,7 @@ function CarInformation({ data, ...props }) {
           </FlexContainer>
         )}
       </FlexContainer>
-      {props.listView && (
+      {props.showInListView && (
         <FlexContainer
           direction="column"
           gap={0.5}

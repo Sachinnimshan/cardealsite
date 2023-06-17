@@ -25,11 +25,11 @@ function Popular(props) {
       >
         <Tabs data={props.data} bgrColor={PRIMARY_WHITE} />
       </SectionHeader>
-      <Carousel>
+      <SlideShow>
         {props.carData?.map((item, index) => (
-          <CarCard data={item} key={index} shrink="0"  />
+          <CarCard data={item} key={index} shrink="0" />
         ))}
-      </Carousel>
+      </SlideShow>
     </FlexContainer>
   );
 }

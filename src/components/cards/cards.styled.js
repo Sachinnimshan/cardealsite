@@ -11,7 +11,7 @@ import {
 export const CarCardContainer = styled(Link)`
   text-decoration: none;
   border-radius: ${BORDER_RADIUS};
-  flex-grow: 1;
+  flex-grow: ${(props) => props.grow || 1};
   flex-shrink: ${(props) => props.shrink || 1};
   flex-basis: 300px;
   overflow: hidden;

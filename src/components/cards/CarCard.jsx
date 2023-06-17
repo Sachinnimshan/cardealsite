@@ -15,7 +15,7 @@ function CarCard({
   ...props
 }) {
   return (
-    <CarCardContainer to={`/cars/${data?.id}`} border={border} shrink={shrink}>
+    <CarCardContainer to={`/cars/${data?.id}`} border={border} shrink={shrink} className="carcard">
       {data.featured && <FeaturedTag>Featured</FeaturedTag>}
       <CarImage
         images={data.images}

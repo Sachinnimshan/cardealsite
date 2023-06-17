@@ -16,15 +16,15 @@ function App() {
   const mobile = useResponsive();
 
   useEffect(() => {
-    if (window.location.pathname !== "/") {
+    if (window.location.pathname == "/") {
       setIsHome(true);
     }
-  }, [window.location]);
+  }, [window.location.pathname]);
 
   return (
     <AppContainer>
       <BrowserRouter>
-        <Header mobile={mobile} />
+        <Header mobile={mobile}/>
         <AppContent marginTop={!mobile}>
           <Routes>
             <Route path="/" element={<HomePage mobile={mobile} />} />

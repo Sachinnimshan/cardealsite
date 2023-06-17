@@ -1,33 +1,51 @@
 import styled from "@emotion/styled";
-import { PRIMARY_WHITE } from "../../themes/common";
 
-export const SlideShowContainer = styled("div")`
+export const MainCarouselContainer = styled("div")`
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  padding: 2rem 0;
+  gap: 1rem;
+  position: relative;
 `;
 
-export const SlideContainer = styled("div")`
+export const CarouselContainer = styled("div")`
+  position: relative;
   display: flex;
+`;
+
+export const CarouselBody = styled("div")`
   overflow-x: scroll;
-  gap: 1rem;
   &::-webkit-scrollbar {
     display: none;
   }
 `;
 
-export const SlideControls = styled("div")`
+export const CarouselWrapper = styled("div")`
   display: flex;
-  justify-content: space-between;
+  flex: 1;
   gap: 0.5rem;
+  transition: all 0.5s linear;
+  transform: ${(props) =>
+    `translateX(-${props.currentIndex * (100 / props.showCount)}%)`};
 `;
 
-export const SlideController = styled("div")`
-  background-color: ${PRIMARY_WHITE};
-  border-radius: 50%;
-  font-size: 1.25rem;
+////////////////////////////////Carousel/////////////////////////////////////////////
+
+export const MainContainer = styled("div")`
   display: flex;
-  align-items: center;
-  padding: 1rem;
+  flex-direction: column;
+  gap: 1rem;
+`;
+export const SlideShowContainer = styled("div")`
+  position: relative;
+`;
+
+export const SlideShowWrapper = styled("div")`
+  overflow: hidden;
+  position: relative;
+`;
+
+export const Slides = styled("div")`
+  display: flex;
+  position: relative;
+  gap: 0.5rem;
 `;

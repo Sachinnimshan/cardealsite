@@ -24,7 +24,8 @@ export const HeaderContainer = styled("div")`
   top: 0;
   z-index: 10000;
   background-color: ${(props) =>
-    (props.scrolledDown && PRIMARY_WHITE) || PRIMARY_BLACK};
+    (props.scrolledDown && PRIMARY_WHITE) ||
+    PRIMARY_BLACK};
   display: flex;
   align-items: center;
   justify-content: space-between;

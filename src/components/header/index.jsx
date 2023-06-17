@@ -21,6 +21,13 @@ import { HeaderContainer, HeaderRight, NavItem } from "./header.styled";
 function Header(props) {
   const [scrolledDown, setScrolledDown] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
+  const [isHome, setIsHome] = useState(false);
+
+  useEffect(() => {
+    if (window.location.pathname == "/") {
+      setIsHome(true);
+    }
+  }, [window.location.pathname]);
 
   const handleShow = () => setShowMenu(!showMenu);
   const handleClose = () => setShowMenu(false);
@@ -33,7 +40,6 @@ function Header(props) {
     }
   };
 
-
   useEffect(() => {
     window.addEventListener("scroll", checkScrolledDown);
   }, [window.pageYOffset, scrolledDown]);
@@ -42,7 +48,6 @@ function Header(props) {
     <HeaderContainer
       mobile={props.mobile}
       scrolledDown={scrolledDown && !props.mobile}
-      home={props.home && !scrolledDown}
     >
       {props.mobile && (
         <IconWrapper color={PRIMARY_ORANGE} size="2rem">

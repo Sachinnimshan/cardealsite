@@ -9,6 +9,8 @@ import {
 } from "../../themes/common";
 import SectionHeader from "../sectioncommons/SectionHeader";
 import SlideShow from "../slideshow";
+import CarCard from "../cards/CarCard";
+import Carousel from "../slideshow/Carousel";
 function Popular(props) {
   return (
     <FlexContainer
@@ -16,10 +18,18 @@ function Popular(props) {
       bgrColor={BG_COLOR_BLUE}
       direction="column"
     >
-      <SectionHeader title=" Popular Makes" alignX = "space-between" mobile={props.mobile}>
+      <SectionHeader
+        title=" Popular Makes"
+        alignX="space-between"
+        mobile={props.mobile}
+      >
         <Tabs data={props.data} bgrColor={PRIMARY_WHITE} />
       </SectionHeader>
-      <SlideShow data={props.carData} mobile={props.mobile} />
+      <Carousel>
+        {props.carData?.map((item, index) => (
+          <CarCard data={item} key={index} shrink="0"  />
+        ))}
+      </Carousel>
     </FlexContainer>
   );
 }

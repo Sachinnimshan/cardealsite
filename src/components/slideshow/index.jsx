@@ -9,8 +9,8 @@ import {
 } from "./slideshow.styled";
 
 function SlideShow({ children, ...props }) {
-  const [length, setLength] = useState(children.length);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [length, setLength] = useState(children?.length);
   const [touchPosition, setTouchPosition] = useState(null);
   const [infiniteLoop, setInfiniteLoop] = useState(true);
 
@@ -60,7 +60,7 @@ function SlideShow({ children, ...props }) {
     }
   };
   useEffect(() => {
-    setLength(children.length);
+    setLength(children?.length);
   }, [children]);
 
   return (

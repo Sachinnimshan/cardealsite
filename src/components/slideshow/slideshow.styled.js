@@ -24,6 +24,7 @@ export const CarouselWrapper = styled("div")`
   flex: 1;
   gap: 0.5rem;
   transition: all 0.5s linear;
+  overflow: hidden;
   transform: ${(props) =>
     `translateX(-${props.currentIndex * (100 / props.showCount)}%)`};
 `;

@@ -1,5 +1,5 @@
 import React from "react";
-import { CarCardContainer, FeaturedTag } from "./cards.styled";
+import { CardContainer, FeaturedTag } from "./cards.styled";
 import CarImage from "./CarImage";
 import CarInformation from "./CarInformation";
 
@@ -15,7 +15,12 @@ function CarCard({
   ...props
 }) {
   return (
-    <CarCardContainer to={`/cars/${data?.id}`} border={border} shrink={shrink} className="carcard">
+    <CardContainer
+      to={`/cars/${data?.id}`}
+      border={border}
+      shrink={shrink}
+      className="carcard"
+    >
       {data.featured && <FeaturedTag>Featured</FeaturedTag>}
       <CarImage
         images={data.images}
@@ -25,7 +30,7 @@ function CarCard({
         zoom={zoom}
       />
       <CarInformation data={data} {...props} />
-    </CarCardContainer>
+    </CardContainer>
   );
 }
 

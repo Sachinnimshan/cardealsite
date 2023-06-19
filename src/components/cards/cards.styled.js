@@ -8,7 +8,7 @@ import {
   WEIGHT_500,
 } from "../../themes/common";
 
-export const CarCardContainer = styled(Link)`
+export const CardContainer = styled(Link)`
   text-decoration: none;
   border-radius: ${BORDER_RADIUS};
   flex-grow: ${(props) => props.grow || 1};
@@ -72,4 +72,33 @@ export const ListViewCardContainer = styled("div")`
   justify-content: space-between;
   gap: 1rem;
   display: flex;
+`;
+
+export const TeamCardContainer = styled("div")`
+  display: flex;
+  flex-direction: column;
+  flex-grow: ${(props) => props.grow || 1};
+  flex-shrink: ${(props) => props.shrink || 1};
+  flex-basis: 300px;
+  border-radius: ${BORDER_RADIUS};
+  transition: ${TRANSITION};
+  overflow: hidden;
+`;
+
+export const TeamMemberContainer = styled("div")`
+  overflow-x: scroll;
+  display: flex;
+`;
+
+export const TeamCardImage = styled("img")`
+  width: 100%;
+`;
+
+export const TeamMemberIconContainer = styled("div")`
+  display: flex;
+  align-items: center;
+  bottom: -8%;
+  position: absolute;
+  gap: 0.5rem;
+  left: 2rem;
 `;

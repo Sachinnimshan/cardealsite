@@ -19,7 +19,6 @@ function Mobile(props) {
     <FlexContainer
       padding={props.mobile ? PADDING_MOBILE : PADDING_DESKTOP}
       alignX="center"
-      flex
       flexwrap
       gap={2}
     >
@@ -87,6 +86,7 @@ function Mobile(props) {
             bgrColor="transparent"
             border
             hoverBgColor={PRIMARY_ORANGE}
+            flex="0"
           />
         </FlexContainer>
         <FlexContainer direction="column" gap={0.5} alignX="center">

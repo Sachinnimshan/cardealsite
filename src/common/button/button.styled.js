@@ -21,7 +21,7 @@ export const ButtonContainer = styled("span")`
   transition: all ease-in-out 0.2s;
   border-radius: ${BORDER_RADIUS};
   white-space: nowrap;
-  border: ${(props) => props.border && `2px solid ${PRIMARY_ORANGE}`};
+  border: ${(props) => props.border && `1.75px solid ${PRIMARY_ORANGE}`};
   align-items: center;
   justify-content: center;
   max-width: ${(props) => props.maxWidth && "150px"};

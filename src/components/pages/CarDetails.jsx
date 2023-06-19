@@ -31,7 +31,8 @@ import formatCurrency from "../../utils/currency";
 import CarImage from "../cards/CarImage";
 import ContactForm from "../contact";
 import SlideShow from "../slideshow";
-import BreadCrumbs from '../sectioncommons/BreadCrumbs';
+import BreadCrumbs from "../sectioncommons/BreadCrumbs";
+import CarCard from "../cards/CarCard";
 
 function CarDetails(props) {
   const [data, setData] = useState([]);
@@ -229,7 +230,11 @@ function CarDetails(props) {
         </FlexContainer>
       </FlexContainer>
       <ContactForm mobile={props.mobile} />
-      <SlideShow data={props.data} mobile={props.mobile} />
+      <SlideShow mobile={props.mobile}>
+        {props.data?.map((item, index) => (
+          <CarCard data={item} shrink="0" key={index}/>
+        ))}
+      </SlideShow>
     </FlexContainer>
   );
 }

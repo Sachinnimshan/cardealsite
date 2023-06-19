@@ -621,3 +621,57 @@ export const carBrands = [
     logo: "/images/mazda-logo.png",
   },
 ];
+
+export const teamData = {
+  teamInfo: [
+    "Praesent nibh luctus viverra",
+    "Adipiscing elit",
+    "Tempor incididunt ut labore",
+    "Quis ipsum suspendisseviverra",
+    "Maecenas ac",
+  ],
+  teamMembers: [
+    {
+      name: "Emily Rees",
+      title: "Customer Advisor",
+      email: "isabella@vehica.com",
+      mobile: "(123) 345-6789",
+      image: "/images/emily.jpg",
+    },
+    {
+      name: "George Brown",
+      title: "Customer Advisor",
+      email: "george@vehica.com",
+      mobile: "(123) 345-6789",
+      image: "/images/george.jpg",
+    },
+    {
+      name: "Isabella Evans",
+      title: "Customer Advisor",
+      email: "emily@vehica.com",
+      mobile: "(123) 345-6789",
+      image: "/images/isabella.jpg",
+    },
+    {
+      name: "Jacob Austin",
+      title: "Customer Advisor",
+      email: "jacob@vehica.com",
+      mobile: "(123) 345-6789",
+      image: "/images/jacob.jpg",
+    },
+    {
+      name: "Kate Hendricks",
+      title: "Customer Advisor",
+      email: "kate@vehica.com",
+      mobile: "(123) 345-6789",
+      image: "/images/kate.jpg",
+    },
+    {
+      name: "Ralph Davin",
+      title: "Customer Advisor",
+      email: "ralph@vehica.com",
+      mobile: "(123) 345-6789",
+      image: "/images/ralph.jpg",
+    },
+  ],
+};

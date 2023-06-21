@@ -24,7 +24,7 @@ function Popular(props) {
       >
         <Tabs data={props.data} bgrColor={PRIMARY_WHITE} />
       </SectionHeader>
-      <SlideShow>
+      <SlideShow showControlls>
         {props.carData?.map((item, index) => (
           <CarCard data={item} key={index} shrink="0" />
         ))}

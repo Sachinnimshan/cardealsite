@@ -3,9 +3,8 @@ import { useState } from "react";
 import SlideButtons from "../../common/slidebtn";
 import {
   CarouselBody,
-  CarouselContainer,
   CarouselWrapper,
-  MainCarouselContainer,
+  CarouselContainer,
 } from "./slideshow.styled";
 
 function SlideShow({ children, ...props }) {
@@ -17,20 +16,12 @@ function SlideShow({ children, ...props }) {
   }, [children]);
 
   return (
-    <MainCarouselContainer>
-      <CarouselContainer>
-        <CarouselBody>
-          <CarouselWrapper
-            currentIndex={currentIndex}
-            showCount={props.showCount}
-            //onTransitionEnd={() => handleTransitionEnd()}
-          >
-            {children}
-          </CarouselWrapper>
-        </CarouselBody>
-      </CarouselContainer>
-      <SlideButtons showNext showPrevious {...props} />
-    </MainCarouselContainer>
+    <CarouselContainer>
+      <CarouselBody>
+        <CarouselWrapper id="carouselDiv">{children}</CarouselWrapper>
+      </CarouselBody>
+      {props.showControlls && <SlideButtons showNext showPrevious {...props} />}
+    </CarouselContainer>
   );
 }
 

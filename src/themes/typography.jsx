@@ -19,6 +19,7 @@ export const TextView = styled("span")`
   overflow-x: ${(props) => props.overflowX && "scroll"};
   display: flex;
   height: fit-content;
+  flex: ${(props) => props.flex};
   text-decoration: ${(props) => props.underline && "underline"};
   &:hover {
     color: ${(props) => props.hoverColor};

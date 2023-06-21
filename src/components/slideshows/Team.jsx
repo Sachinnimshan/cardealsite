@@ -18,15 +18,18 @@ import { TextView } from "../../themes/typography";
 import TeamCard from "../cards/TeamCard";
 
 function Team(props) {
-    const handleNext = () => {
-        
-    };
-
-    const handlePrevious = () => {
-        
-    };
-
+  const slider = document.getElementById("carouselDiv");
+  const teamCard = document.getElementById("teamMemberCard");
+    const slideWidth = teamCard?.clientWidth;
     
+  const handleNext = () => {
+    if (slider) {
+      slider.scrollLeft += 100;
+    }
+  };
+
+  const handlePrevious = () => {};
+
   return (
     <FlexContainer
       bgrColor={PRIMARY_WHITE}
@@ -40,7 +43,7 @@ function Team(props) {
         radius
         alignX="space-between"
         direction={props.mobile && "column"}
-        gap={3}
+        gap={4}
         overflowX
       >
         <FlexContainer direction="column" gap={2} flex>
@@ -60,13 +63,30 @@ function Team(props) {
             ))}
           </FlexContainer>
           <Button text="Learn more" flex="0" />
-          {!props.mobile && <SlideButtons showNext showPrevious />}
+          {!props.mobile && (
+            <SlideButtons
+              showNext
+              showPrevious
+              onClickNext={handleNext}
+              onClickPrevious={handlePrevious}
+            />
+          )}
         </FlexContainer>
-        <SlideShow>
-          {props.data?.teamMembers?.map((item, index) => (
-            <TeamCard data={item} key={index} shrink="0" />
-          ))}
-        </SlideShow>
+        <FlexContainer overflowX direction="column" gap={1}>
+          <SlideShow>
+            {props.data?.teamMembers?.map((item, index) => (
+              <TeamCard data={item} key={index} shrink="0" />
+            ))}
+          </SlideShow>
+          {props.mobile && (
+            <SlideButtons
+              showNext
+              showPrevious
+              onClickNext={handleNext}
+              onClickPrevious={handlePrevious}
+            />
+          )}
+        </FlexContainer>
       </FlexContainer>
     </FlexContainer>
   );

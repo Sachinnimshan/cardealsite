@@ -34,6 +34,7 @@ export const CarDetailsImage = styled("img")`
   border: ${(props) => props.border && "2px solid transparent"};
   border: ${(props) => props.active && `2px solid ${PRIMARY_ORANGE}`};
   transition: ${TRANSITION};
+
   &:hover {
     opacity: ${(props) => props.hover && 1};
     transition: ${TRANSITION};
@@ -65,6 +66,11 @@ export const ImageCount = styled("div")`
   width: 100%;
   align-items: center;
   justify-content: space-between;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
 `;
 
 export const ListViewCardContainer = styled("div")`

@@ -1,4 +1,5 @@
 import React from "react";
+import SlideShow from ".";
 import Button from "../../common/button";
 import SlideButtons from "../../common/slidebtn";
 import { CheckIcon, IconWrapper } from "../../icons";
@@ -17,6 +18,15 @@ import { TextView } from "../../themes/typography";
 import TeamCard from "../cards/TeamCard";
 
 function Team(props) {
+    const handleNext = () => {
+        
+    };
+
+    const handlePrevious = () => {
+        
+    };
+
+    
   return (
     <FlexContainer
       bgrColor={PRIMARY_WHITE}
@@ -31,12 +41,13 @@ function Team(props) {
         alignX="space-between"
         direction={props.mobile && "column"}
         gap={3}
+        overflowX
       >
         <FlexContainer direction="column" gap={2} flex>
           <TextView size={2} weight={WEIGHT_700} color={PRIMARY_WHITE}>
             Our team
           </TextView>
-          <FlexContainer direction="column" gap={1} >
+          <FlexContainer direction="column" gap={1}>
             {props.data?.teamInfo?.map((item, index) => (
               <FlexContainer key={index} gap={1} alignY="center">
                 <IconWrapper color={PRIMARY_ORANGE}>
@@ -51,14 +62,11 @@ function Team(props) {
           <Button text="Learn more" flex="0" />
           {!props.mobile && <SlideButtons showNext showPrevious />}
         </FlexContainer>
-        <FlexContainer direction="column" gap={1} alignY="center" overflowX>
-          <FlexContainer gap={1} overflowX flexwrap>
-            {props.data?.teamMembers?.map((item, index) => (
-              <TeamCard data={item} key={index} />
-            ))}
-          </FlexContainer>
-          {props.mobile && <SlideButtons showNext showPrevious />}
-        </FlexContainer>
+        <SlideShow>
+          {props.data?.teamMembers?.map((item, index) => (
+            <TeamCard data={item} key={index} shrink="0" />
+          ))}
+        </SlideShow>
       </FlexContainer>
     </FlexContainer>
   );

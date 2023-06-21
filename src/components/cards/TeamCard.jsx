@@ -18,7 +18,7 @@ import {
 
 function TeamCard({ data, ...props }) {
   return (
-    <TeamCardContainer shrink={props.shrink}>
+    <TeamCardContainer shrink={props.shrink} className="teamMember" >
       <FlexContainer position="relative">
         <TeamCardImage src={data?.image} />
         <TeamMemberIconContainer>

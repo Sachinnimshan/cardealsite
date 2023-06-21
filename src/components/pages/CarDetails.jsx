@@ -30,7 +30,7 @@ import { TextView } from "../../themes/typography";
 import formatCurrency from "../../utils/currency";
 import CarImage from "../cards/CarImage";
 import ContactForm from "../contact";
-import SlideShow from "../slideshow";
+import SlideShow from "../slideshows";
 import BreadCrumbs from "../sectioncommons/BreadCrumbs";
 import CarCard from "../cards/CarCard";
 
@@ -232,7 +232,7 @@ function CarDetails(props) {
       <ContactForm mobile={props.mobile} />
       <SlideShow mobile={props.mobile}>
         {props.data?.map((item, index) => (
-          <CarCard data={item} shrink="0" key={index}/>
+          <CarCard data={item} shrink="0" key={index} />
         ))}
       </SlideShow>
     </FlexContainer>

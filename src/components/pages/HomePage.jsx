@@ -5,9 +5,9 @@ import Home from "../home";
 import Popular from "../sections/Popular";
 import Service from "../sections/Service";
 import Mobile from "../sections/Mobile";
-import { FlexContainer, PageContainer } from "../../themes/Layouts.styled";
+import { FlexContainer } from "../../themes/Layouts.styled";
 import Brands from "../sections/Brands";
-import Team from "../sections/Team";
+import Team from "../slideshows/Team";
 function HomePage(props) {
   return (
     <FlexContainer direction="column">

@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { BORDER_RADIUS, PRIMARY_BLACK } from "../../themes/common";
 
 export const MainCarouselContainer = styled("div")`
   display: flex;
@@ -24,29 +25,8 @@ export const CarouselWrapper = styled("div")`
   flex: 1;
   gap: 0.5rem;
   transition: all 0.5s linear;
-  overflow: hidden;
   transform: ${(props) =>
     `translateX(-${props.currentIndex * (100 / props.showCount)}%)`};
 `;
 
 ////////////////////////////////Carousel/////////////////////////////////////////////
-
-export const MainContainer = styled("div")`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-`;
-export const SlideShowContainer = styled("div")`
-  position: relative;
-`;
-
-export const SlideShowWrapper = styled("div")`
-  overflow: hidden;
-  position: relative;
-`;
-
-export const Slides = styled("div")`
-  display: flex;
-  position: relative;
-  gap: 0.5rem;
-`;

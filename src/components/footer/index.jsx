@@ -1,12 +1,17 @@
 import React from "react";
 import { SiteLogo, SiteLogoImg } from "../../images";
 import {
+  BG_COLOR,
+  BORDER_COLOR,
+  FONT_DARK,
   FONT_SECONDARY,
   PADDING_DESKTOP,
   PADDING_MOBILE,
   PRIMARY_ORANGE,
+  PRIMARY_WHITE,
   SECONDARY_BLACK,
   WEIGHT_600,
+  WEIGHT_700,
 } from "../../themes/common";
 import SocialMediaIcons from "../../common/social";
 import { FlexContainer } from "../../themes/Layouts.styled";
@@ -34,7 +39,7 @@ function Footer(props) {
         >
           <SiteLogo src={SiteLogoImg} alt="Vehica Logo" />
           <TextView
-            color={FONT_SECONDARY}
+            color={BG_COLOR}
             maxWidth="300px"
             size={0.01}
             lineHeight={0.25}
@@ -49,14 +54,17 @@ function Footer(props) {
         <FlexContainer direction="column">
           <TextView
             size={1}
-            weight={WEIGHT_600}
+            weight={WEIGHT_700}
             color={PRIMARY_ORANGE}
             align={props.mobile && "center"}
           >
-            (123) 456-78901
+            <TextView color={PRIMARY_WHITE} size={1} weight={WEIGHT_700}>
+              (123)
+            </TextView>
+            456-78901
           </TextView>
           <TextView
-            color={FONT_SECONDARY}
+            color={BG_COLOR}
             size={0.01}
             lineHeight={0.25}
             align={props.mobile && "center"}
@@ -70,10 +78,12 @@ function Footer(props) {
         alignY="center"
         flexwrap
         alignX={props.mobile && "center"}
+        borderTop={FONT_DARK}
+        padding="2rem 0 0 0"
       >
         <TextView
           size={0.01}
-          color={FONT_SECONDARY}
+          color={BG_COLOR}
           lineHeight={0.5}
           align={props.mobile && "center"}
         >

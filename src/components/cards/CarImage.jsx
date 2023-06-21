@@ -83,19 +83,20 @@ function CarImage(props) {
       </FlexContainer>
       {props.slideView && (
         <FlexContainer flex gap={0.25} overflowX>
-          {props.images?.map((item, index) => (
-            <CarDetailsImage
-              key={index}
-              src={item}
-              fade={imageIndex !== index}
-              active={imageIndex === index}
-              onClick={() => handleChangeIndex(index)}
-              maxWidth="125px"
-              height="100px"
-              hover={props.hover}
-              border
-            />
-          ))}
+          {props.images?.length > 1 &&
+            props.images?.map((item, index) => (
+              <CarDetailsImage
+                key={index}
+                src={item}
+                fade={imageIndex !== index}
+                active={imageIndex === index}
+                onClick={() => handleChangeIndex(index)}
+                maxWidth="125px"
+                height="100px"
+                hover={props.hover}
+                border
+              />
+            ))}
         </FlexContainer>
       )}
     </FlexContainer>

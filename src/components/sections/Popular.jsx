@@ -8,9 +8,8 @@ import {
   PRIMARY_WHITE,
 } from "../../themes/common";
 import SectionHeader from "../sectioncommons/SectionHeader";
-import SlideShow from "../slideshow";
+import SlideShow from "../slideshows";
 import CarCard from "../cards/CarCard";
-import Carousel from "../slideshow/Carousel";
 function Popular(props) {
   return (
     <FlexContainer

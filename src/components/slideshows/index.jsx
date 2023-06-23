@@ -1,25 +1,18 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SlideButtons from "../../common/slidebtn";
-import {
-  CarouselBody,
-  CarouselWrapper,
-  CarouselContainer,
-} from "./slideshow.styled";
+import { CarouselWrapper, CarouselContainer } from "./slideshow.styled";
 
 function SlideShow({ children, ...props }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [length, setLength] = useState(children?.length);
-
-  useEffect(() => {
-    setLength(children?.length);
-  }, [children]);
-
   return (
     <CarouselContainer>
-      <CarouselBody>
-        <CarouselWrapper id="carouselDiv">{children}</CarouselWrapper>
-      </CarouselBody>
+      <CarouselWrapper
+        id="carouselDiv"
+        currentIndex={props.currentIndex}
+        showCount={props.showCount}
+        grid={props.grid}
+      >
+        {children}
+      </CarouselWrapper>
       {props.showControlls && <SlideButtons showNext showPrevious {...props} />}
     </CarouselContainer>
   );

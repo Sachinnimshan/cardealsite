@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import SlideShow from ".";
 import Button from "../../common/button";
 import SlideButtons from "../../common/slidebtn";
@@ -18,17 +19,25 @@ import { TextView } from "../../themes/typography";
 import TeamCard from "../cards/TeamCard";
 
 function Team(props) {
-  const slider = document.getElementById("carouselDiv");
   const teamCard = document.getElementById("teamMemberCard");
-    const slideWidth = teamCard?.clientWidth;
-    
+  const teamCardWidth = teamCard?.clientWidth;
+  const [currentIndex, setCurrentIndex] = useState(1);
+
   const handleNext = () => {
-    if (slider) {
-      slider.scrollLeft += 100;
-    }
+    setCurrentIndex(
+      currentIndex === props.data?.teamMembers?.length - 1
+        ? 0
+        : currentIndex + 1
+    );
   };
 
-  const handlePrevious = () => {};
+  const handlePrevious = () => {
+    setCurrentIndex(
+      currentIndex === 0
+        ? props.data?.teamMembers?.length - 1
+        : currentIndex - 1
+    );
+  };
 
   return (
     <FlexContainer
@@ -73,7 +82,7 @@ function Team(props) {
           )}
         </FlexContainer>
         <FlexContainer overflowX direction="column" gap={1}>
-          <SlideShow>
+          <SlideShow currentIndex={currentIndex} showCount={props.mobile ? 1 : 3} grid="grid">
             {props.data?.teamMembers?.map((item, index) => (
               <TeamCard data={item} key={index} shrink="0" />
             ))}

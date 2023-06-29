@@ -34,7 +34,7 @@ export const Tab = styled("div")`
 export const TabText = styled("span")`
   font-weight: ${WEIGHT_400};
   color: ${(props) => (props.active && PRIMARY_ORANGE) || props.color};
-  font-size: 14px;
+  font-size: ${(props) => props.size || "15px"};
   white-space: nowrap;
   text-align: center;
 `;

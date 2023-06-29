@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FlexContainer } from "../../themes/Layouts.styled";
 import Tabs from "../../common/tab";
 import {
@@ -22,9 +22,14 @@ function Popular(props) {
         alignX="space-between"
         mobile={props.mobile}
       >
-        <Tabs data={props.data} bgrColor={PRIMARY_WHITE} />
+        <Tabs data={props.data} bgrColor={PRIMARY_WHITE} count />
       </SectionHeader>
-      <SlideShow showControlls>
+      <SlideShow
+        slideWrapperName="popular-slide-show"
+        showControlls
+        showCount={props.mobile ? 1 : 4}
+        mobile={props.mobile}
+      >
         {props.carData?.map((item, index) => (
           <CarCard data={item} key={index} shrink="0" />
         ))}

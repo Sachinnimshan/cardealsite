@@ -230,7 +230,11 @@ function CarDetails(props) {
         </FlexContainer>
       </FlexContainer>
       <ContactForm mobile={props.mobile} />
-      <SlideShow mobile={props.mobile}>
+      <SlideShow
+        mobile={props.mobile}
+        showCount={props.mobile ? 1 : 5}
+        showControlls
+      >
         {props.data?.map((item, index) => (
           <CarCard data={item} shrink="0" key={index} />
         ))}

@@ -19,6 +19,7 @@ function Mobile(props) {
     <FlexContainer
       padding={props.mobile ? PADDING_MOBILE : PADDING_DESKTOP}
       alignX="center"
+      direction={props.mobile && "column"}
       flexwrap
       gap={2}
     >
@@ -30,8 +31,9 @@ function Mobile(props) {
         alignX={props.mobile ? "center" : "space-between"}
         gap={1}
         flexwrap
+        position="relative"
       >
-        <FlexContainer direction="column" gap={1} flex={props.mobile}>
+        <FlexContainer direction="column" gap={1} >
           <TextView color={PRIMARY_WHITE} weight={WEIGHT_700} size={2}>
             Download {!props.mobile && <br />}
             our app

@@ -34,7 +34,6 @@ export const CarDetailsImage = styled("img")`
   border: ${(props) => props.border && "2px solid transparent"};
   border: ${(props) => props.active && `2px solid ${PRIMARY_ORANGE}`};
   transition: ${TRANSITION};
-
   &:hover {
     opacity: ${(props) => props.hover && 1};
     transition: ${TRANSITION};
@@ -73,13 +72,6 @@ export const ImageCount = styled("div")`
   );
 `;
 
-export const ListViewCardContainer = styled("div")`
-  width: 100%;
-  justify-content: space-between;
-  gap: 1rem;
-  display: flex;
-`;
-
 export const TeamCardContainer = styled("div")`
   display: flex;
   flex-direction: column;
@@ -89,11 +81,7 @@ export const TeamCardContainer = styled("div")`
   border-radius: ${BORDER_RADIUS};
   transition: ${TRANSITION};
   overflow: hidden;
-`;
-
-export const TeamMemberContainer = styled("div")`
-  overflow-x: scroll;
-  display: flex;
+  min-width: 150px;
 `;
 
 export const TeamCardImage = styled("img")`
@@ -103,7 +91,7 @@ export const TeamCardImage = styled("img")`
 export const TeamMemberIconContainer = styled("div")`
   display: flex;
   align-items: center;
-  bottom: -8%;
+  bottom: -7%;
   position: absolute;
   gap: 0.5rem;
   left: 2rem;

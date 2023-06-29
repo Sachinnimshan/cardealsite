@@ -18,13 +18,13 @@ import {
 
 function TeamCard({ data, ...props }) {
   return (
-    <TeamCardContainer shrink={props.shrink} id="teamMemberCard">
+    <TeamCardContainer shrink={props.shrink} id="teamMemberCard" margin={props.margin}>
       <FlexContainer position="relative">
         <TeamCardImage src={data?.image} />
         <TeamMemberIconContainer>
           <IconWrapper
             bgrColor={PRIMARY_ORANGE}
-            size="2rem"
+            size="1.75rem"
             color={PRIMARY_WHITE}
             padding
             radius
@@ -33,7 +33,7 @@ function TeamCard({ data, ...props }) {
           </IconWrapper>
           <IconWrapper
             bgrColor={PRIMARY_ORANGE}
-            size="2rem"
+            size="1.75rem"
             color={PRIMARY_WHITE}
             padding
             radius

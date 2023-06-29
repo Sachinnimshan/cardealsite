@@ -19,13 +19,13 @@ function Tabs(props) {
           <TabText
             active={activeTab === index}
             color={FONT_DARK}
-            fontSize="14px"
+            size="15px"
           >
             {item}
           </TabText>
           {props.count && (
             <TabText
-              fontSize="12px"
+              size="12px"
               active={activeTab === index}
               color={FONT_LIGHT}
             >

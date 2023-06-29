@@ -19,9 +19,7 @@ import { TextView } from "../../themes/typography";
 import TeamCard from "../cards/TeamCard";
 
 function Team(props) {
-  const teamCard = document.getElementById("teamMemberCard");
-  const teamCardWidth = teamCard?.clientWidth;
-  const [currentIndex, setCurrentIndex] = useState(1);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
     setCurrentIndex(
@@ -52,9 +50,10 @@ function Team(props) {
         radius
         alignX="space-between"
         direction={props.mobile && "column"}
-        gap={4}
+        gap={2}
         overflowX
       >
+        {" "}
         <FlexContainer direction="column" gap={2} flex>
           <TextView size={2} weight={WEIGHT_700} color={PRIMARY_WHITE}>
             Our team
@@ -72,30 +71,18 @@ function Team(props) {
             ))}
           </FlexContainer>
           <Button text="Learn more" flex="0" />
-          {!props.mobile && (
-            <SlideButtons
-              showNext
-              showPrevious
-              onClickNext={handleNext}
-              onClickPrevious={handlePrevious}
-            />
-          )}
         </FlexContainer>
-        <FlexContainer overflowX direction="column" gap={1}>
-          <SlideShow currentIndex={currentIndex} showCount={props.mobile ? 1 : 3} grid="grid">
-            {props.data?.teamMembers?.map((item, index) => (
-              <TeamCard data={item} key={index} shrink="0" />
-            ))}
-          </SlideShow>
-          {props.mobile && (
-            <SlideButtons
-              showNext
-              showPrevious
-              onClickNext={handleNext}
-              onClickPrevious={handlePrevious}
-            />
-          )}
-        </FlexContainer>
+        <SlideShow
+          currentIndex={currentIndex}
+          showCount={props.mobile ? 1 : 3}
+          grid="grid"
+          slideWrapperName="team-slide-show"
+          showControlls
+        >
+          {props.data?.teamMembers?.map((item, index) => (
+            <TeamCard data={item} key={index} shrink="0" />
+          ))}
+        </SlideShow>
       </FlexContainer>
     </FlexContainer>
   );

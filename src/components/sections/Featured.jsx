@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../../common/button";
-import { FlexContainer } from "../../themes/Layouts.styled";
+import { FlexContainer, GridContainer } from "../../themes/Layouts.styled";
 import ButtonLink from "../../common/link";
 import SocialMediaIcons from "../../common/social";
 import Tabs from "../../common/tab";
@@ -12,7 +12,7 @@ import {
   PRIMARY_WHITE,
 } from "../../themes/common";
 import CarCard from "../cards/CarCard";
-import SectionHeader from '../sectioncommons/SectionHeader';
+import SectionHeader from "../sectioncommons/SectionHeader";
 
 function Featured(props) {
   const tabs = ["New", "Used"];
@@ -28,14 +28,20 @@ function Featured(props) {
       >
         <Tabs data={tabs} bgrColor={BG_COLOR} />
       </SectionHeader>
-      <FlexContainer gap={0.5} flexwrap flex>
-        {props.data?.slice(0, 7).map((item, index) => (
-          <CarCard key={index} data={item} mobile={props.mobile} />
+      <GridContainer>
+        {props.data?.slice(0, 5).map((item, index) => (
+          <CarCard
+            key={index}
+            data={item}
+            mobile={props.mobile}
+            gridcolumn={index === 0 && !props.mobile}
+            gridrow={index === 0 && !props.mobile}
+          />
         ))}
-      </FlexContainer>
+      </GridContainer>
       <FlexContainer alignX="space-between" flexwrap gap={1} margin="1rem 0">
         <SocialMediaIcons />
-        <ButtonLink to='/search'>
+        <ButtonLink to="/search">
           <Button text="View 29 New" bgrColor={PRIMARY_ORANGE} maxWidth />
         </ButtonLink>
       </FlexContainer>

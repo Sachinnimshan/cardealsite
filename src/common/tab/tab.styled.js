@@ -8,7 +8,7 @@ import {
 export const TabContainer = styled("div")`
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
   cursor: pointer;
   overflow-x: scroll;
   scroll-behavior: smooth;

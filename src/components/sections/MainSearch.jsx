@@ -49,14 +49,14 @@ function MainSearch(props) {
       <BreadCrumbs title="Search" mobile={props.mobile} />
       {showFilter && (
         <FlexContainer direction="column" gap={1}>
-          <FlexContainer gap={0.5} direction="column">
-            <FlexContainer gap={0.5} flexwrap>
+          <FlexContainer gap={0.75} direction="column">
+            <FlexContainer gap={0.75} flexwrap>
               <SelectBox data={vehicleBrands} />
               <SelectBox data={vehicleBrands} />
               <SelectBox data={vehicleBrands} />
               <SelectBox data={vehicleBrands} />
             </FlexContainer>
-            <FlexContainer gap={0.5} flexwrap>
+            <FlexContainer gap={0.75} flexwrap>
               <SelectBox data={vehicleBrands} />
               <SelectBox data={vehicleBrands} />
               <SelectBox data={vehicleBrands} />
@@ -98,7 +98,6 @@ function MainSearch(props) {
         borderTop={BORDER_COLOR}
         alignY={!props.mobile && "center"}
         direction={props.mobile && "column"}
-        flexwrap
       >
         {props.mobile && (
           <Button

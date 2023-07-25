@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { searchCriterias } from "../../common/data";
-import { FlexContainer } from "../../themes/Layouts.styled";
+import { FlexContainer, GridContainer } from "../../themes/Layouts.styled";
 import SelectBox from "../../common/select";
 import { GridViewIcon, IconWrapper, ListViewIcon } from "../../icons";
 import {
@@ -64,23 +64,20 @@ function ListView(props) {
           <SelectBox data={searchCriterias} />
         </FlexContainer>
       </FlexContainer>
-      <FlexContainer gap={1} flexwrap>
-        <FlexContainer flex gap={0.5} flexwrap>
-          {props.data?.map((item, index) => (
-            <CarCard
-              key={index}
-              data={item}
-              bgrColor={PRIMARY_WHITE}
-              titleColor={SECONDARY_BLACK}
-              priceColor={SECONDARY_BLACK}
-              mobile={props.mobile}
-              border={BORDER_COLOR}
-              borderTop={BORDER_COLOR}
-            />
-          ))}
-        </FlexContainer>
-        {/* {!props.mobile && listView && <AppBanner src={AppBannerImg} />} */}
-      </FlexContainer>
+      <GridContainer>
+        {props.data?.map((item, index) => (
+          <CarCard
+            key={index}
+            data={item}
+            bgrColor={PRIMARY_WHITE}
+            titleColor={SECONDARY_BLACK}
+            priceColor={SECONDARY_BLACK}
+            mobile={props.mobile}
+            border={BORDER_COLOR}
+            borderTop={BORDER_COLOR}
+          />
+        ))}
+      </GridContainer>
     </FlexContainer>
   );
 }

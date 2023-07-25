@@ -21,6 +21,13 @@ export const CardContainer = styled(Link)`
   display: flex;
   flex-direction: ${(props) => (props.selectedView ? "row" : "column")};
   border: ${(props) => `1px solid ${props.border}`};
+  grid-column: ${(props) => props.gridcolumn && "span 2"};
+  grid-row: ${(props) => props.gridrow && "span 2"};
+`;
+
+export const CarCardImage = styled("img")`
+  height: 100%;
+  object-fit: cover;
 `;
 
 export const CarDetailsImage = styled("img")`

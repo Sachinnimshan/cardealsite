@@ -23,7 +23,7 @@ export const CarouselAnimation = keyframes`
 export const Slides = styled("div")`
   display: ${(props) => props.grid || "flex"};
   grid-auto-flow: column;
-  gap: ${(props) => props.gap && "5px"};
+  gap: ${(props) => props.gap && "0.75rem"};
   border-radius: ${BORDER_RADIUS};
   grid-auto-columns: ${(props) =>
     props.mobile ? "100%" : `calc(100% / ${props.showCount})`};
